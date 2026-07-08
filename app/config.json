@@ -1,8 +1,8 @@
 {
-  "serviceName": "Service name goes here",
+    "serviceName": "Disability Living Allowance for Children",
   "plugins": {
     "govuk-frontend": {
-      "rebrand": true
+      "rebrand": false
     }
   }
 }

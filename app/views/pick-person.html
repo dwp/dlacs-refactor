@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+      data-target="dwp-side-navigation-panel"
+      data-label-hide="Hide navigation"
+      data-label-show="Show navigation"
+      aria-expanded="false">
+      <span class="dwp-side-navigation__section-toggle-focus">
+        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+      </span>
+    </button>
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link">
+            Child details
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Life history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
+            Relationship details
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
+            Historical personal details
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Pick person
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <h1 class="govuk-heading-l">Pick person</h1>
+
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    New person
+  </button>
+
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Per no.</th>
+      <th scope="col" class="govuk-table__header">Last name</th>
+      <th scope="col" class="govuk-table__header">First name</th>
+      <th scope="col" class="govuk-table__header">Per no.</th>
+      <th scope="col" class="govuk-table__header">NINO</th>
+      <th scope="col" class="govuk-table__header">S. Ind</th>
+      <th scope="col" class="govuk-table__header">Relationship</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+<a href="#" class="govuk-link">01</a></td>
+      <td class="govuk-table__cell">Smith</td>
+      <td class="govuk-table__cell">John</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="#" class="govuk-link">02</a></td>
+      <td class="govuk-table__cell">Smith</td>
+      <td class="govuk-table__cell">John</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="#" class="govuk-link">03</a></td>
+      <td class="govuk-table__cell">Smith</td>
+      <td class="govuk-table__cell">John</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+
+</div>
+
+{% endblock %}

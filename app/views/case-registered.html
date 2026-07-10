@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_nonavheader.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-two-thirds">
+
+  <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Case registered
+            </h1>
+            <div class="govuk-panel__body">
+              National Insurance number<br><strong>QQ 12 34 56 X</strong>
+            </div>
+          </div>
+          <p class="govuk-body">This case is now registered. Go back to the homepage to access the registered claim and open the notepad.</p>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+          Return to homepage
+          </button>
+
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+  
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set pastDayHtml %}
+
+
+
+
+
+          <div class="tab-header">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
+              Historical name
+            </h2>
+            <a class="govuk-link" href="/previous-name">
+              View previous name
+            </a>
+          </a>
+          </div>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Name type"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Person type"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Name written to"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Name number"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Max name number held"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Other current name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "From"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+     {
+      key: {
+        text: "To"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+           {
+      key: {
+        text: "Surname"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "First name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+     {
+      key: {
+        text: "Other name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+    {
+      key: {
+        text: "Title"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+    {
+      key: {
+        text: "Request name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+  ]
+}) }}
+{% endset -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Historical name",
+      id: "Historical name",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "Historical address",
+      id: "Historical addres",
+      panel: {
+        html: pastWeekHtml
+      }
+    }
+  ]
+}) }}
+
+
+
+
+
+  </div>
+
+</div>
+
+{% endblock %}

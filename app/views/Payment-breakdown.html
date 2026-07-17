@@ -1,0 +1,217 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+  
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set pastDayHtml %}
+
+
+
+
+
+          <div class="tab-header">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
+              Payment breakdown
+            </h2>
+          </a>
+          </div>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "MOP"
+      },
+      value: {
+        text: "AC"
+      }
+    },
+       {
+      key: {
+        text: "IOP amount"
+      },
+      value: {
+        text: "£23.80"
+      }
+    },
+       {
+      key: {
+        text: "From"
+      },
+      value: {
+        text: "14 Jan 2025"
+      }
+    },
+       {
+      key: {
+        text: "To"
+      },
+      value: {
+        text: "14 Jan 2025"
+      }
+    }
+  ]
+}) }}
+
+
+
+ <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Payability</th>
+      <th scope="col" class="govuk-table__header">Mobility rate</th>
+      <th scope="col" class="govuk-table__header">Mobility net amount</th>
+      <th scope="col" class="govuk-table__header">Care rate</th>
+      <th scope="col" class="govuk-table__header">Care net amount</th>
+      <th scope="col" class="govuk-table__header">Total net weekly</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">19 Jan 2026 to 19 Jan 2026</td>
+      <td class="govuk-table__cell">N</td>
+      <td class="govuk-table__cell">£0.00</td>
+      <td class="govuk-table__cell">M</td>
+      <td class="govuk-table__cell">£59.78</td>
+     <td class="govuk-table__cell">£59.78</td>
+    </tr>
+      <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">19 Jan 2026 to 19 Jan 2026</td>
+      <td class="govuk-table__cell">N</td>
+      <td class="govuk-table__cell">£0.00</td>
+      <td class="govuk-table__cell">M</td>
+      <td class="govuk-table__cell">£59.78</td>
+     <td class="govuk-table__cell">£59.78</td>
+    </tr>
+  </tbody>
+</table>
+
+ <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Payment adjustment</th>
+      <th scope="col" class="govuk-table__header">Amount</th>
+      <th scope="col" class="govuk-table__header">From</th>
+      <th scope="col" class="govuk-table__header">To</th>
+
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="#" class="govuk-link">01</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="#" class="govuk-link">02</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="#" class="govuk-link">03</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+      <tbody class="govuk-table__body">
+</table>
+
+
+
+
+
+
+{% endset -%}
+
+
+
+
+
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Payment breakdown",
+      id: "Payment breakdown",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "Payment location",
+      id: "Payment location",
+      panel: {
+        html: pastWeekHtml
+      }
+    },
+    {
+      label: "Control details",
+      id: "Control details",
+      panel: {
+        html: pastWeekHtml
+      }
+    }
+  ]
+}) }}
+
+
+
+
+
+  </div>
+
+</div>
+
+{% endblock %}

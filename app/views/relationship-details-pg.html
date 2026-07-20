@@ -70,267 +70,121 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-{% from "govuk/components/tabs/macro.njk" import govukTabs %}
-{% from "govuk/components/table/macro.njk" import govukTable %}
+  </section>
 
-{% set pastDayHtml %}
-
+  <h1 class="govuk-heading-l">Relationship details</h1>
 
 
+  <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Relationship type</th>
+        <td class="govuk-table__cell">Parent Guardian</td>
+      </tr>
+    </tbody>
+  </table>
 
+  <h2 class="govuk-heading-m">Name</h2>
 
-          <div class="tab-header">
-            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
-              Relationship details
-            </h2>
-           
-          </a>
-          </div>
+  <table class="govuk-table">
+        <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Surname</th>
+        <td class="govuk-table__cell" >Placeholder</td>
+      </tr>
+       <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Firstnmae</th>
+        <td class="govuk-table__cell" >Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Other names</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Title</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Requested name</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+    </tbody>
+  </table>
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
- {{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Relationship type"
-      },
-         value: {
-        text: "Parent guardian"
-      }
-    }
-  ]
-}) }}
+    <h2 class="govuk-heading-m">Further personal details</h2>
 
+  <table class="govuk-table">
+        <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Date of birth</th>
+        <td class="govuk-table__cell" >Placeholder</td>
+      </tr>
+       <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">NINO</th>
+        <td class="govuk-table__cell" >Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Prefered language</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Start</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">End</th>
+        <td class="govuk-table__cell" style="width: 50%">Placeholder</td>
+      </tr>
+    </tbody>
+  </table>
 
-<h2 class="govuk-heading-m">Name</h2>
+  <h2 class="govuk-heading-m">Address</h2>
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+  <table class="govuk-table">
+        <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Type</th>
+        <td class="govuk-table__cell" >Residential</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Address</th>
+        <td class="govuk-table__cell">20 York Road<br> London<br> SE17ND<br></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Country</th>
+        <td class="govuk-table__cell" style="width: 50%">England</td>
+      </tr>
+    </tbody>
+     <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Type</th>
+        <td class="govuk-table__cell" >Correspondence</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Address</th>
+        <td class="govuk-table__cell">20 York Road<br> London<br> SE17ND<br></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Country</th>
+        <td class="govuk-table__cell" style="width: 50%">England</td>
+      </tr>
+    </tbody>
+  </table>
 
-{{ govukSummaryList({
-  rows: [
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "First name"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Other name"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Titled"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    }
-  ]
-}) }}
+  <h2 class="govuk-heading-m">Contact</h2>
 
-<h2 class="govuk-heading-m">Further personal details</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-       {
-      key: {
-        text: "Date of birth"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "NINO"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-           {
-      key: {
-        text: "Perferred language"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Start"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "End"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    }
-  ]
-}) }}
-
-<h2 class="govuk-heading-m">Address</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Type"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-        {
-      key: {
-        text: "Start"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "End"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-        {
-      key: {
-        text: "Type"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "Address"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-        {
-      key: {
-        text: "Country"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "Type"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-    {
-      key: {
-        text: "Address"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-    {
-      key: {
-        text: "Country"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    }
-  ]
-}) }}
-
-<h2 class="govuk-heading-m">Contact</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Contact number"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-     {
-      key: {
-        text: "Type"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    }
-  ]
-}) }}
-{% endset -%}
-
-
-
-
-{{ govukTabs({
-  items: [
-    {
-      label: "Relationship details",
-      id: "Relationship details",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "CA claimant",
-      id: "A claimant",
-      panel: {
-        html: pastWeekHtml
-      }
-    }
-  ]
-}) }}
-
-
-
+  <table class="govuk-table">
+        <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Contact number</th>
+        <td class="govuk-table__cell" style="width: 50%">077777777</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Type</th>
+        <td class="govuk-table__cell"style="width: 50%" >Mobile</td>
+      </tr>
+    </tbody>
+  </table>
 
 
   </div>

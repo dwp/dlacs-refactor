@@ -38,8 +38,8 @@
             Life history
           </a>
         </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Relationship details
           </a>
         </li>
@@ -48,8 +48,8 @@
             Historical personal details
           </a>
         </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
             Pick person
           </a>
         </li>
@@ -70,55 +70,140 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  </section>
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
-  <h1 class="govuk-heading-l">Pick person</h1>
+{% set pastDayHtml %}
 
-  <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Per no.</th>
-      <th scope="col" class="govuk-table__header">Last name</th>
-      <th scope="col" class="govuk-table__header">First name</th>
-      <th scope="col" class="govuk-table__header">Per no.</th>
-      <th scope="col" class="govuk-table__header">NINO</th>
-      <th scope="col" class="govuk-table__header">S. Ind</th>
-      <th scope="col" class="govuk-table__header">Relationship</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-<a href="#" class="govuk-link">01</a></td>
-      <td class="govuk-table__cell">Smith</td>
-      <td class="govuk-table__cell">John</td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">02</a></td>
-      <td class="govuk-table__cell">Smith</td>
-      <td class="govuk-table__cell">John</td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">03</a></td>
-      <td class="govuk-table__cell">Smith</td>
-      <td class="govuk-table__cell">John</td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-  </tbody>
-</table>
+
+
+
+
+          <div class="tab-header">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
+              CA claimant
+            </h2>
+           
+          </a>
+          </div>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+ {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Relationship type"
+      },
+         value: {
+        text: "Parent guardian"
+      }
+    }
+  ]
+}) }}
+
+
+<h2 class="govuk-heading-m">Name</h2>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+       {
+      key: {
+        text: "Surname"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "First name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Other name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Titled"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+       {
+      key: {
+        text: "Requested name"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">Further personal details</h2>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+       {
+      key: {
+        text: "CA ref No"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+     {
+      key: {
+        text: "Date of birth"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+  ]
+}) }}
+
+
+{% endset -%}
+
+
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Relationship details",
+      id: "Relationship details",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "CA claimant",
+      id: "CA claimant",
+      panel: {
+        html: pastWeekHtml
+      }
+    }
+  ]
+}) }}
+
+
+
+
 
   </div>
 

@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-full">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+<a href="#" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-l">Are you sure you want to deregister this event?</h1>
+
+  <p>This action will permanently deregister the event and cannot be undone.</p>
+
+
+  <button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Deregister event
+  </button>
+
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}

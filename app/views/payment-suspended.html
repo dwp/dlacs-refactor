@@ -28,62 +28,84 @@
     </button>
     <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
       <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+            Payment details
+          </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
-            Case summary
+            Childs payment details
           </a>
-        </li>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
-            Event maintenance
+          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
+            Payment history
           </a>
-      <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
-            Case details
-          </a>
-        </li>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
-            Delete interest or undecided claim
+            Payment breakdown
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
-            Delete decided claim
+            Payment location
           </a>
         </li>
-               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
-            Management unit transfer
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
+            Payment adjustment
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
-            Confirm personal details
+            Overpayment and clerical calculations
           </a>
-              <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
-      <ul class="dwp-side-navigation__list">
-        <li class="dwp-side-navigation__item dwp-side-navigation__link">
-          <p id="s-item-0" class="govuk-caption-m">
-            Input          </p>
-        </li>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-8" href="#s-item-8" class="dwp-side-navigation__link">
-            Supplier agreement history
+            Control details
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
-            Motability payments
+            Deductions from underpayment
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
-            Clerical mota payments
+            Payment recall
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Suspend payments
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
+            Boarder payments
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-13" href="#s-item-13" class="dwp-side-navigation__link">
+            Authorise/refuse replacement
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-14" href="#s-item-14" class="dwp-side-navigation__link">
+          Payment deductions
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-15" href="#s-item-15" class="dwp-side-navigation__link">
+            Clerical calculation
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-16" href="#s-item-16" class="dwp-side-navigation__link">
+            Finalise payment
           </a>
         </li>
       </ul>
@@ -103,148 +125,38 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
- <h1 class="govuk-heading-l">Management unit transfer</h1>
+  </section>
 
-<h2 class="govuk-heading-m">Name</h2>
+  <h1 class="govuk-heading-l">Suspend payments</h1>
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Title"
-      },
-      value: {
-        text: "Miss"
-      }
-    },
-    {
-      key: {
-        text: "Forename"
-      },
-      value: {
-        text: "Jane"
-      }
-    },
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "Smith"
-      }
-    },
-       {
-      key: {
-        text: "Other names"
-      },
-      value: {
-        text: "May"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "May"
-      }
-    }
-  ]
-}) }}
-
-<h2 class="govuk-heading-m">Name 2</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Title"
-      },
-      value: {
-        text: "Miss"
-      }
-    },
-    {
-      key: {
-        text: "Forename"
-      },
-      value: {
-        text: "Jane"
-      }
-    },
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "Smith"
-      }
-    },
-       {
-      key: {
-        text: "Other names"
-      },
-      value: {
-        text: "May"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "May"
-      }
-    }
-  ]
-}) }}
-
-{{ govukInput({
-  label: {
-    text: "New Management unit transfer"
-  },
-  classes: "govuk-input--width-5",
-  id: "width-5",
-  name: "width5"
-}) }}
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+              <a href="suspend-payment-update">
+                <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
+              </a>
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+          <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" style="width: 45%">Suspension action</th>
+          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
+          <td class="govuk-table__cell" style="width: 10%"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Effestive suspension date</th>
+          <td class="govuk-table__cell">[Data value]</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reason for suspension</th>
+          <td class="govuk-table__cell">[Data value]</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
 
-{{ govukButton({
-  text: "Save"
-}) }}
+      </tbody>
+    </table>
 
-
-</div>
+  </div>
 
 </div>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

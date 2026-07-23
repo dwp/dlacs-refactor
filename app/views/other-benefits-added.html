@@ -1,0 +1,186 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+      data-target="dwp-side-navigation-panel"
+      data-label-hide="Hide navigation"
+      data-label-show="Show navigation"
+      aria-expanded="false">
+      <span class="dwp-side-navigation__section-toggle-focus">
+        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+      </span>
+    </button>
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Input          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link">
+            Evidence used for decision
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Entitlement
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Other benefits
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Payability          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
+            Hospital and scheduled accommodation
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
+            Lay evidence and exclusions
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Summary          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
+            Evidence summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
+            Decision summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Enquiry         </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-8" href="#s-item-8" class="dwp-side-navigation__link">
+            Decision history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
+            Summary of payability
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+            Previous events
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
+            Maintain reasons for decision
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
+            Picklist
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <h1 class="govuk-heading-l">Other benefits</h1>
+
+  <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Christmas bonus</th>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"> <a href="#" class="govuk-link" style="margin-left: 40%">Change</a> </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">War pensions ref</th>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell"> <a href="#" class="govuk-link" style="margin-left: 40%">Change</a> </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Effective date</th>
+        <td class="govuk-table__cell">17 November 2025</td>
+    <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="govuk-heading-m">Other benefits</h2>
+
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+Add other benefits
+</button>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Action</th>
+    <th scope="col" class="govuk-table__header">From</th>
+    <th scope="col" class="govuk-table__header">To</th>
+    <th scope="col" class="govuk-table__header">Ben type</th>
+    <th scope="col" class="govuk-table__header">Rate</th>
+    <th scope="col" class="govuk-table__header">O/P</th>
+    <th scope="col" class="govuk-table__header">Office</th>
+    <th scope="col" class="govuk-table__header">V/NW</th>
+    <th scope="col" class="govuk-table__header"></th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell">Input</td>
+    <td class="govuk-table__cell">27/11/2025</td>
+    <td class="govuk-table__cell">27/11/2025</td>
+    <td class="govuk-table__cell">Input</td>
+    <td class="govuk-table__cell">Input</td>
+    <td class="govuk-table__cell">Input</td>
+    <td class="govuk-table__cell">Input</td>
+    <td class="govuk-table__cell">27/11/2025</td>
+    <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a> | <a href="#" class="govuk-link">Delete</a></td>
+  </tr>
+</tbody>
+</table>
+
+
+</div>
+
+{% endblock %}

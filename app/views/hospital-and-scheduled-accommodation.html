@@ -1,0 +1,287 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+      data-target="dwp-side-navigation-panel"
+      data-label-hide="Hide navigation"
+      data-label-show="Show navigation"
+      aria-expanded="false">
+      <span class="dwp-side-navigation__section-toggle-focus">
+        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+      </span>
+    </button>
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Input          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link">
+            Evidence used for decision
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Entitlement
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
+            Other benefits
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Payability          </p>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Hospital and scheduled accommodation
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
+            Lay evidence and exclusions
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Summary          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
+            Evidence summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
+            Decision summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Enquiry         </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-8" href="#s-item-8" class="dwp-side-navigation__link">
+            Decision history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
+            Summary of payability
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+            Previous events
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
+            Maintain reasons for decision
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
+            Picklist
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <h1 class="govuk-heading-l">Hospital and scheduled accommodation</h1>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    Customer initiated change?
+  </label>
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+</div>
+
+<div class="govuk-date-input" id="passport-issued">
+  <p>Receipt date of change</p>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+<h3 class="govuk-heading-s">Entry 1</h3>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-5">
+Action
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="width-5">
+Type
+</label>
+<input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+</div>
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Links period?
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Affects award?
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+          </div>
+
+
+  <div class="govuk-grid-column-full">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add another accomodation
+    </button>
+    <br>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+</div>
+
+  </div>
+  <div class="govuk-grid-row">
+
+
+
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,232 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+      data-target="dwp-side-navigation-panel"
+      data-label-hide="Hide navigation"
+      data-label-show="Show navigation"
+      aria-expanded="false">
+      <span class="dwp-side-navigation__section-toggle-focus">
+        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+      </span>
+    </button>
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Case summary
+          </a>
+        </li>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Event maintenance
+          </a>
+      <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Case details
+          </a>
+        </li>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
+            Delete interest or undecided claim
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
+            Delete decided claim
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+            Management unit transfer
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
+            Confirm personal details
+          </a>
+              <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Motability          </p>
+        </li>
+        </li>
+               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Supplier agreement history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
+            Motability payments
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+            Clerical mota payments
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+ <h1 class="govuk-heading-l">Supplier agreement history</h1>
+
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Cust paid to"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+    {
+      key: {
+        text: "Mob award ends"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+       {
+      key: {
+        text: "Cust ref no"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+       {
+      key: {
+        text: "Sup paid to"
+      },
+      value: {
+        text: "[populated]"
+      }
+        },
+       {
+      key: {
+        text: "Next payment due"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+       {
+      key: {
+        text: "Rnwl likely"
+      },
+      value: {
+        text: "[populated]"
+      }
+    }
+  ]
+}) }}
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Opt no</th>
+    <th scope="col" class="govuk-table__header">Ag typ</th>
+    <th scope="col" class="govuk-table__header">From</th>
+    <th scope="col" class="govuk-table__header">To</th>
+    <th scope="col" class="govuk-table__header">Agreement number</th>
+    <th scope="col" class="govuk-table__header">Weekly ammount</th>
+    <th scope="col" class="govuk-table__header">Total paid</th>
+    <th scope="col" class="govuk-table__header">Cl. payments</th>
+    <th scope="col" class="govuk-table__header">Term date</th>
+  </tr>
+</thead>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">01</a>
+</p></td>
+    <td class="govuk-table__cell">VA</td>
+    <td class="govuk-table__cell">12 Jan 2026</td>
+    <td class="govuk-table__cell">12 Jan 2026</td>
+    <td class="govuk-table__cell">12345678</td>
+    <td class="govuk-table__cell">£10.00</td>
+    <td class="govuk-table__cell">£10.00</td>
+    <td class="govuk-table__cell">[populated]</td>
+    <td class="govuk-table__cell">12 Jan 2026</td>
+</tbody>
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

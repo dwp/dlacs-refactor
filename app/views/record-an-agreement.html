@@ -97,13 +97,21 @@
 
 <h2 class="govuk-heading-m">Agreement</h2>
 
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
 {{ govukInput({
+  id: "cost",
+  name: "cost",
   label: {
-    text: "Agreement type"
+    text: "4 weekly ammount",
+    classes: "govuk-body--m",
+    isPageHeading: true
   },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-input--width-5",
+  spellcheck: false
 }) }}
 
 
@@ -147,22 +155,7 @@
 </div>
 
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  id: "cost",
-  name: "cost",
-  label: {
-    text: "4 weekly ammount",
-    classes: "govuk-body--m",
-    isPageHeading: true
-  },
-  prefix: {
-    text: "£"
-  },
-  classes: "govuk-input--width-5",
-  spellcheck: false
-}) }}
 
 
 

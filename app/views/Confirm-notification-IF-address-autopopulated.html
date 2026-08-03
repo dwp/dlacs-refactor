@@ -34,7 +34,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "/Select-a-notification-type"
+  href: "#"
 }) }}
 
 <h1 class="govuk-heading-l">Confirm notification</h1>
@@ -73,7 +73,7 @@
       actions: {
         items: [
           {
-            href: "/select-a-notification-type",
+            href: "#",
             text: "Amend",
             visuallyHiddenText: "date of birth"
           }
@@ -86,8 +86,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save",
-  href: "/notifications"
+  text: "Send"
 }) }}
 
   

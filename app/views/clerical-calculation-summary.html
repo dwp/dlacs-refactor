@@ -127,23 +127,13 @@
 
   </section>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  <h1 class="govuk-heading-l">Clerical calculation summary</h1>
 
-<div class="app-heading-action">
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    Clerical calculation summary
-  </h1>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Enter new reason
+</button>
 
-  {{ govukButton({
-    text: "Enter new reason",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-</div>
-
-<p class="govuk-body">
-  There are no clerical calculations recorded.
-</p>
-
+    <p>There are no clerical calculations recorded.</p>
 
   </div>
 

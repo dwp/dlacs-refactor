@@ -127,23 +127,14 @@
 
   </section>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  <h1 class="govuk-heading-l">Suspend payments</h1>
 
-<h1 class="govuk-heading-l">
-  Suspend payments
-</h1>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Suspend payment
+</button>
 
-<div class="app-content-action">
-  <p class="govuk-body govuk-!-margin-bottom-0">
-    This payment is currently not suspended.
-  </p>
+    <p>The payment is currently not suspended.</p>
 
-  {{ govukButton({
-    text: "Amend suspend payment",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-</div>
-    
   </div>
 
 </div>

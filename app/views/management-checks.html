@@ -28,80 +28,84 @@
     </button>
     <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
       <ul class="dwp-side-navigation__list">
-        <li class="dwp-side-navigation__item dwp-side-navigation__link">
-          <p id="s-item-0" class="govuk-caption-m">
-            Input          </p>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link">
-            Evidence used for decision
+   <li class="dwp-side-navigation__item">
+          <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
+            Payment details
           </a>
         </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
-            Entitlement
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+            Childs payment details
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
-            Other benefits
+            Payment history
           </a>
-        </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__link">
-          <p id="s-item-0" class="govuk-caption-m">
-            Payability          </p>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
-            Hospital and scheduled accommodation
+            Payment breakdown
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
-            Lay evidence and exclusions
+            Payment location
           </a>
-        </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__link">
-          <p id="s-item-0" class="govuk-caption-m">
-            Summary          </p>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
-            Evidence summary
+            Payment adjustment
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
-            Decision summary
+            Overpayment and clerical calculations
           </a>
-        </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__link">
-          <p id="s-item-0" class="govuk-caption-m">
-            Enquiry         </p>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-8" href="#s-item-8" class="dwp-side-navigation__link">
-            Decision history
+            Control details
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
-            Summary of payability
+            Deductions from underpayment
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
-            Previous events
+            Payment recall
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
-            Maintain reasons for decision
+            Suspend payments
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
-            Picklist
+          <a id="s-item-13" href="#s-item-13" class="dwp-side-navigation__link">
+            Boarder payments
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-13" href="#s-item-13" class="dwp-side-navigation__link">
+            Authorise/refuse replacement
+          </a>
+        </li>
+           <li class="dwp-side-navigation__item">
+          <a id="s-item-15" href="#s-item-15" class="dwp-side-navigation__link">
+          Payment deductions
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-15" href="#s-item-15" class="dwp-side-navigation__link">
+            Clerical calculation
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+           <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Finalise payment
           </a>
         </li>
       </ul>
@@ -119,38 +123,23 @@
       <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
     </dl>
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<div class="govuk-grid-row">
 
-  </section>
 
-  <h1 class="govuk-heading-l">Entitlement</h1>
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-  <table class="govuk-table">
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Effective date</th>
-        <td class="govuk-table__cell">23 May 2025</td>
-        <td class="govuk-table__cell"></td>
-      </tr>
-    </tbody>
-  </table>
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-  <div class="govuk-grid-row">
+{% call govukNotificationBanner({
+  type: "error",
+  titleText: "Important"
+}) %}
+  <p class="govuk-notification-banner__heading">
+    Management check. Refer case papers to a manager.
+  </p>
+{% endcall %}
 
-  <div class="govuk-grid-column-one-half">
-    <p class="govuk-body">
-      There is no entitlement recorded
-    </p>
-  </div>
 
-  <div class="govuk-grid-column-one-half" style="text-align: right;">
-    <button
-      type="submit"
-      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
-      data-module="govuk-button">
-      Add and amend entitlement
-    </button>
-  </div>
 
 </div>
 

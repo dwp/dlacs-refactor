@@ -37,8 +37,8 @@
             Evidence used for decision
           </a>
         </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Entitlement
           </a>
         </li>
@@ -53,11 +53,11 @@
         </li>
         <li class="dwp-side-navigation__item">
           <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
-            Hospital and scheduled accomodation
+            Hospital and scheduled accommodation
           </a>
         </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
             Lay evidence and exclusions
           </a>
         </li>
@@ -123,57 +123,94 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Lay evidence and exclusions</h1>
-
-        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Add and amend evidence
-</button>
+  <h1 class="govuk-heading-l">Entitlement</h1>
 
   <table class="govuk-table">
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header"><label for=""></label>Exclusion reason</th>
-        <td class="govuk-table__cell">Input</td>
+        <th scope="col" class="govuk-table__header">Effective date</th>
+        <td class="govuk-table__cell">23 May 2025</td>
+        <td class="govuk-table__cell"></td>
       </tr>
     </tbody>
   </table>
 
-<br>
-<br>
+
+<table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"></th>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell govuk-!-text-align-right">
+  <button
+    type="submit"
+    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+    data-module="govuk-button">
+    Add and amend entitlement
+  </button>
+</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Primary disability</th>
+        <td class="govuk-table__cell">F66</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Secondary disability</th>
+        <td class="govuk-table__cell">F66</td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+  </table>
 
 <table class="govuk-table govuk-table--small-text-until-tablet">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Action</th>
       <th scope="col" class="govuk-table__header">Period</th>
-      <th scope="col" class="govuk-table__header">Reason code</th>
-      <th scope="col" class="govuk-table__header">Reason decode</th>
+      <th scope="col" class="govuk-table__header">Indefinite period</th>
+      <th scope="col" class="govuk-table__header">Mobility rate</th>
+      <th scope="col" class="govuk-table__header">Mobility reason</th>
+      <th scope="col" class="govuk-table__header">Care rate</th>
+      <th scope="col" class="govuk-table__header">Care reason</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">|</td>
       <td class="govuk-table__cell">19/11/2024 to 14/02/2025</td>
-      <td class="govuk-table__cell">Example</td>
-      <td class="govuk-table__cell">Example</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">M41</td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">C80</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">|</td>
       <td class="govuk-table__cell">19/11/2024 to 14/02/2025</td>
-      <td class="govuk-table__cell">Example</td>
-      <td class="govuk-table__cell">Example</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">M41</td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">C80</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">|</td>
       <td class="govuk-table__cell">119/11/2024 to 14/02/2025</td>
-      <td class="govuk-table__cell">Example</td>
-      <td class="govuk-table__cell">Example</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">M41</td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">C80</td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">|</td>
       <td class="govuk-table__cell">19/11/2024 to 14/02/2025</td>
-      <td class="govuk-table__cell">Example</td>
-      <td class="govuk-table__cell">Example</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">M41</td>
+      <td class="govuk-table__cell">L</td>
+      <td class="govuk-table__cell">C80</td>
     </tr>
   </tbody>
 </table>

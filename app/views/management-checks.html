@@ -126,14 +126,19 @@
 <div class="govuk-grid-row">
 
 
-{% from "govuk/components/notification-banner/macro.njk" error govukNotificationBanner %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-{% call govukNotificationBanner() %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% call govukNotificationBanner({
+  type: "error",
+  titleText: "Important"
+}) %}
   <p class="govuk-notification-banner__heading">
     Management check. Refer case papers to a manager.
-    <a class="govuk-notification-banner__link" href="#">View application</a>.
   </p>
 {% endcall %}
+
 
 
 </div>

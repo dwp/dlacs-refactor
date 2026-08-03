@@ -149,25 +149,12 @@
     </tbody>
   </table>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+    <h2 class="govuk-heading-m">Deductions</h2>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add a payment deduction
+</button>
 
-<div class="app-content-action">
-  <div>
-    <h2 class="govuk-heading-m">
-      Deductions
-    </h2>
-
-    <p class="govuk-body govuk-!-margin-bottom-0">
-      A payment deduction has not been recorded.
-    </p>
-  </div>
-
-  {{ govukButton({
-    text: "Add a payment deduction",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-</div>
-`
+    <p>There are no payment deductions recorded.</p>
 
   </div>
 

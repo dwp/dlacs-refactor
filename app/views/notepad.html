@@ -30,20 +30,11 @@
 
   </section>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  <h1 class="govuk-heading-l">Notepad</h1>
 
-<div class="app-heading-action">
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    Notepad
-  </h1>
-
-  {{ govukButton({
-    text: "Add a note",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-
-
-</div>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Add a note
+  </button>
 
   <table class="govuk-table">
   <thead class="govuk-table__head">

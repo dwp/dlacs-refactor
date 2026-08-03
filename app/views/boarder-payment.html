@@ -144,21 +144,15 @@
     </tbody>
   </table>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+    <h2 class="govuk-heading-m">Payment period</h2>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add and amend payment periods
+</button>
 
-<div class="app-heading-action">
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    Payment period
-  </h1>
+    <p>There are no payment period recorded.</p>
 
-  {{ govukButton({
-    text: "Add and amend payment period",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
+  </div>
+
 </div>
-
-<p class="govuk-body">
-  There are no payment periods recorded.
-</p>
 
 {% endblock %}

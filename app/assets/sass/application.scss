@@ -29,6 +29,17 @@
   padding-bottom: 15px;
 }
 
+.app-heading-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-heading-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 .page-header {
   display: flex;
@@ -64,3 +75,8 @@
 }
 
 
+.app-content-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

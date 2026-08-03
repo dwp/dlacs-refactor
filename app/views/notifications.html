@@ -30,11 +30,20 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Notifications</h1>
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Send a notification
-  </button>
+<div class="app-heading-action">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    Notifications
+  </h1>
+
+  {{ govukButton({
+    text: "Send a notification",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+
+
+</div>
 
   <table class="govuk-table">
   <thead class="govuk-table__head">

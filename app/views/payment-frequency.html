@@ -75,8 +75,8 @@
             Payment adjustment
           </a>
         </li>
- <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+<li class="dwp-side-navigation__item">
+          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
             Overpayment and clerical calculations
           </a>
         </li>
@@ -120,8 +120,8 @@
             Clerical calculation
           </a>
         </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-16" href="#s-item-16" class="dwp-side-navigation__link">
+ <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Finalise payment
           </a>
         </li>
@@ -144,35 +144,22 @@
 
           <div class="tab-header">
             <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
-              Calculation breakdown
+              Payment frequency
             </h2>
             
           </a>
           </div>
 
+
+          
+
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({
   rows: [
     {
       key: {
-        text: "Reason"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Decision (previous)"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Decision (due)"
+        text: "Paid up to"
       },
       value: {
         text: "[Data value]"
@@ -182,87 +169,64 @@
   ]
 }) }}
 
+ <br>
 
- <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Comp</th>
-      <th scope="col" class="govuk-table__header">Calculation period From
-      </th>
-      <th scope="col" class="govuk-table__header">
-        To</th>
-      <th scope="col" class="govuk-table__header">
-        Wks
-      </th>
-      <th scope="col" class="govuk-table__header">Previous
-        Rate/Wkly Amt</th>
-      <th scope="col" class="govuk-table__header">Due
-        Rate/Wkly Amt
-      </th>
-     <th scope="col" class="govuk-table__header">Net amount</th>
-
-
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-     <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-    </tr>
+    <table class="govuk-table">
       <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-     <td class="govuk-table__cell">[Data value]</td>
-      <td class="govuk-table__cell">[Data value]</td>
-    </tr>
-  </tbody>
-</table>
+    <h2 class="govuk-heading-m">Current</h2>
+            
+          <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
+          <td class="govuk-table__cell" style="width: 45%">Data value]</td>
+          <td class="govuk-table__cell" style="width: 10%"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Frequency</th>
+          <td class="govuk-table__cell">Data value] </td>
+          <td class="govuk-table__cell"></td>
+        </tr>
 
- 
+      </tbody>
+    </table>
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Total"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Deductions"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    },
-       {
-      key: {
-        text: "Pyt total"
-      },
-      value: {
-        text: "[Data value]"
-      }
-    }
-      
-  ]
-}) }}
+     <br>
 
 
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
+<div class="app-heading-action">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+    Next
+  </h2>
+
+  {{ govukButton({
+    text: "Amend method of payment",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>
+
+            
+          <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
+          <td class="govuk-table__cell" style="width: 45%">Data value]</td>
+          <td class="govuk-table__cell" style="width: 10%"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Frequency</th>
+          <td class="govuk-table__cell">Data value] </td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+     <br>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue 
+</button>
 
   </div>
 

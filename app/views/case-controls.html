@@ -30,11 +30,19 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Case controls</h1>
 
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Add new case controls
-  </button>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="app-heading-action">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    Case controls
+  </h1>
+
+  {{ govukButton({
+    text: "Add new case controls",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+</div>
 
   <table class="govuk-table">
   <thead class="govuk-table__head">

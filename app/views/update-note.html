@@ -33,29 +33,37 @@
 
 <a href="#" class="govuk-back-link">Back</a>
 
-  {{ govukRadios({
-  name: "AmendWarRef",
-  fieldset: {
-    legend: {
-      text: "Amend War pension ref",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "Y",
-      text: "Y"
-    },
-    {
-      value: "N",
-      text: "N"
-    }
-  ]
-}) }}
+  <h1 class="govuk-heading-l">Update note</h1>
+
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+      Date
+    </th>
+    <td class="govuk-table__cell">
+      Placeholder content
+    </td>
+  </tr>
+</tbody>
+</table>  
+
+  <div class="govuk-form-group">
+    <p>
+      Write your note
+    </p>
+    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
-  Save
+Update
 </button>
+
+
+  </div>
+
+
+
+</div>
 
 {% endblock %}

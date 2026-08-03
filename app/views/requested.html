@@ -15,7 +15,8 @@
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-">
+
+<div class="govuk-grid-column-full">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -30,69 +31,31 @@
 
   </section>
 
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+<a href="#" class="govuk-back-link">Back</a>
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
-}) }}
-
-<h1 class="govuk-heading-l">Confirm notification</h1>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
+  {{ govukRadios({
+  name: "Requested",
+  fieldset: {
+    legend: {
+      text: "Requested",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
     {
-      key: {
-        text: "Addresses"
-      },
-      value: {
-        text: "Mrs Joan"
-      }
+      value: "Y - Yes",
+      text: "Y"
     },
     {
-      key: {
-        text: "Address"
-      },
-      value: {
-        html: "72 Guild Street<br>London<br>SE23 6FH"
-      },
-      actions: {
-        items: [ 
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Letter purpose"
-      },
-      value: {
-        text: "letter of entitlement"
-      },
-      actions: {
-        items: [
-          {
-            href: "#",
-            text: "Amend",
-            visuallyHiddenText: "date of birth"
-          }
-        ]
-      }
+      value: "N",
+      text: "C - Clear"
     }
   ]
 }) }}
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Send"
-}) }}
-
-  
-
-  </div>
-
-</div>
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save
+</button>
 
 {% endblock %}

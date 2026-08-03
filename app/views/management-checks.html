@@ -125,9 +125,11 @@
 
 <div class="govuk-grid-row">
 
+
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {% call govukNotificationBanner({
+  titleText: "Important",
   classes: "app-important-banner"
 }) %}
   <p class="govuk-notification-banner__heading">

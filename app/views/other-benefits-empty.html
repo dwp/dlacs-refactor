@@ -145,13 +145,24 @@
     </tbody>
   </table>
 
-  <h2 class="govuk-heading-m">Other benefits</h2>
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-<p class="govuk-body">Other benefits has not been recorded.</p>
+<div class="app-content-action">
+  <div>
+    <h2 class="govuk-heading-m">
+      Other benefits
+    </h2>
 
-   <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Add and amend other benefits
-</button>
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      Other benefits has not been recorded.
+    </p>
+  </div>
+
+  {{ govukButton({
+    text: "Add and amend other benefits",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+</div>
 
 
 </div>

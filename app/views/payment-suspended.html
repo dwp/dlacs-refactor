@@ -127,33 +127,49 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Suspend payments</h1>
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-              <a href="suspend-payment-update">
-                <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
-              </a>
+<div class="app-heading-action">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    Suspend payments
+  </h1>
 
+  {{ govukButton({
+    text: "Amend suspend payment",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+</div>
 
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Suspension action</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Effestive suspension date</th>
-          <td class="govuk-table__cell">[Data value]</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Reason for suspension</th>
-          <td class="govuk-table__cell">[Data value]</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header" style="width:45%">
+        Suspension action
+      </th>
+      <td class="govuk-table__cell">
+        F
+      </td>
+    </tr>
 
-      </tbody>
-    </table>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Effective suspension date
+      </th>
+      <td class="govuk-table__cell">
+        14 Jan 2025
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Reason for suspension
+      </th>
+      <td class="govuk-table__cell">
+        N
+      </td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
 

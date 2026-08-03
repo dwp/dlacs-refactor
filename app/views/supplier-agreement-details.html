@@ -110,7 +110,7 @@
   href: "#"
 }) }}
 
- <h1 class="govuk-heading-l">Supplier payment breakdown</h1>
+ <h1 class="govuk-heading-l">Supplier agreement details</h1>
 
 
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
@@ -127,6 +127,14 @@
     },
     {
       key: {
+        text: "Sup paid to"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+       {
+      key: {
         text: "Joint X-ref no"
       },
       value: {
@@ -135,15 +143,7 @@
     },
        {
       key: {
-        text: "Supplier paid to"
-      },
-      value: {
-        text: "[populated]"
-      }
-    },
-       {
-      key: {
-        text: "Supplier reference"
+        text: "Type"
       },
       value: {
         text: "[populated]"
@@ -151,7 +151,7 @@
         },
        {
       key: {
-        text: "Agreement from"
+        text: "From"
       },
       value: {
         text: "[populated]"
@@ -167,7 +167,7 @@
     },
            {
       key: {
-        text: "Type"
+        text: "Cust ref no"
       },
       value: {
         text: "[populated]"
@@ -175,7 +175,7 @@
     },
            {
       key: {
-        text: "Termination date"
+        text: "Term date"
       },
       value: {
         text: "[populated]"
@@ -191,7 +191,7 @@
     },
            {
       key: {
-        text: "Payment reason"
+        text: "Agrmy ref no"
       },
       value: {
         text: "[populated]"
@@ -199,7 +199,47 @@
     },
            {
       key: {
-        text: "Clerical payment Supplier details"
+        text: "Orig prov from"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+           {
+      key: {
+        text: "Rnwl likely"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+           {
+      key: {
+        text: "Agrmt stat"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+           {
+      key: {
+        text: "Start pyt to sup"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+           {
+      key: {
+        text: "Supplier reference"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+           {
+      key: {
+        text: "Total paid to sup"
       },
       value: {
         text: "[populated]"
@@ -211,23 +251,30 @@
 <table class="govuk-table">
 <thead class="govuk-table__head">
   <tr class="govuk-table__row">
-    <th scope="col" class="govuk-table__header">Date made</th>
+    <th scope="col" class="govuk-table__header">Opt no</th>
+    <th scope="col" class="govuk-table__header">Date last pty made</th>
     <th scope="col" class="govuk-table__header">From</th>
     <th scope="col" class="govuk-table__header">To</th>
-    <th scope="col" class="govuk-table__header">Amount paid</th>
-    <th scope="col" class="govuk-table__header">Agrmt ref</th>
-    <th scope="col" class="govuk-table__header">Cust ref no</th>
-
+    <th scope="col" class="govuk-table__header">Amount of each pyt</th>
+    <th scope="col" class="govuk-table__header">No issues</th>
+    <th scope="col" class="govuk-table__header">No of weeks</th>
+    <th scope="col" class="govuk-table__header">Pyt type</th>
+    <th scope="col" class="govuk-table__header">Cl pyt status</th>
   </tr>
 </thead>
 <tbody class="govuk-table__body">
   <tr class="govuk-table__row">
-    <td class="govuk-table__cell">12 Jan 2026</td>
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">01</a>
+</p></td>
+    <td class="govuk-table__cell">VA</td>
     <td class="govuk-table__cell">12 Jan 2026</td>
     <td class="govuk-table__cell">12 Jan 2026</td>
     <td class="govuk-table__cell">£10.00</td>
     <td class="govuk-table__cell">[poplated]</td>
+    <td class="govuk-table__cell">12</td>
     <td class="govuk-table__cell">[populated]</td>
+    <td class="govuk-table__cell">[poplated]</td>
 </tbody>
 </table>
 

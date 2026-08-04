@@ -15,7 +15,7 @@
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-">
+  <div class="govuk-grid-column-three-quarters">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -27,52 +27,44 @@
     </dl>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
   </section>
 
-<div style="background:#005ea5; padding:40px; color:white; margin-top:30px;">
 
-  <h1 class="govuk-heading-xl" style="color:white;">
-    Are you sure you want to delete this note?
-  </h1>
+  </section>
+<a href="/payment-frequency" class="govuk-back-link">Back</a>
+  <h1 class="govuk-heading-l">Amend method of payment</h1>
 
-  <p class="govuk-body-l" style="color:white;">
-    Once you delete the note it will be removed.
-  </p>
 
-  <p class="govuk-body-l" style="color:white;">
-    You cannot undo this change.
-  </p>
-
-{{ govukTable({
-  classes: "delete-note-table",
-  head: [
-    { text: "Date" },
-    { text: "Note" }
-  ],
-  rows: [
-    [
-      { text: "5 October 2025" },
-      { text: "IDV passed, do not delete" }
-    ]
-  ]
+{{ govukInput({
+  label: {
+    text: "Method of payment"
+  },
+  classes: "govuk-input--width-10",
+  id: "method-of-payment",
+  name: "methodOfPayment",
+  value: "[input]"
 }) }}
 
-  <a href="/case-controls"
-     role="button"
-     draggable="false"
-     class="govuk-button govuk-button--inverse">
-    Delete note
-  </a>
-  <a href="/case-controls"
-   class="govuk-link"
-   style="color:white; margin-left:20px;">
-  Go back to notepad
-</a>
+{{ govukInput({
+  label: {
+    text: "Frequency"
+  },
+  classes: "govuk-input--width-10",
+  id: "frequency",
+  name: "frequency",
+  value: "[input]"
+}) }}
 
- 
-</div>
 
- 
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/payment-frequency"
+}) }}
+
 
   </div>
 

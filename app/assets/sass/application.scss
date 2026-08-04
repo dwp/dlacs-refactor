@@ -86,3 +86,14 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.delete-note-table,
+.delete-note-table .govuk-table__header,
+.delete-note-table .govuk-table__cell {
+  color: white !important;
+}
+
+.delete-note-table .govuk-table__header,
+.delete-note-table .govuk-table__cell {
+  border-bottom-color: rgba(255,255,255,0.3) !important;
+}

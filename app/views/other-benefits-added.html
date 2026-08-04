@@ -16,7 +16,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
 
-    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+     <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
       data-target="dwp-side-navigation-panel"
       data-label-hide="Hide navigation"
       data-label-show="Show navigation"
@@ -33,17 +33,17 @@
             Input          </p>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link">
+          <a id="evidence-used-empty" href="evidence-used-empty" class="dwp-side-navigation__link">
             Evidence used for decision
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+          <a id="entitlement" href="entitlement" class="dwp-side-navigation__link">
             Entitlement
           </a>
         </li>
         <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+          <a id="other-benefits-empty" href="other-benefits-empty" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Other benefits
           </a>
         </li>
@@ -52,12 +52,12 @@
             Payability          </p>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
+          <a id="hospital-and-scheduled-accommodation" href="hospital-and-scheduled-accommodation" class="dwp-side-navigation__link">
             Hospital and scheduled accommodation
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
+          <a id="lay-evidence-and-exclusions" href="lay-evidence-and-exclusions" class="dwp-side-navigation__link">
             Lay evidence and exclusions
           </a>
         </li>
@@ -66,12 +66,12 @@
             Summary          </p>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
+          <a id="evidence-summary" href="evidence-summary" class="dwp-side-navigation__link">
             Evidence summary
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
+          <a id="decision-summary" href="decision-summary" class="dwp-side-navigation__link">
             Decision summary
           </a>
         </li>
@@ -80,27 +80,27 @@
             Enquiry         </p>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-8" href="#s-item-8" class="dwp-side-navigation__link">
+          <a id="decision-history" href="decision-history" class="dwp-side-navigation__link">
             Decision history
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
+          <a id="summary-of-payability" href="summary-of-payability" class="dwp-side-navigation__link">
             Summary of payability
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
+          <a id="previous-events" href="previous-events" class="dwp-side-navigation__link">
             Previous events
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
+          <a id="maintain-reasons-for-decision-empty" href="maintain-reasons-for-decision-empty" class="dwp-side-navigation__link">
             Maintain reasons for decision
           </a>
         </li>
         <li class="dwp-side-navigation__item">
-          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
+          <a id="picklist" href="picklist" class="dwp-side-navigation__link">
             Picklist
           </a>
         </li>
@@ -130,12 +130,12 @@
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Christmas bonus</th>
         <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"> <a href="#" class="govuk-link" style="margin-left: 40%">Amend</a> </td>
+        <td class="govuk-table__cell"> <a href="amend-xmas-bonus" class="govuk-link" style="margin-left: 40%">Amend</a> </td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">War pensions ref</th>
         <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"> <a href="#" class="govuk-link" style="margin-left: 40%">Amend</a> </td>
+        <td class="govuk-table__cell"> <a href="amend-war-ref" class="govuk-link" style="margin-left: 40%">Amend</a> </td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Effective date</th>
@@ -145,7 +145,7 @@
     </tbody>
   </table>
 
- <div style="display:flex; justify-content:space-between; align-items:center;">
+ <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
 
   <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
     Other benefits
@@ -154,7 +154,8 @@
   <button
     type="submit"
     class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
-    data-module="govuk-button">
+    data-module="govuk-button"
+    onclick="window.location.href='add-other-benefits'">
     Add and amend other benefits
   </button>
 
@@ -182,7 +183,7 @@
     <td class="govuk-table__cell">Input</td>
     <td class="govuk-table__cell">Input</td>
     <td class="govuk-table__cell">27/11/2025</td>
-    <td class="govuk-table__cell"> <a href="#" class="govuk-link">Delete</a></td>
+    <td class="govuk-table__cell"> <a href="other-benefits-empty" class="govuk-link">Delete</a></td>
   </tr>
 </tbody>
 </table>

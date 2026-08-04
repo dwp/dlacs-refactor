@@ -1,0 +1,116 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Disability Living Allowance for Children
+{% endblock %}
+
+{% block header %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{{
+  dwpHeader({
+    serviceName: "Disability Living Allowance for Children",
+    serviceHref: "#",
+    container: true
+  })
+}}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+        Welcome to DLA Child
+      </h1>
+
+      <p class="govuk-body-l govuk-!-margin-bottom-8">
+        Select a category
+      </p>
+
+    </div>
+  </div>
+
+
+
+
+<div class="dfe-grid-container">
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Register claim</a>
+            </h3>
+            <p>Register a new claim in DLAC</p>
+          </div>
+      </div>
+
+
+
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="access-a-registered-case" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Access a case</a>
+            </h3>
+            <p>View and amend cases, make new claim decisions and access notepad</p>
+          </div>
+      </div>
+  </div>
+
+
+
+
+  <div class="dfe-grid-container">
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Deregister a claim</a>
+            </h3>
+            <p>A short description for the card.</p>
+          </div>
+      </div>
+
+
+
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Record returned IOP details</a>
+            </h3>
+            <p>A short description for the card.</p>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+  <div class="dfe-grid-container">
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Management checks</a>
+            </h3>
+            <p>A short description for the card.</p>
+          </div>
+      </div>
+
+
+      
+      <div class="dfe-card">
+          <div class="dfe-card-container">
+            <h3 class="govuk-heading-m">
+                <a href="#" class="govuk-link govuk-link--no-visited-state dfe-card-link--header">Card title</a>
+            </h3>
+            <p>A short description for the card.</p>
+          </div>
+      </div>
+  </div>
+
+
+{% endblock %}
+

@@ -29,8 +29,8 @@
     <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
       <ul class="dwp-side-navigation__list">
         </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
+               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Case summary
           </a>
         </li>
@@ -55,8 +55,8 @@
             Delete decided claim
           </a>
         </li>
-               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
             Management unit transfer
           </a>
         </li>
@@ -103,121 +103,7 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
- <h1 class="govuk-heading-l">Management unit transfer</h1>
-
-<h2 class="govuk-heading-m">Name</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Title"
-      },
-      value: {
-        text: "Miss"
-      }
-    },
-    {
-      key: {
-        text: "Forename"
-      },
-      value: {
-        text: "Jane"
-      }
-    },
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "Smith"
-      }
-    },
-       {
-      key: {
-        text: "Other names"
-      },
-      value: {
-        text: "May"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "May"
-      }
-    }
-  ]
-}) }}
-
-<h2 class="govuk-heading-m">Name 2</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Title"
-      },
-      value: {
-        text: "Miss"
-      }
-    },
-    {
-      key: {
-        text: "Forename"
-      },
-      value: {
-        text: "Jane"
-      }
-    },
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "Smith"
-      }
-    },
-       {
-      key: {
-        text: "Other names"
-      },
-      value: {
-        text: "May"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "May"
-      }
-    }
-  ]
-}) }}
-
-{{ govukInput({
-  label: {
-    text: "New Management unit transfer"
-  },
-  classes: "govuk-input--width-5",
-  id: "width-5",
-  name: "width5"
-}) }}
-
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Save"
-}) }}
+ <h1 class="govuk-heading-l">Case summary</h1>
 
 
 </div>

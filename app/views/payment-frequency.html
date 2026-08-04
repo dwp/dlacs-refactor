@@ -131,6 +131,12 @@
 
 <div class="govuk-grid-column-three-quarters">
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
   
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
@@ -171,12 +177,12 @@
             
           <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
+          <td class="govuk-table__cell" style="width: 45%">Data value]</td>
           <td class="govuk-table__cell" style="width: 10%"></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Frequency</th>
-          <td class="govuk-table__cell">[Data value] </td>
+          <td class="govuk-table__cell">Data value] </td>
           <td class="govuk-table__cell"></td>
         </tr>
 
@@ -195,22 +201,21 @@
     Next
   </h2>
 
- {{ govukButton({
-  text: "Amend method of payment",
-  href: "/amend-mop",
-  classes: "govuk-button--secondary"
-}) }}
+  {{ govukButton({
+    text: "Amend method of payment",
+    classes: "govuk-button--secondary"
+  }) }}
 </div>
 
             
           <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
+          <td class="govuk-table__cell" style="width: 45%">Data value]</td>
           <td class="govuk-table__cell" style="width: 10%"></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Frequency</th>
-          <td class="govuk-table__cell">[Data value] </td>
+          <td class="govuk-table__cell">Data value] </td>
           <td class="govuk-table__cell"></td>
         </tr>
 
@@ -219,12 +224,9 @@
 
      <br>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Continue",
-  href: "/finalise-payment"
-}) }}
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue 
+</button>
 
   </div>
 

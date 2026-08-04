@@ -31,8 +31,6 @@
 
   </section>
 
-  <a href="/payment-details" class="govuk-back-link">Back</a>
-
   <h1 class="govuk-heading-l">Add account details</h1>
 
   <h1 class="govuk-heading-m">Bank or building society account details</h1>
@@ -60,13 +58,9 @@
     </label>
     <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
   </div>
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Save",
-  href: "/payment-account-details"
-}) }}
-
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Save
+  </button>
 
 
   </div>

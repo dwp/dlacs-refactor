@@ -5,15 +5,8 @@
 {% endblock %}
 
 {% block header %}
-{% from "internal-service-header/macro.njk" import dwpHeader %}
 
-{{
-        dwpHeader({
-            serviceName: "Disability Living Allowance for Children",
-            serviceHref: '#',
-            container: true
-        })
-}}
+{% include './includes/_header.html' %}
 
 
 {% endblock %}
@@ -40,17 +33,9 @@
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
 </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
- 
-{{ govukButton({
-  text: "Search",
-  href: "/case-summary"
-}) }}
- 
-
-
-
-
+<button type="submit" class="govuk-button" data-module="govuk-button">
+Search
+</button>
 
   </div>
 

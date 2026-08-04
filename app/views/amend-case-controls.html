@@ -29,7 +29,7 @@
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
   </section>
 
-  <a href="/case-controls" class="govuk-back-link">Back</a>
+  <a href="#" class="govuk-back-link">Back</a>
   <h1 class="govuk-heading-l">Amend case controls</h1>
 
 <p>Date</p>
@@ -87,7 +87,7 @@
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-      Section type
+      Section
     </th>
     <td class="govuk-table__cell">
       Placeholder content
@@ -96,12 +96,9 @@
 </tbody>
 </table>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Save",
-  href: "/case-controls"
-}) }}
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save
+</button>
 
   </div>
 

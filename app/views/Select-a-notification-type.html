@@ -34,7 +34,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "/notifications"
 }) }}
 
  {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -99,8 +99,10 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Continue"
+  text: "Save",
+  href: "/Confirm-notification-IF-address-autopopulated"
 }) }}
+
 
   
 

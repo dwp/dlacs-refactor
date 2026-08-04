@@ -37,10 +37,11 @@
     Notepad
   </h1>
 
-  {{ govukButton({
-    text: "Add a note",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
+{{ govukButton({
+  text: "Add a note",
+  href: "/add-note",
+  classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+}) }}
 
 
 </div>
@@ -57,17 +58,17 @@
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">5 October 2025</td>
       <td class="govuk-table__cell">IDV passed do not delete</td>
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">Amend</a> | <a href="#" class="govuk-link">Delete</a></td>
+      <td class="govuk-table__cell"><a href="amend-note" class="govuk-link">Amend</a> | <a href="delete-note" class="govuk-link">Delete</a></td>
     </tr>
     <tr class="govuk-table__row">
         <td class="govuk-table__cell">22 September 2025</td>
       <td class="govuk-table__cell">New case registered to case manager - via CAMLITE</td>
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">Amend</a> | <a href="#" class="govuk-link">Delete</a></td>
+      <td class="govuk-table__cell"><a href="amend-note" class="govuk-link">Amend</a> | <a href="delete-note" class="govuk-link">Delete</a></td>
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">14 July 2025</td>
       <td class="govuk-table__cell">New case registered to case manager - via CAMLITE</td>
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">Amend</a> | <a href="#" class="govuk-link">Delete</a></td>
+      <td class="govuk-table__cell"><a href="amend-note" class="govuk-link">Amend</a> | <a href="delete-note" class="govuk-link">Delete</a></td>
     </tr>
   </tbody>
 </table>

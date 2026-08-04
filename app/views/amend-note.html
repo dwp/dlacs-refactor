@@ -31,7 +31,7 @@
 
   </section>
 
-<a href="#" class="govuk-back-link">Back</a>
+<a href="/notepad" class="govuk-back-link">Back</a>
 
   <h1 class="govuk-heading-l">Amend note</h1>
 
@@ -55,9 +55,12 @@
     <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
   </div>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-Update
-</button>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/notepad"
+}) }}
 
 
   </div>

@@ -41,41 +41,14 @@
   align-items: flex-start;
 }
 
-.page-header {
+
+.app-content-action {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
 }
 
-@media (max-width: 40.0625em) {
-  .page-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .page-header .govuk-button {
-    margin-top: 15px;
-  }
-}
-
-
-.app-section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
-}
-
-
-.reference-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-
-.app-content-action {
+.app-heading-action {
   display: flex;
   justify-content: space-between;
   align-items: center;

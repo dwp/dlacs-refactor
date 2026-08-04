@@ -87,7 +87,7 @@
       actions: {
         items: [
           {
-            href: "#",
+            href: "/select-a-notification-type",
             text: "Amend",
             visuallyHiddenText: "date of birth"
           }
@@ -100,7 +100,8 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Send"
+  text: "Save",
+  href: "/notifications"
 }) }}
 
   

@@ -55,8 +55,8 @@
             Delete decided claim
           </a>
         </li>
-               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+        <li class="dwp-side-navigation__item">
+          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
             Management unit transfer
           </a>
         </li>
@@ -76,8 +76,8 @@
             Supplier agreement history
           </a>
         </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
+               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Motability payments
           </a>
         </li>
@@ -103,9 +103,19 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
- <h1 class="govuk-heading-l">Management unit transfer</h1>
 
-<h2 class="govuk-heading-m">Name</h2>
+<div class="page-header">
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
+    Motability payment
+  </h1>
+
+  {{ govukButton({
+    text: "View next payment",
+    href: "/next-payment",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+</div>
+
 
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
@@ -113,116 +123,206 @@
   rows: [
     {
       key: {
-        text: "Title"
+        text: "MOP"
       },
       value: {
-        text: "Miss"
+        text: "[populated]"
       }
     },
     {
       key: {
-        text: "Forename"
+        text: "Customer paid to"
       },
       value: {
-        text: "Jane"
+        text: "[populated]"
       }
     },
        {
       key: {
-        text: "Surname"
+        text: "Supplier paid to"
       },
       value: {
-        text: "Smith"
+        text: "[populated]"
       }
     },
        {
       key: {
-        text: "Other names"
+        text: "MOP award ends"
       },
       value: {
-        text: "May"
+        text: "[populated]"
+      }
+        },
+       {
+      key: {
+        text: "Safe date"
+      },
+      value: {
+        text: "[populated]"
       }
     },
        {
       key: {
-        text: "Requested name"
+        text: "Appointee"
       },
       value: {
-        text: "May"
+        text: "[populated]"
       }
     }
   ]
 }) }}
 
-<h2 class="govuk-heading-m">Name 2</h2>
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Title"
-      },
-      value: {
-        text: "Miss"
-      }
-    },
-    {
-      key: {
-        text: "Forename"
-      },
-      value: {
-        text: "Jane"
-      }
-    },
-       {
-      key: {
-        text: "Surname"
-      },
-      value: {
-        text: "Smith"
-      }
-    },
-       {
-      key: {
-        text: "Other names"
-      },
-      value: {
-        text: "May"
-      }
-    },
-       {
-      key: {
-        text: "Requested name"
-      },
-      value: {
-        text: "May"
-      }
-    }
-  ]
-}) }}
-
-{{ govukInput({
-  label: {
-    text: "New Management unit transfer"
-  },
-  classes: "govuk-input--width-5",
-  id: "width-5",
-  name: "width5"
-}) }}
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">References</h2>
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Save"
-}) }}
-
-
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
+  </a>
 </div>
 
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Customer Ref No.
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Agrmt Ref No.
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Join X-Ref No.
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+</dl>
+
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Provisional agreement</h2>
+
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
+  </a>
 </div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      From
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Cancel?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+</dl>
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Agreement</h2>
+
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
+  </a>
+</div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Agreement type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      From
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      To
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      4 weekly amount
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      No. of weekly payments
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Wheelchair?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Transferred agreement - pay supplier from
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
 
 {% endblock %}
 

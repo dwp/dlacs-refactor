@@ -126,19 +126,15 @@
   Suspend payments
 </h1>
 
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<div class="app-content-action">
   <p class="govuk-body govuk-!-margin-bottom-0">
     This payment is currently not suspended.
   </p>
 
-  <button
-    type="button"
-    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
-    data-module="govuk-button"
-    onclick="window.location.href='/suspend-payments-add'">
-    Suspend payment
-  </button>
+  {{ govukButton({
+    text: "Amend suspend payment",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
 </div>
     
   </div>

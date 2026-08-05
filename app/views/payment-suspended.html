@@ -125,17 +125,11 @@
     Suspend payments
   </h1>
 
-  <button
-    type="button"
-    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
-    data-module="govuk-button"
-    onclick="window.location.href='/suspend-payments-amend'">
-    Amend suspend payment
-  </button>
+  {{ govukButton({
+    text: "Amend suspend payment",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
 </div>
-
-<br>
-
 
 <table class="govuk-table">
   <tbody class="govuk-table__body">

@@ -16,7 +16,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
 
-    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+
+
+             <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
       data-target="dwp-side-navigation-panel"
       data-label-hide="Hide navigation"
       data-label-show="Show navigation"
@@ -28,14 +30,13 @@
     </button>
     <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
       <ul class="dwp-side-navigation__list">
-       
-               <li class="dwp-side-navigation__item">
+                    <li class="dwp-side-navigation__item">
           <a id="payment-details" href="payment-details" class="dwp-side-navigation__link">
             Payment details
           </a>
         </li>
-                <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="childs-payment-details" href="childs-payment-details" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+        <li class="dwp-side-navigation__item">
+          <a id="childs-payment-details" href="childs-payment-details" class="dwp-side-navigation__link">
             Childs payment details
           </a>
         </li>
@@ -54,17 +55,17 @@
             Overpayment and clerical calculations
           </a>
         </li>
-            <li class="dwp-side-navigation__item">
+                  <li class="dwp-side-navigation__item">
           <a id="control-details" href="control-details" class="dwp-side-navigation__link">
             Control details
           </a>
         </li>
-          <li class="dwp-side-navigation__item">
+                  <li class="dwp-side-navigation__item">
           <a id="deductions-from-underpayments" href="deductions-from-underpayments" class="dwp-side-navigation__link">
             Deductions from underpayment
           </a>
         </li>
-              <li class="dwp-side-navigation__item">
+          <li class="dwp-side-navigation__item">
           <a id="display-payments" href="display-payments" class="dwp-side-navigation__link">
             Payment recall
           </a>
@@ -74,13 +75,13 @@
             Suspend payments
           </a>
         </li>
-            <li class="dwp-side-navigation__item">
+                    <li class="dwp-side-navigation__item">
           <a id="boarder-payment" href="boarder-payment" class="dwp-side-navigation__link">
             Boarder payments
           </a>
         </li>
-            <li class="dwp-side-navigation__item">
-          <a id="authorisation-replacement-browse" href="authorisation-replacement-browse" class="dwp-side-navigation__link">
+            <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="authorisation-replacement-browse" href="authorisation-replacement-browse" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Authorise/refuse replacement
           </a>
         </li>
@@ -101,7 +102,7 @@
         </li>
       </ul>
     </nav>
-  </div>
+  </div>    
 
 
 
@@ -120,54 +121,9 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Childs payment details</h1>
-
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Payee name</th>
-        <td class="govuk-table__cell">Lucy Smith</td>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Relationship type</th>
-        <td class="govuk-table__cell">Claimant</td>
-      </tr>
-    </tbody>
-  </table>
-
-<br>
-
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-    <h2 class="govuk-heading-m">Account details</h2>
-              <a href="payment-change-account-details">
-                <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Change</span>
-              </a>
+  <h1 class="govuk-heading-l">Authorise replacement browse</h1>
 
 
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Account holder</th>
-          <td class="govuk-table__cell" style="width: 45%"> Miss Lucy Smith</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Sort code </th>
-          <td class="govuk-table__cell">54 76 98 </td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Account number</th>
-          <td class="govuk-table__cell">98765409</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
 
-      </tbody>
-    </table>
-
-  </div>
-
-</div>
 
 {% endblock %}

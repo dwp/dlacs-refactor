@@ -16,7 +16,7 @@
 <div class="govuk-grid-row">
 
 
-<div class="govuk-grid-column-full">
+<div class="govuk-grid-column-three-quarters">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -31,22 +31,32 @@
 
   </section>
 
-<a href="#" class="govuk-back-link">Back</a>
+  <a href="/clerical-calculation-summary" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Add reason for decision</h1>
+  <h1 class="govuk-heading-l">Reason</h1>
 
   <div class="govuk-form-group">
-    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </label>
+    <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort-code">
+      Enter year for reasons 520/920 or 531/532
+    </label>
+    <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
   </div>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-Save
-</button>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/add-calc-period"
+}) }}
+
 
 
   </div>
-
-
 
 </div>
 

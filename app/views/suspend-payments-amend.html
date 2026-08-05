@@ -28,12 +28,8 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+<a href="/payment-suspended" class="govuk-back-link">Back</a>
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
-}) }}
 
   <h1 class="govuk-heading-l">Suspend payments</h1>
   <label class="govuk-label" for="sort-code">
@@ -54,7 +50,24 @@
     },
     hint: {
       text: "For example, 27 3 2026"
-    }
+    },
+items: [
+  {
+    name: "day",
+    classes: "govuk-input--width-2",
+    value: "27"
+  },
+  {
+    name: "month",
+    classes: "govuk-input--width-2",
+    value: "3"
+  },
+  {
+    name: "year",
+    classes: "govuk-input--width-4",
+    value: "2026"
+  }
+]
   }) }}
 {% endset %}
 
@@ -68,6 +81,7 @@
     {
       value: "A",
       text: "A - Award",
+      checked: true,
       conditional: {
         html: awardDateHtml
       }
@@ -83,12 +97,15 @@
     <label class="govuk-label" for="sort-code">
       Reason for suspension
     </label>
-    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric" value="[input]">
   </div>
 
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-  Save 
-</button>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/suspend-payments"
+}) }}
 
 
 </div>

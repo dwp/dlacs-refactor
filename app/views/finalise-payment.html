@@ -131,14 +131,14 @@
 
 <div class="govuk-grid-column-three-quarters">
 
-  
+<a href="/payment-frequency" class="govuk-back-link">Back</a>
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 
           <div class="tab-header">
             <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
-              Payment frequency
+              Finalise payment
             </h2>
             
           </a>
@@ -153,10 +153,10 @@
   rows: [
     {
       key: {
-        text: "Paid up to"
+        text: "Payee name"
       },
       value: {
-        text: "[Data value]"
+        text: "Clair Smith"
       }
     }
       
@@ -165,66 +165,55 @@
 
  <br>
 
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-    <h2 class="govuk-heading-m">Current</h2>
-            
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Frequency</th>
-          <td class="govuk-table__cell">[Data value] </td>
-          <td class="govuk-table__cell"></td>
-        </tr>
 
-      </tbody>
-    </table>
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Due</th>
+      <th scope="col" class="govuk-table__header">MOP</th>
+      <th scope="col" class="govuk-table__header">Frequency</th>
+      <th scope="col" class="govuk-table__header">Period</th>
+      <th scope="col" class="govuk-table__header">Amount</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Y</td>
+      <td class="govuk-table__cell">AC</td>
+      <td class="govuk-table__cell">00</td>
+      <td class="govuk-table__cell">00/00/0000 to 00/00/0000</td>
+      <td class="govuk-table__cell">£100</td>
+        </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">N</td>
+      <td class="govuk-table__cell">AC</td>
+      <td class="govuk-table__cell">04</td>
+      <td class="govuk-table__cell">00/00/0000 to 00/00/0000</td>
+      <td class="govuk-table__cell">£100</td>
+        </thead>
+
+</table>
 
      <br>
 
-
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<div class="app-heading-action">
-  <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
-    Next
-  </h2>
+<div class="govuk-button-group">
 
- {{ govukButton({
-  text: "Amend method of payment",
-  href: "/amend-mop",
-  classes: "govuk-button--secondary"
-}) }}
+  {{ govukButton({
+    text: "Accept",
+    href: "/finalise-payment-success"
+  }) }}
+
+  {{ govukButton({
+    text: "Cancel",
+    href: "/payment-frequency",
+    classes: "govuk-button--secondary"
+  }) }}
+
 </div>
-
-            
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">MOP</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Frequency</th>
-          <td class="govuk-table__cell">[Data value] </td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-
-      </tbody>
-    </table>
-
-     <br>
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Continue",
-  href: "/finalise-payment"
-}) }}
 
   </div>
 

@@ -28,12 +28,8 @@
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+<a href="/display-payments" class="govuk-back-link">Back</a>
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
-}) }}
 
   <h1 class="govuk-heading-l">Recall payment</h1>
 
@@ -73,9 +69,13 @@
     <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
   </div>
 
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-  Recall 
-</button>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Recall",
+  href: "/display-payments"
+}) }}
 
 
 </div>

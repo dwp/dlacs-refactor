@@ -30,8 +30,12 @@
 
   </section>
 
-<a href="/payment-adjustment" class="govuk-back-link">Back</a>
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
   
 
 {% from "govuk/components/tabs/macro.njk" import govukTabs %}
@@ -127,24 +131,27 @@
 
 
 
-<div class="govuk-tabs">
-  <ul class="govuk-tabs__list">
+{{ govukTabs({
+  items: [
+    {
+      label: "Calculation breakdown",
+      id: "Calculation breakdown",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "Boarder breakdown",
+      id: "Boarder breakdown",
+      panel: {
+        html: pastWeekHtml
+      }
+    }
+  ]
+}) }}
 
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="/calculation-breakdown-tab">Calculation breakdown</a>
-    </li>
 
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
 
-      <a class="govuk-tabs__tab" href="/boarder-breakdown-tab">Boarder breakdown</a>
-    </li>
-
-  </ul>
-
-<div class="govuk-tabs__panel">
-  {{ pastDayHtml | safe }}
-
-</div>
 
 
   </div>

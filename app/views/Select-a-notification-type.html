@@ -54,44 +54,86 @@
       text: "Letter of entitlement"
     },
     {
-      value: "Payment letter",
-      text: "Payment letter"
+      value: "VED Certificate of Entitlement",
+      text: "VED Certificate of Entitlementr"
     },
     {
-      value: "VED certificate of entitlement",
-      text: "VED certificate of entitlement"
+      value: "DBD225A Parent Guardian responsbilities",
+      text: "DBD225A Parent Guardian responsbilities"
     },
       {
-      value: "DBD225A Parent Guardian responsibilities",
-      text: "DBD225A Parent Guardian responsibilities"
+      value: "BF57B Review of appointment to act (P/G)",
+      text: "BF57B Review of appointment to act (P/G)"
     },
       {
-      value: "BF57B Review of appointment to act (P/G) ",
-      text: "BF57B Review of appointment to act (P/G) "
+      value: "DBD955 Change of account details",
+      text: "DBD955 Change of account details"
+    }
+  ]
+}) }}
+
+    <h2 class="govuk-heading-m">Renewal and supersssion forms/notifications</h2>
+  {{ govukRadios({
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [  
+      {
+      value: "DBD138 DLA Nighttime needs",
+      text: "DBD138 DLA Nighttime needs"
     },
       {
+      value: "DBD73 Child renewal invite",
+      text: "DBD73 Child renewal invite"
+    },
+      {
+      value: "DBD420 Child/Adult supersession request",
+      text: "DBD420 Child/Adult supersession request"
+    }
+  ]
+}) }}
+
+    <h2 class="govuk-heading-m">Appeal/recon - enquiey forms/notifications</h2>
+  {{ govukRadios({
+  fieldset: {
+    legend: {
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [  
+      {
+      value: "DBD919 TS des rtd for corrective actions",
+      text: "DBD919 TS des rtd for corrective action"
+    },
+      {
+      value: "DBD4R Acknowledgment
+DBD4 Acknowledgment",
+      text: "DBD4R Acknowledgment
+DBD4 Acknowledgment"
+    },
+      {
+      value: "DBD303 Non-payee request",
+      text: "DBD303 Non-payee request"
+    },
+    {
+      value: "DBD304 Confirm non-payee permission (or can be req after DBD303)",
+      text: "DBD304 Confirm non-payee permission (or can be req after DBD303)"
+    },
+    {
       value: "PIPR11 Suspension",
       text: "PIPR11 Suspension"
     },
-      {
+    {
       value: "PIPR13 Termination",
       text: "PIPR13 Termination"
     },
-      {
+        {
       value: "PIPR14 Chooses not to claim PIP",
       text: "PIPR14 Chooses not to claim PIP"
-    },
-      {
-      value: "PIP182",
-      text: "PIP182"
-    },
-      {
-      value: "PIP183",
-      text: "PIP183"
-    },
-      {
-      value: "PIP184",
-      text: "PIP184"
     }
   ]
 }) }}
@@ -99,7 +141,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save",
+  text: "Continue",
   href: "/Confirm-notification-IF-address-autopopulated"
 }) }}
 

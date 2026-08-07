@@ -14,6 +14,23 @@
 {% block content %}
 
 <div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
 
 
@@ -90,13 +107,13 @@
             Clerical calculation
           </a>
         </li>
-                <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="payment-deductions" href="payment-deductions" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+          <li class="dwp-side-navigation__item">
+          <a id="payment-deductions" href="payment-deductions" class="dwp-side-navigation__link">
           Payment deductions
           </a>
         </li>
-             <li class="dwp-side-navigation__item">
-          <a id="payment-frequency" href="payment-frequency" class="dwp-side-navigation__link">
+          <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="payment-frequency" href="payment-frequency" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
             Finalise payment
           </a>
         </li>
@@ -108,61 +125,140 @@
 
 
 <div class="govuk-grid-column-three-quarters">
-  <section class="dwp-quick-reference" aria-label="Case information">
-    <dl class="dwp-quick-reference__block">
-      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
-      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
-      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
-      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
-      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
-    </dl>
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  
 
-  </section>
+{% from "govuk/components/table/macro.njk" import govukTable %}
 
-  <h1 class="govuk-heading-l">Payment deductions</h1>
 
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">MOP</th>
-        <td class="govuk-table__cell">Placeholder content</td>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Award ends</th>
-        <td class="govuk-table__cell">Placeholder content</td>
-      </tr>
-      <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Paid to</th>
-        <td class="govuk-table__cell">Placeholder content</td>
-      </tr>
-    </tbody>
-  </table>
+          <div class="tab-header">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
+              Recalcuation results
+            </h2>
+            
+          </a>
+          </div>
+
+
+          
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Change effective from"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "MOP"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "Paid up to"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "Status"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+      
+  ]
+}) }}
+
+     <br>
+[add in table]
+     <br>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Total"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+      
+  ]
+}) }}
+     <br>
+
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Clerical recall required?"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "Clerical calculation required"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "Type"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+        {
+      key: {
+        text: "Reason(s)"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    },
+            {
+      key: {
+        text: "Pay underpayment?"
+      },
+      value: {
+        text: "[Data value]"
+      }
+    }
+      
+  ]
+}) }}
+
+
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<div class="app-content-action">
-  <div>
-    <h2 class="govuk-heading-m">
-      Deductions
-    </h2>
-
-    <p class="govuk-body govuk-!-margin-bottom-0">
-      A payment deduction has not been recorded.
-    </p>
-  </div>
-
 {{ govukButton({
-  text: "Add a payment deduction",
-  href: "/payment-deductions-add",
-  classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  text: "Continue",
+  href: "/payment-frequency"
 }) }}
-</div>
 
   </div>
 

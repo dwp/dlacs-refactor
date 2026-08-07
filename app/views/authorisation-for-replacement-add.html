@@ -33,7 +33,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "authorisation-replacement-details"
 }) }}
 
   <h1 class="govuk-heading-l">Authorisation for replacement</h1>
@@ -46,7 +46,7 @@
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            A - Authomatic
+            A - Automatic
           </label>
         </div>
          <div class="govuk-radios__item">
@@ -68,9 +68,13 @@
 
 
 
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-  Save 
-</button>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/authorisation-replacement-details-added"
+}) }}
 
   </div>
 

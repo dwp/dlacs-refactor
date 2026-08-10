@@ -110,10 +110,6 @@
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
-}) }}
 
  <h1 class="govuk-heading-l">Delete decided claim</h1>
 
@@ -366,14 +362,13 @@ Country
 
 
 
-
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
   text: "Delete claim",
+  href: "delete-claim",
   classes: "govuk-button--warning"
 }) }}
-
 
 
 </div>

@@ -18,6 +18,7 @@
 
 
 
+
  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
       data-target="dwp-side-navigation-panel"
       data-label-hide="Hide navigation"
@@ -92,12 +93,14 @@
 
 
 
+
 <div class="govuk-grid-column-three-quarters">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
       <dd class="dwp-quick-reference__primary">Jane Smith</dd>
       <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
       <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
       <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
       <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
@@ -106,16 +109,18 @@
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "motability-payment-with-agreement"
+}) }}
+
+
 <div class="page-header">
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    Motability payment
+    Next payment
   </h1>
-
-  {{ govukButton({
-    text: "Add or amend payment",
-    href: "/amend-agreement",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
 </div>
 
 
@@ -165,7 +170,7 @@
     },
        {
       key: {
-        text: "Appointee"
+        text: "Supplier reference"
       },
       value: {
         text: "[populated]"
@@ -176,8 +181,12 @@
 
 
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">References</h2>
+  <h2 class="govuk-heading-m">Agreement details</h2>
 
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
   </a>
 </div>
 
@@ -190,66 +199,6 @@
       [input]
     </dd>
   </div>
-
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Agrmt Ref No.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Join X-Ref No.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-</dl>
-
-
-
-
-
-<div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">Provisional agreement</h2>
-
-  </a>
-</div>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      From
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Cancel?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-</dl>
-
-
-
-
-<div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">Agreement</h2>
-
-  </a>
-</div>
-
-<dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Agreement type
@@ -258,7 +207,117 @@
       [input]
     </dd>
   </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      From
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      To
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      4 weekly amount
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      No. of weekly payments
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+</dl>
 
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Termination</h2>
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
+  </a>
+</div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Reason
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+</dl>
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Renewal intentions</h2>
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
+  </a>
+</div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Renewal likely?
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Prov from
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+</dl>
+
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Next payment to supplier</h2>
+
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
+  </a>
+</div>
+
+<dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       From
@@ -277,9 +336,18 @@
     </dd>
   </div>
 
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Amount
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
    <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      4 weekly amount
+      To
     </dt>
     <dd class="govuk-summary-list__value">
       [input]
@@ -288,43 +356,27 @@
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      No. of weekly payments
+      Payment
     </dt>
     <dd class="govuk-summary-list__value">
       [input]
     </dd>
   </div>
-
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Wheelchair?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Transferred agreement - pay supplier from
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-  
 
  </dl>
 
-<div style="width: 100%; display: flex; justify-content: flex-end;">
-  {{ govukPagination({
-    next: {
-      labelText: "View next payment",
-      href: "next-payment"
-    }
-  }) }}
-</div>
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
+{{ govukPagination({
+  previous: {
+    labelText: "Previous payment",
+    href: "motability-payment-terminate"
+  },
+  next: {
+    labelText: "Next payment",
+    href: "#"
+  }
+}) }}
 
 {% endblock %}
 

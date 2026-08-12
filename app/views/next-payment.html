@@ -113,7 +113,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "motability-payment-with-agreement"
 }) }}
 
 
@@ -121,12 +121,6 @@
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
     Next payment
   </h1>
-
-  {{ govukButton({
-    text: "View next payment",
-    href: "/next-payment",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
 </div>
 
 
@@ -368,8 +362,21 @@
       [input]
     </dd>
   </div>
-  </div>
 
+ </dl>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    labelText: "Previous payment",
+    href: "motability-payment-with-agreement"
+  },
+  next: {
+    labelText: "Next payment",
+    href: "#"
+  }
+}) }}
 
 {% endblock %}
 

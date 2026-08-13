@@ -73,11 +73,47 @@
 <h3 class="govuk-heading-s">Entry 1</h3>
 
 <div class="govuk-form-group">
-<label class="govuk-label" for="width-5">
-Type
-</label>
-<input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+  <label class="govuk-label" for="sort">
+    Action
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Add</option>
+    <option value="comments">Update</option>
+    <option value="comments">Delete</option>
+    <option value="comments">No action</option>
+  </select>
 </div>
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Type
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Hospital
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          Scheduled accommodation and care
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
 
 </div>
 
@@ -149,18 +185,55 @@ Type
           </label>
           <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
           </div>
+
           <div class="govuk-form-group">
-          <label class="govuk-label" for="width-5">
-          Links period?
-          </label>
-          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
-          </div>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Links period?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
           <div class="govuk-form-group">
-          <label class="govuk-label" for="width-5">
-          Affects award?
-          </label>
-          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
-          </div>
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Affects award?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
 
           </div>
 

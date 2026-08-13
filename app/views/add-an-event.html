@@ -32,14 +32,73 @@
   <a href="event-maintenance" class="govuk-back-link">Back</a>
   <h1 class="govuk-heading-l">Add an event</h1>
 
-{{ govukInput({
-  label: {
-    text: "Events"
-  },
-  classes: "govuk-input--width-20",
-  id: "width-20",
-  name: "width20"
-}) }}
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Events
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="published">New claim</option>
+    <option value="published">New claim - Special Rules (SR)</option>
+    <option value="published">Duplicate claim</option>
+    <option value="published">Top up claim of care component - DLA only (Pre 5 April 1993)</option>
+    <option value="published">Top up claim of mobility component - DLA only (Pre 5 April 1993)</option>
+    <option value="published">Top up claim care (suspended) - DLA only (Pre 5 April 1993)</option>
+    <option value="published">Top up claim mobility (suspended) - DLA only (Pre 5 April 1993)</option>
+    <option value="published">Invite renewal</option>
+    <option value="published">Monitor renewal response</option>
+    <option value="published">Renewal claim both components - DLA only</option>
+    <option value="published">Renewal claim - DLA care or AA</option>
+    <option value="published">Renewal claim mobility - DLA only</option>
+    <option value="published">Renewal or review care - DLA only (Pre 18 October 1999) (replaced by 16)</option>
+    <option value="published">Renewal or Supersession - care component</option>
+    <option value="published">Renewal or Supersession - mobility component</option>
+    <option value="published">Supersession - age 3</option>
+    <option value="published">Review 1 - out of time (Pre 18 October 1999) (replaced by 27)</option>
+    <option value="published">Review 2 - in time (Pre 18 October 1999) (replaced by 26)</option>
+    <option value="published">Review - age 5 - DLA only (Pre 18 October 1999) (replaced by 28)</option>
+    <option value="published">Review - Secretary of State (Pre 18 October 1999) (replaced by 29)</option>
+    <option value="published">Explanation</option>
+    <option value="published">Reconsideration</option>
+    <option value="published">Supersession - change of circumstances or dispute</option> 
+    <option value="published">Supersession - age 5</option>
+    <option value="published">Supersession - Secretary of State</option>
+    <option value="published">Appeal - pending</option>
+    <option value="published">Appeal - registered</option>
+    <option value="published">Appeal - continued - DLA only</option>
+    <option value="published">Appeal - Social Security Commissioner (SSC)</option>
+    <option value="published">Appeal - Disability Appeals Tribunal (DAT) (Pre 18 October 1999) (replaced by 38)</option>
+    <option value="published">Appeal - Social Security Appeal Tribunal (SSAT) (Pre 18 October 1999) (replaced by 38)</option>
+    <option value="published">Appeal - MAT - DLA only (Pre 18 October 1999) (replaced by 38)</option>
+    <option value="published">Appeal - continuing</option> 
+    <option value="published">Appeal - Appeal Tribunal (AT)</option>
+    <option value="published">Appeal - Misconceived</option>
+    <option value="published">New Payee</option>
+    <option value="published">Notification of date of death (DoD)</option>
+    <option value="published">Change of MOP</option>
+    <option value="published">Boarder</option>
+    <option value="published">Lost, Non Receipt, Stolen instrument of payment (IOP)</option>
+    <option value="published">Returned IOP</option>
+    <option value="published">Outstanding mobility A claim - DLA only (Pre 18 October 1999)</option>
+    <option value="published">Outstanding AA claim - DLA only (Pre 18 October 1999)</option> 
+    <option value="published">Outstanding AA review or appeal - DLA only (Pre 18 October 1999)</option>
+    <option value="published">Manual Conversion - care component (dual beneficiary) - DLA only</option>
+    <option value="published">Manual Conversion - mobility component (dual beneficiary) - DLA only</option>
+    <option value="published">Manual Conversion of Disallowance - AA only</option>
+    <option value="published">Manual Conversion Attendance Allowance Unit (AAU) paid - AA only</option>
+    <option value="published">Manual Conversion: Care component - DLA only or Non AAU paid - AA only</option>
+    <option value="published">Manual Conversion - mobility component - DLA only</option>
+    <option value="published">Manual Conversion - both components - DLA only</option>
+    <option value="published">Other event</option>
+  </select>
+</div>
+
+
 
 <p>Receipt date</p>
 
@@ -173,23 +232,92 @@
     </fieldset>
   </div>
 
-{{ govukInput({
-  label: {
-    text: "Ev.c"
-  },
-  classes: "govuk-input--width-2",
-  id: "width-2",
-  name: "width2"
-}) }}
 
-{{ govukInput({
-  label: {
-    text: "Outcome"
-  },
-  classes: "govuk-input--width-2",
-  id: "width-2",
-  name: "width2"
-}) }}
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+     Evidence code
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Claim form only (with statement of disability with or without corroborative statement) No attachments.</option>
+    <option value="comments">Claim form (with or without statement of disability and corroborative statement) and further information from customer and/or another person. This can either be sent in with the claim form, or sent in later, but before the decision has been given.</option>
+    <option value="views">Claim form (with or without statement of disability and corroborative statement) and Health Care Professional (HCP) report.</option>
+    <option value="views">Claim form (with or without statement of disability and corroborative statement) and any non-fee paying factual report (inclusive of hospitals).</option>
+    <option value="views">Other</option>
+  </select>
+</div>
+
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Outcome
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Reduced</option>
+<option value="views">Reduction to lower rate care - DLA only</option>
+<option value="views">Reduction to lower rate mobility - DLA only</option>
+<option value="views">Reduction to lower rate both components - DLA only</option>
+<option value="views">Maintained</option>
+<option value="views">Varied</option>
+<option value="views">Increased</option>
+<option value="views">Lapsed</option>
+<option value="views">Allowed</option>
+<option value="views">Satisfied</option>
+<option value="views">Not satisfied</option>
+<option value="views">Written response</option>
+<option value="views">Withdrawn</option>
+<option value="views">Withdrawn appeal</option>
+<option value="views">Withdrawn appeal</option>
+<option value="views">Appeal to SSC</option>
+<option value="views">Appeal to DAT</option>
+<option value="views">Appeal to SSAT</option>
+<option value="views">Appeal to MAT</option>
+<option value="views">Appeal continuing</option>
+<option value="views">Appeal to AT</option>
+<option value="views">Defective</option>
+<option value="views">No grounds</option>
+<option value="views">Superseded</option>
+<option value="views">Disallowed</option>
+<option value="views">Misconceived</option>
+<option value="views">Rejected</option>
+<option value="views">Appeal valid</option>
+<option value="views">DMA Lapsed</option>
+<option value="views">Other</option>
+<option value="views">Renewal not continuing</option>
+<option value="views">Renewal pack clerically issued</option>
+<option value="views">Renewal pack system issued</option>
+<option value="views">Renewal of DLA registered</option>
+<option value="views">Renewal of care component registered</option>
+<option value="views">Renewal of mobility component registered - DLA only</option>
+<option value="views">Renewal supersession of care component - DLA only</option>
+<option value="views">Renewal supersession of mobility component - DLA only</option>
+<option value="views">Renewal cleared on registration of subsequent CC365</option>
+<option value="views">Renewal system cleared at end of entitlement</option>
+<option value="views">Renewal cleared due to DOD</option>
+<option value="views">Overpayment Recoverability</option>
+<option value="views">Award</option>
+<option value="views">Adjusted award</option>
+<option value="views">Disallowed on disability grounds</option>
+
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
 
 {{ govukRadios({
   name: "whereDoYouLive",

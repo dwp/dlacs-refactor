@@ -33,12 +33,22 @@
   <h1 class="govuk-heading-l">Add and amend evidence used</h1>
 
 
-  <div class="govuk-form-group">
-  <label class="govuk-label" for="width-5">
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
     Evidence code
   </label>
-  <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Claim form only (with statement of disability with or without corroborative statement) No attachments.</option>
+    <option value="comments">Claim form (with or without statement of disability and corroborative statement) and further information from customer and/or another person. This can either be sent in with the claim form, or sent in later, but before the decision has been given.</option>
+    <option value="views">Claim form (with or without statement of disability and corroborative statement) and Health Care Professional (HCP) report.</option>
+    <option value="views">Claim form (with or without statement of disability and corroborative statement) and any non-fee paying factual report (inclusive of hospitals).</option>
+    <option value="views">Other</option>
+  </select>
 </div>
+
+
+
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="check-hint">

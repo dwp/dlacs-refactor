@@ -1,0 +1,216 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Amend agreement – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block header %}
+  {% include './includes/_header.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <section class="dwp-quick-reference" aria-label="Case information">
+      <dl class="dwp-quick-reference__block">
+
+        <dd class="dwp-quick-reference__primary">
+          Miss Jane Smith
+        </dd>
+
+        <dd class="dwp-quick-reference__secondary">
+          <strong>National insurance number:</strong> QQ123456B
+        </dd>
+
+        <dd class="dwp-quick-reference__secondary">
+          <strong>Date of Birth:</strong> 09 May 2006
+          <strong class="govuk-tag">V</strong>
+        </dd>
+
+        <dd class="dwp-quick-reference__secondary">
+          <strong>Claim status:</strong>
+          <strong class="govuk-tag">R - REGISTERED</strong>
+        </dd>
+
+      </dl>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </section>
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "record-supplier-clerical-payment-empty"
+}) }}
+
+    <h1 class="govuk-heading-l">
+      Record a payment/recovery
+    </h1>
+
+    {{ govukInput({
+      id: "supplier-reference",
+      name: "supplierReference",
+      label: {
+        text: "Payment reason"
+      },
+      classes: "govuk-!-width-one-half",
+      value: ""
+    }) }}
+
+    <h2 class="govuk-heading-m">
+      Relevent details for supplier
+    </h2>
+
+    {{ govukDateInput({
+      id: "provisional-from",
+      namePrefix: "provisional-from",
+      fieldset: {
+        legend: {
+          text: "Date",
+          classes: "govuk-fieldset__legend--s"
+        }
+      },
+      items: [
+        {
+          name: "day",
+          classes: "govuk-input--width-2",
+          value: ""
+        },
+        {
+          name: "month",
+          classes: "govuk-input--width-2",
+          value: ""
+        },
+        {
+          name: "year",
+          classes: "govuk-input--width-4",
+          value: ""
+        }
+      ]
+    }) }}
+
+    {{ govukInput({
+      id: "weekly-amount",
+      name: "weeklyAmount",
+      label: {
+        text: "Amount"
+      },
+      prefix: {
+        text: "£"
+      },
+      value: "",
+      classes: "govuk-input--width-10"
+    }) }}
+
+    <h2 class="govuk-heading-m">
+      Payment/recovery period
+    </h2>
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-half">
+
+        {{ govukDateInput({
+          id: "agreement-from",
+          namePrefix: "agreement-from",
+          fieldset: {
+            legend: {
+              text: "From",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              name: "day",
+              classes: "govuk-input--width-2",
+              value: ""
+            },
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              value: ""
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4",
+              value: ""
+            }
+          ]
+        }) }}
+
+      </div>
+
+      <div class="govuk-grid-column-one-half">
+
+        {{ govukDateInput({
+          id: "agreement-to",
+          namePrefix: "agreement-to",
+          fieldset: {
+            legend: {
+              text: "To",
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              name: "day",
+              classes: "govuk-input--width-2",
+              value: ""
+            },
+            {
+              name: "month",
+              classes: "govuk-input--width-2",
+              value: ""
+            },
+            {
+              name: "year",
+              classes: "govuk-input--width-4",
+              value: ""
+            }
+          ]
+        }) }}
+
+      </div>
+
+    </div>
+
+    {{ govukInput({
+      id: "weekly-amount",
+      name: "weeklyAmount",
+      label: {
+        text: "Amount"
+      },
+      prefix: {
+        text: "£"
+      },
+      value: "",
+      classes: "govuk-input--width-10"
+    }) }}
+
+
+    {{ govukInput({
+      id: "agreement-type",
+      name: "agreementType",
+      label: {
+        text: "Cancel clerical payment?"
+      },
+      classes: "govuk-!-width-one-half",
+      value: ""
+    }) }}
+
+   {{ govukButton({
+  text: "Save",
+  href: "record-supplier-clerical-payment"
+}) }}
+
+  </div>
+</div>
+
+{% endblock %}

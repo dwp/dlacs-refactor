@@ -114,12 +114,6 @@
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
     Motability payment
   </h1>
-
-  {{ govukButton({
-    text: "Add or amend payment",
-    href: "/amend-agreement-terminate",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
 </div>
 
 
@@ -170,6 +164,13 @@
   ]
 }) }}
 
+<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+  {{ govukButton({
+    text: "Add or amend payment",
+    href: "/amend-agreement-terminate",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+</div>
 
 
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -359,6 +360,29 @@
     </dd>
   </div>
 </dl>
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "next-payment-terminate"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "next-payment-terminate"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 
 
 

@@ -110,6 +110,12 @@
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
     Motability payment
   </h1>
+
+  {{ govukButton({
+    text: "View next payment",
+    href: "/next-payment",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
 </div>
 
 
@@ -169,17 +175,13 @@
 }) }}
 
 
-<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-  {{ govukButton({
-    text: "Add or amend payment",
-    href: "/amend-agreement",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-</div>
-
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
   <h2 class="govuk-heading-m">References</h2>
 
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
   </a>
 </div>
 
@@ -219,6 +221,10 @@
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
   <h2 class="govuk-heading-m">Provisional agreement</h2>
 
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
   </a>
 </div>
 
@@ -248,6 +254,10 @@
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
   <h2 class="govuk-heading-m">Agreement</h2>
 
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">Amend</a>
+</p>
   </a>
 </div>
 
@@ -314,18 +324,6 @@
       [input]
     </dd>
   </div>
-  
-
- </dl>
-
-<div style="width: 100%; display: flex; justify-content: flex-end;">
-  {{ govukPagination({
-    next: {
-      labelText: "View next payment",
-      href: "next-payment"
-    }
-  }) }}
-</div>
 
 
 {% endblock %}

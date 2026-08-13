@@ -15,8 +15,7 @@
 
 <div class="govuk-grid-row">
 
-
-<div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-column-">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -28,33 +27,39 @@
     </dl>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
   </section>
 
-  <a href="/clerical-calculation-summary-empty" class="govuk-back-link">Back</a>
+<div style="background:#005ea5; padding:40px; color:white; margin-top:30px;">
 
-  <h1 class="govuk-heading-l">Reason</h1>
+  <h1 class="govuk-heading-xl" style="color:white;">
+    Are you sure you want to go to [screen name]?
+  </h1>
 
-  <div class="govuk-form-group">
-    </label>
-    <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
-  </div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="sort-code">
-      Enter year for reasons 520/920 or 531/532
-    </label>
-    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
-  </div>
+  <p class="govuk-body-l" style="color:white;">
+    The calculation periods you've entered will not be saved.
+  </p>
 
-
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Continue",
-  href: "/add-calc-period"
-}) }}
+  <p class="govuk-body-l" style="color:white;">
+    If you go to [screen name], your changes will be lost.
+  </p>
 
 
+  <a href="/clerical-calculation-summary"
+     role="button"
+     draggable="false"
+     class="govuk-button govuk-button--inverse">
+    Go to [screen name] without saving
+  </a>
+  <a href="/calc-period"
+   class="govuk-link"
+   style="color:white; margin-left:20px;">
+  Stay on [current screen]
+</a>
+
+ 
+</div>
+
+ 
 
   </div>
 

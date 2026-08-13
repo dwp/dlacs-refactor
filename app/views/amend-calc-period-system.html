@@ -35,18 +35,10 @@
 
 
         <div class="govuk-grid-column-full">
-  <a href="/reason" class="govuk-back-link">Back</a>
+  <a href="/amend-calc-period" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Add a calculation period</h1>
+  <h1 class="govuk-heading-l">Amend a calculation period</h1>
 
-{{ govukInput({
-  label: {
-    text: "Cmp"
-  },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
-}) }}
 
 </div>
         <div class="govuk-grid-column-one-half">
@@ -57,7 +49,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                      Day
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -65,7 +57,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                      Month
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -73,7 +65,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                      Year
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
                  </div>
                </div>
              </div>
@@ -88,7 +80,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
              Day
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -96,7 +88,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
              Month
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -104,7 +96,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
              Year
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
          </div>
        </div>
      </div>
@@ -112,38 +104,11 @@
 </div>
 
 
-
-  <div class="govuk-grid-column-full">
-       <h2 class="govuk-heading-m">Previous</h2>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
-
-
-    <div class="govuk-form-group">
-         <h2 class="govuk-heading-m">Due</h2>
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
-
-
-
-  <button type="button"
-    class="govuk-button govuk-button--secondary"
-    onclick="window.location.href='add-another-calc-period'">
-    Add another calculation period
-  </button>
-
   <br>
 
   {{ govukButton({
     text: "Continue",
-    href: "/calc-period"
+    href: "/amend-calc-period"
   }) }}
 
 </div>

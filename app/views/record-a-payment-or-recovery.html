@@ -47,55 +47,25 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "motability-payment-with-agreement"
+  href: "record-supplier-clerical-payment-empty"
 }) }}
 
     <h1 class="govuk-heading-l">
-      Amend agreement
+      Record a payment/recovery
     </h1>
 
     {{ govukInput({
       id: "supplier-reference",
       name: "supplierReference",
       label: {
-        text: "Supplier reference"
+        text: "Payment reason"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
-
-    {{ govukInput({
-      id: "customer-ref",
-      name: "customerRef",
-      label: {
-        text: "Customer Ref No."
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
-
-    {{ govukInput({
-      id: "agreement-ref",
-      name: "agreementRef",
-      label: {
-        text: "Agrmt Ref No."
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
-
-    {{ govukInput({
-      id: "join-xref",
-      name: "joinXRef",
-      label: {
-        text: "Join X-Ref No."
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: ""
     }) }}
 
     <h2 class="govuk-heading-m">
-      Provisional agreement
+      Relevent details for supplier
     </h2>
 
     {{ govukDateInput({
@@ -103,7 +73,7 @@
       namePrefix: "provisional-from",
       fieldset: {
         legend: {
-          text: "From",
+          text: "Date",
           classes: "govuk-fieldset__legend--s"
         }
       },
@@ -111,44 +81,37 @@
         {
           name: "day",
           classes: "govuk-input--width-2",
-          value: "00"
+          value: ""
         },
         {
           name: "month",
           classes: "govuk-input--width-2",
-          value: "00"
+          value: ""
         },
         {
           name: "year",
           classes: "govuk-input--width-4",
-          value: "0000"
+          value: ""
         }
       ]
     }) }}
 
     {{ govukInput({
-      id: "cancel",
-      name: "cancel",
+      id: "weekly-amount",
+      name: "weeklyAmount",
       label: {
-        text: "Cancel?"
+        text: "Amount"
       },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      prefix: {
+        text: "£"
+      },
+      value: "",
+      classes: "govuk-input--width-10"
     }) }}
 
     <h2 class="govuk-heading-m">
-      Agreement
+      Payment/recovery period
     </h2>
-
-    {{ govukInput({
-      id: "agreement-type",
-      name: "agreementType",
-      label: {
-        text: "Agreement Type"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
 
     <div class="govuk-grid-row">
 
@@ -167,17 +130,17 @@
             {
               name: "day",
               classes: "govuk-input--width-2",
-              value: "00"
+              value: ""
             },
             {
               name: "month",
               classes: "govuk-input--width-2",
-              value: "00"
+              value: ""
             },
             {
               name: "year",
               classes: "govuk-input--width-4",
-              value: "0000"
+              value: ""
             }
           ]
         }) }}
@@ -199,17 +162,17 @@
             {
               name: "day",
               classes: "govuk-input--width-2",
-              value: "00"
+              value: ""
             },
             {
               name: "month",
               classes: "govuk-input--width-2",
-              value: "00"
+              value: ""
             },
             {
               name: "year",
               classes: "govuk-input--width-4",
-              value: "0000"
+              value: ""
             }
           ]
         }) }}
@@ -222,48 +185,29 @@
       id: "weekly-amount",
       name: "weeklyAmount",
       label: {
-        text: "4 weekly amount"
+        text: "Amount"
       },
       prefix: {
         text: "£"
       },
-      value: "[input]",
+      value: "",
       classes: "govuk-input--width-10"
     }) }}
 
-    {{ govukInput({
-      id: "weekly-payments",
-      name: "weeklyPayments",
-      label: {
-        text: "No. of weekly pymnts"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
 
     {{ govukInput({
-      id: "wheelchair",
-      name: "wheelchair",
+      id: "agreement-type",
+      name: "agreementType",
       label: {
-        text: "Wheelchair?"
+        text: "Cancel clerical payment?"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
-
-    {{ govukInput({
-      id: "transferred-agreement",
-      name: "transferredAgreement",
-      label: {
-        text: "Transferred agreement - pay supplier from"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: ""
     }) }}
 
    {{ govukButton({
   text: "Save",
-  href: "motability-payment-with-agreement"
+  href: "record-supplier-clerical-payment"
 }) }}
 
   </div>

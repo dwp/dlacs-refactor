@@ -35,13 +35,27 @@
 
 
         <div class="govuk-grid-column-full">
-  <a href="/reason" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Add a calculation period</h1>
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Clerical calculation summary",
+      href: "/clerical-calculation-summary-empty"
+    },
+    {
+      text: "Reason",
+      href: "/Reason"
+    }
+  ]
+}) }}
+
+  <h1 class="govuk-heading-l">Record calculation</h1>
 
 {{ govukInput({
   label: {
-    text: "Cmp"
+    text: "Component"
   },
   id: "cmp",
   name: "cmp",
@@ -135,15 +149,15 @@
 
   <button type="button"
     class="govuk-button govuk-button--secondary"
-    onclick="window.location.href='add-another-calc-period'">
-    Add another calculation period
+    onclick="window.location.href='record-calc-another-503'">
+    Add another entry
   </button>
 
   <br>
 
   {{ govukButton({
     text: "Continue",
-    href: "/calc-period"
+    href: "/calc-period-503"
   }) }}
 
 </div>

@@ -35,9 +35,9 @@
 
 
         <div class="govuk-grid-column-full">
-  <a href="/amend-calc-period" class="govuk-back-link">Back</a>
+  <a href="/calc-period-604" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Amend a calculation period</h1>
+  <h1 class="govuk-heading-l">Amend calculation</h1>
 
 
 </div>
@@ -104,11 +104,20 @@
 </div>
 
 
+
+    <h1 class="govuk-label-wrapper">
+    <p>Net amount</p>
+  </h1>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+
   <br>
 
   {{ govukButton({
     text: "Continue",
-    href: "/amend-calc-period"
+    href: "/calc-period-604"
   }) }}
 
 </div>

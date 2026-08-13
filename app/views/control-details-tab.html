@@ -14,105 +14,8 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-quarter">
 
-    <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
-      data-target="dwp-side-navigation-panel"
-      data-label-hide="Hide navigation"
-      data-label-show="Show navigation"
-      aria-expanded="false">
-      <span class="dwp-side-navigation__section-toggle-focus">
-        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
-        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
-      </span>
-    </button>
-    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
-      <ul class="dwp-side-navigation__list">
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
-            Payment details
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-2" href="#s-item-2" class="dwp-side-navigation__link">
-            Childs payment details
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-3" href="#s-item-3" class="dwp-side-navigation__link">
-            Payment history
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-4" href="#s-item-4" class="dwp-side-navigation__link">
-            Payment breakdown
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-5" href="#s-item-5" class="dwp-side-navigation__link">
-            Payment location
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-6" href="#s-item-6" class="dwp-side-navigation__link">
-            Payment adjustment
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-7" href="#s-item-7" class="dwp-side-navigation__link">
-            Overpayment and clerical calculations
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
-          <a id="s-item-1" href="#s-item-1" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
-            Control details
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-9" href="#s-item-9" class="dwp-side-navigation__link">
-            Deductions from underpayment
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-10" href="#s-item-10" class="dwp-side-navigation__link">
-            Payment recall
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-11" href="#s-item-11" class="dwp-side-navigation__link">
-            Suspend payments
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-12" href="#s-item-12" class="dwp-side-navigation__link">
-            Boarder payments
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-13" href="#s-item-13" class="dwp-side-navigation__link">
-            Authorise/refuse replacement
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-14" href="#s-item-14" class="dwp-side-navigation__link">
-          Payment deductions
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-15" href="#s-item-15" class="dwp-side-navigation__link">
-            Clerical calculation
-          </a>
-        </li>
-        <li class="dwp-side-navigation__item">
-          <a id="s-item-16" href="#s-item-16" class="dwp-side-navigation__link">
-            Finalise payment
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
-<div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-column-">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -127,9 +30,31 @@
 
   </section>
 
-  <h1 class="govuk-heading-l">Control details</h1>
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
-  <table class="govuk-table">
+{{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+  
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set pastDayHtml %}
+
+
+
+
+
+          <div class="tab-header">
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
+              Control detais
+            </h2>
+          </a>
+          </div>
+
+ <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">IOP issued</th>
@@ -303,6 +228,50 @@
 
       </tbody>
     </table>
+
+  </div>
+
+</div>
+
+
+
+{% endset -%}
+
+
+
+
+
+
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Payment breakdown",
+      id: "Payment breakdown",
+      panel: {
+        html: pastDayHtml
+      }
+    },
+    {
+      label: "Payment location",
+      id: "Payment location",
+      panel: {
+        html: pastWeekHtml
+      }
+    },
+    {
+      label: "Control details",
+      id: "Control details",
+      panel: {
+        html: pastMonthHtml
+      }
+    }
+  ]
+}) }}
+
+
+
+
 
   </div>
 

@@ -15,7 +15,8 @@
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-">
+
+<div class="govuk-grid-column-full">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -27,43 +28,25 @@
     </dl>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
   </section>
 
-<div style="background:#005ea5; padding:40px; color:white; margin-top:30px;">
+<a href="#" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-xl" style="color:white;">
-    Are you sure you want to force claim closure?
-  </h1>
+  <h1 class="govuk-heading-l">Are you sure you want to force claim closure?</h1>
 
-  <p class="govuk-body-l" style="color:white;">
-    Once you close the claim it will be removed.
-  </p>
-
-  <p class="govuk-body-l" style="color:white;">
-    You cannot undo this change.
-  </p>
+  <p>This action will permanently close the claim and cannot be undone.</p>
 
 
-  <a href="/event-maintenance"
-     role="button"
-     draggable="false"
-     class="govuk-button govuk-button--inverse">
-    Force claim closure
-  </a>
-  <a href="/event-maintenance"
-   class="govuk-link"
-   style="color:white; margin-left:20px;">
-  Go back to event maintenance
-</a>
+  <button type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Close claim
+  </button>
 
- 
-</div>
-
- 
 
   </div>
+
+
 
 </div>
 
 {% endblock %}
-

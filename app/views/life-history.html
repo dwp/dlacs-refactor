@@ -79,51 +79,37 @@
   <h1 class="govuk-heading-l">Life history</h1>
 
 
-  {{ govukSummaryList({
-  rows: [
-    {
-      key: { text: "Date of birth" },
-      value: { text: "09/05/2006" }
-    },
-    {
-      key: { text: "Verification type" },
-      value: { text: "[populated]" }
-    },
-    {
-      key: { text: "Requested" },
-      value: { text: "Y" },
-      actions: {
-        items: [
-          {
-            href: "life-history-requested",
-            text: "Amend"
-          }
-        ]
-      }
-    }
-  ]
-}) }}
+  <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Date of birth</th>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Verification type</th>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Requested</th>
+        <td class="govuk-table__cell"><a href="#" class="govuk-link">Amend</a> </td>
+        <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+  </table>
 
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Date of death"
-      },
-      value: {
-        text: ""
-      }
-    },
-    {
-      key: {
-        text: "Verification type"
-      },
-      value: {
-        text: "[populated]"
-      }
-    }
-  ]
-}) }}
+  <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Date of death</th>
+        <td class="govuk-table__cell"></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Verification type</th>
+        <td class="govuk-table__cell"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 
 </div>
 

@@ -295,8 +295,7 @@ Payment
   <button
     type="submit"
     class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
-    data-module="govuk-button"
-    onclick="window.location.href='add-an-event'">
+    data-module="govuk-button">
     Add and amend evidence
   </button>
 </div>
@@ -325,7 +324,7 @@ Payment
                   <td class="govuk-table__cell">[input]</td>
                       <td class="govuk-table__cell">[input]</td>
                           <td class="govuk-table__cell">[input]</td>
-      <td class="govuk-table__cell"><a href="link" class="govuk-link">Clear</a> | <a href="deregister-event" class="govuk-link">Deregister</a></td>
+      <td class="govuk-table__cell"><a href="link" class="govuk-link">Amend</a> | <a href="ilink" class="govuk-link">Delete</a></td>
     </tr>
    </thead>
   <tbody class="govuk-table__body">
@@ -337,7 +336,7 @@ Payment
                   <td class="govuk-table__cell">[input]</td>
                       <td class="govuk-table__cell">[input]</td>
                           <td class="govuk-table__cell">[input]</td>
-      <td class="govuk-table__cell"><a href="link" class="govuk-link">Clear</a> | <a href="deregister-event" class="govuk-link">Deregister</a></td>
+      <td class="govuk-table__cell"><a href="link" class="govuk-link">Amend</a> | <a href="ilink" class="govuk-link">Delete</a></td>
     </tr>
       </thead>
   <tbody class="govuk-table__body">
@@ -349,7 +348,7 @@ Payment
                   <td class="govuk-table__cell">[input]</td>
                       <td class="govuk-table__cell">[input]</td>
                           <td class="govuk-table__cell">[input]</td>
-      <td class="govuk-table__cell"><a href="link" class="govuk-link">Clear</a> | <a href="deregister-event" class="govuk-link">Deregister</a></td>
+      <td class="govuk-table__cell"><a href="link" class="govuk-link">Amend</a> | <a href="ilink" class="govuk-link">Delete</a></td>
     </tr>
 </table>
 
@@ -388,7 +387,6 @@ Suppress no change letter?
 
 {{ govukButton({
   text: "Force claim closure",
-  href: "/force-claim-closure",
   classes: "govuk-button--warning"
 }) }}
 

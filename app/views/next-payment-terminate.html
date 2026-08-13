@@ -19,7 +19,7 @@
 
 
 
-  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+ <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
       data-target="dwp-side-navigation-panel"
       data-label-hide="Hide navigation"
       data-label-show="Show navigation"
@@ -109,10 +109,17 @@
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "motability-payment-with-agreement"
+}) }}
+
 
 <div class="page-header">
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    Motability payment
+    Next payment
   </h1>
 </div>
 
@@ -147,7 +154,7 @@
     },
        {
       key: {
-        text: "Safe date"
+        text: "MOP award ends"
       },
       value: {
         text: "[populated]"
@@ -155,7 +162,15 @@
         },
        {
       key: {
-        text: "Appointee"
+        text: "Safe date"
+      },
+      value: {
+        text: "[populated]"
+      }
+    },
+       {
+      key: {
+        text: "Supplier reference"
       },
       value: {
         text: "[populated]"
@@ -164,98 +179,21 @@
   ]
 }) }}
 
-<div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-  {{ govukButton({
-    text: "Add or amend payment",
-    href: "/amend-agreement-terminate",
-    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-  }) }}
-</div>
-
 
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">Contra agrmt</h2>
+  <h2 class="govuk-heading-m">Agreement details</h2>
+
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
   </a>
 </div>
 
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      EDD
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Cancel contra agrmt?
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-</dl>
-
-
-
-<div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">References</h2>
-  </a>
-</div>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Supplier reference
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Customer ref no.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Agrmt ref no.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-    <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Join x-ref no.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      [input]
-    </dd>
-  </div>
-</dl>
-
-
-
-
-
-
-
-
-<div style="display: flex; justify-content: space-between; align-items: baseline;">
-  <h2 class="govuk-heading-m">Agreement</h2>
-
-  </a>
-</div>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Orig prov from
+      Customer Ref No.
     </dt>
     <dd class="govuk-summary-list__value">
       [input]
@@ -306,9 +244,13 @@
 
 
 
+
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
   <h2 class="govuk-heading-m">Termination</h2>
 
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
   </a>
 </div>
 
@@ -334,11 +276,12 @@
 
 
 
-
-
 <div style="display: flex; justify-content: space-between; align-items: baseline;">
   <h2 class="govuk-heading-m">Renewal intentions</h2>
 
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
   </a>
 </div>
 
@@ -361,34 +304,79 @@
   </div>
 </dl>
 
-{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+  <h2 class="govuk-heading-m">Next payment to supplier</h2>
+
+
+    <p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state"></a>
+</p>
+  </a>
+</div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      From
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      To
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Amount
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      To
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Payment
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [input]
+    </dd>
+  </div>
+
+ </dl>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
 {{ govukPagination({
-  next: {
-    href: "next-payment-terminate"
+  previous: {
+    labelText: "Previous payment",
+    href: "motability-payment-terminate"
   },
-  items: [
-    {
-      number: 1,
-      current: true,
-      href: "#"
-    },
-    {
-      number: 2,
-      href: "next-payment-terminate"
-    },
-    {
-      number: 3,
-      href: "#"
-    }
-  ]
+  next: {
+    labelText: "Next payment",
+    href: "#"
+  }
 }) }}
-
-
-
-
-
-
 
 {% endblock %}
 

@@ -171,10 +171,13 @@
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Record agreement",
-  classes: "govuk-button--secondary"
-}) }}
+<div style="text-align: right;">
+  {{ govukButton({
+    text: "Record agreement",
+    href: "record-an-agreement",
+    classes: "govuk-button--secondary"
+  }) }}
+</div>
 
 </div>
 

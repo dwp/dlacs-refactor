@@ -109,10 +109,6 @@
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
-}) }}
 
  <h1 class="govuk-heading-l">Delete interest or undecided claim</h1>
 
@@ -373,6 +369,7 @@ Country code
 
 {{ govukButton({
   text: "Delete claim",
+  href: "delete-interest",
   classes: "govuk-button--warning"
 }) }}
 

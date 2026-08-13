@@ -34,7 +34,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "historical-personal-details"
 }) }}
   
 
@@ -51,9 +51,6 @@
             <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
               Historical name
             </h2>
-            <a class="govuk-link" href="/previous-name">
-              View previous name
-            </a>
           </a>
           </div>
 
@@ -167,6 +164,30 @@
     }
   ]
 }) }}
+
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 {% endset -%}
 
 
@@ -183,24 +204,24 @@
 
 
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Historical name",
-      id: "Historical name",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "Historical address",
-      id: "Historical addres",
-      panel: {
-        html: pastWeekHtml
-      }
-    }
-  ]
-}) }}
+<div class="govuk-tabs">
+  <ul class="govuk-tabs__list">
+
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="/historical-name">Historical name</a>
+    </li>
+
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="/historical-address">Historical address</a>
+    </li>
+
+  </ul>
+
+<div class="govuk-tabs__panel">
+  {{ pastDayHtml | safe }}
+
+</div>
+
 
 
 

@@ -136,13 +136,20 @@
 
 <br>
 
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-    <h2 class="govuk-heading-m">Account details</h2>
-              <a href="payment-change-account-details">
-                <span class="govuk-link govuk-!-font-size-19" style="margin-left: 90%">Amend</span>
-              </a>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-50">Account details</h2>
 
+  <button
+    type="button"
+    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-30"
+    data-module="govuk-button"
+    onclick="window.location.href='payment-add-account-details'">
+    Add or amend account details
+  </button>
+</div>
+
+    <table class="govuk-table">
+      <tbody class="govuk-table__body"
 
           <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 45%">Account holder</th>

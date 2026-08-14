@@ -369,13 +369,26 @@
 
 {{ govukPagination({
   previous: {
-    labelText: "Previous payment",
     href: "motability-payment-with-agreement"
   },
   next: {
-    labelText: "Next payment",
-    href: "#"
-  }
+    href: "next-payment"
+  },
+  items: [
+    {
+      number: 1,
+      href: "motability-payment-with-agreement"
+    },
+    {
+      number: 2,
+      current: true,
+      href: "next-payment"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
 }) }}
 
 {% endblock %}

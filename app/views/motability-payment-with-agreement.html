@@ -318,14 +318,28 @@
 
  </dl>
 
-<div style="width: 100%; display: flex; justify-content: flex-end;">
-  {{ govukPagination({
-    next: {
-      labelText: "View next payment",
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "next-payment"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "motability-payment-with-agreement"
+    },
+    {
+      number: 2,
       href: "next-payment"
+    },
+    {
+      number: 3,
+      href: "#"
     }
-  }) }}
-</div>
+  ]
+}) }}
 
 
 {% endblock %}

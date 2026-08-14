@@ -166,14 +166,13 @@
 }) }}
 
 
-<p class="govuk-body">An agreement has not been recorded.</p>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <p class="govuk-body" style="margin-bottom: 0;">
+    An agreement has not been recorded.
+  </p>
 
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<div style="text-align: right;">
   {{ govukButton({
-    text: "Record agreement",
+    text: "Add or amend agreement",
     href: "record-an-agreement",
     classes: "govuk-button--secondary"
   }) }}

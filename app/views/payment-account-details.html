@@ -136,8 +136,24 @@
 
 <br>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h2 class="govuk-heading-m govuk-!-margin-bottom-50">Account details</h2>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="app-heading-action">
+  <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+    Account details
+  </h2>
+  <button
+    type="button"
+    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+    data-module="govuk-button"
+    onclick="window.location.href='/payment-add-account-details'">
+    Add or amend account details
+  </button>
+</div>
 
   <button
     type="button"

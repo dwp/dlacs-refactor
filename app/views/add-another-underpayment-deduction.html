@@ -35,32 +35,91 @@
 
 
         <div class="govuk-grid-column-full">
-  <a href="/reason" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Add a calculation period</h1>
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Clerical calculation summary",
+      href: "/clerical-calculation-summary"
+    },
+    {
+      text: "Calculation period",
+      href: "/calc-period-800"
+    },
+    {
+      text: "Deduct from underpayment",
+      href: "/deduct-from-underpayment-empty"
+    }
+  ]
+}) }}
+
+  <h1 class="govuk-heading-l">Add an underpayment deduction</h1>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-<h2 class="govuk-heading-m">Calculation period 1</h2>
+<h2 class="govuk-heading-m">Entry 1</h2>
 
   <button
     type="button"
     class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
     data-module="govuk-button"
-    onclick="window.location.href='/payment-add-account-details'">
+    onclick="window.location.href='/add-underpayment-deduction'">
     Delete
   </button>
 </div>
 
-{{ govukInput({
-  label: {
-    text: "Cmp"
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Select an option",
+      isPageHeading: true,
+      classes: "govuk-heading-m" 
+    }
   },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
+  items: [
+    {
+      value: "Adj. Type",
+      text: "Adj. Type"
+    },
+    {
+      value: "Rec. AAC",
+      text: "Rec. AAC"
+    }
+  ]
 }) }}
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        Recovery Alt. NINO
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+    </div>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="cost">
+    Deduction amount/Weekly rate
+  </label>
+
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input
+      class="govuk-input govuk-input--width-10"
+      id="cost"
+      name="cost"
+      type="text"
+      spellcheck="false">
+  </div>
 </div>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-6">
+  Period for weekly rate
+</h2>
+
         <div class="govuk-grid-column-one-half">
             <p>From</p>
           <div class="govuk-date-input" id="passport-issued">
@@ -126,48 +185,73 @@
 
 
   <div class="govuk-grid-column-full">
-       <h2 class="govuk-heading-m">Previous</h2>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
-
-
-    <div class="govuk-form-group">
-         <h2 class="govuk-heading-m">Due</h2>
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
+  
 
       <br>
 
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-         <h2 class="govuk-heading-m">Calculation period 2</h2>
+         <h2 class="govuk-heading-m">Entry 2</h2>
 
   <button
     type="button"
     class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
     data-module="govuk-button"
-    onclick="window.location.href='/payment-add-account-details'">
+    onclick="window.location.href='/add-underpayment-deduction'">
     Delete
   </button>
 </div>
 
-{{ govukInput({
-  label: {
-    text: "Cmp"
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Select an option",
+      isPageHeading: true,
+      classes: "govuk-heading-m" 
+    }
   },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
+  items: [
+    {
+      value: "Adj. Type",
+      text: "Adj. Type"
+    },
+    {
+      value: "Rec. AAC",
+      text: "Rec. AAC"
+    }
+  ]
 }) }}
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-10">
+        Recovery Alt. NINO
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+    </div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="cost">
+    Deduction amount/Weekly rate
+  </label>
+
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input
+      class="govuk-input govuk-input--width-10"
+      id="cost"
+      name="cost"
+      type="text"
+      spellcheck="false">
+  </div>
 </div>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-6">
+  Period for weekly rate
+</h2>
+
         <div class="govuk-grid-column-one-half">
             <p>From</p>
           <div class="govuk-date-input" id="passport-issued">
@@ -233,35 +317,19 @@
 
 
   <div class="govuk-grid-column-full">
-       <h2 class="govuk-heading-m">Previous</h2>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
-
-
-    <div class="govuk-form-group">
-         <h2 class="govuk-heading-m">Due</h2>
-      <label class="govuk-label" for="width-10">
-        Rate
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-    </div>
-
+      
 
   <button type="button"
     class="govuk-button govuk-button--secondary"
-    onclick="window.location.href='add-another-calc-period'">
-    Add another entitlement
+    onclick="window.location.href='add-another-underpayment-deduction'">
+    Add another entry
   </button>
 
   <br>
 
   {{ govukButton({
     text: "Continue",
-    href: "/calc-period"
+    href: "/deduct-from-underpayment"
   }) }}
 
 </div>

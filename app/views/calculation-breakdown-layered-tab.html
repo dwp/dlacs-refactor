@@ -30,11 +30,19 @@
 
   </section>
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-{{ govukBackLink({
-  text: "Back",
-  href: "#"
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Payment history",
+      href: "/payment-history"
+    },
+    {
+      text: "Payment breakdown",
+      href: "payment-breakdown"
+    }
+  ]
 }) }}
   
 
@@ -49,7 +57,7 @@
 
           <div class="tab-header">
             <h1 class="govuk-heading-l govuk-!-margin-bottom-!-margin-bottom-0">
-              Payment location
+              Calculation breakdown
             </h2>
           </a>
           </div>
@@ -60,33 +68,68 @@
   rows: [
     {
       key: {
-        text: "MOP"
+        text: "Reason"
       },
       value: {
-        text: "AC"
+        text: "[Placeholder]"
       }
     },
        {
       key: {
-        text: "Payment from"
+        text: "Decision (previous)"
       },
       value: {
-        text: "12 Jan 2026"
+        text: "[Placeholder]"
       }
     },
        {
       key: {
-        text: "Payment from"
+        text: "Decision (due)"
       },
       value: {
-        text: "14 Jan 2025"
+        text: "[Placeholder]"
       }
     }
   ]
 }) }}
 
 
-<h2 class="govuk-heading-m">Payee</h2>
+
+ <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Comp</th>
+      <th scope="col" class="govuk-table__header">Calculation period from</th>
+      <th scope="col" class="govuk-table__header">Calculation period to</th>
+      <th scope="col" class="govuk-table__header">Wks</th>
+      <th scope="col" class="govuk-table__header">Previous rate/Wkly amt</th>
+      <th scope="col" class="govuk-table__header">Previous rate/Wkly amt</th>
+      <th scope="col" class="govuk-table__header">Net amount</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">[Placeholder]</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">[Placeholder]</td>
+      <td class="govuk-table__cell">[Placeholder]</td>
+     <td class="govuk-table__cell">[Placeholder]</td>
+     <td class="govuk-table__cell">[Placeholder]</td>
+    </tr>
+      <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">[Placeholder]</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">[Placeholder]</td>
+      <td class="govuk-table__cell">[Placeholder]</td>
+     <td class="govuk-table__cell">[Placeholder]</td>
+     <td class="govuk-table__cell">[Placeholder]</td>
+    </tr>
+  </tbody>
+</table>
 
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
@@ -94,129 +137,50 @@
   rows: [
     {
       key: {
-        text: "Payee surname"
+        text: "Total"
       },
       value: {
-        text: "Doe"
+        text: "[Placeholder]"
       }
     },
        {
       key: {
-        text: "Payee first name"
+        text: "Deductions (previous)"
       },
       value: {
-        text: "John"
+        text: "[Placeholder]"
       }
     },
        {
       key: {
-        text: "Payee type"
+        text: "Payment total"
       },
       value: {
-        text: "[example data]"
-      }
-    },
-       {
-      key: {
-        text: "Address"
-      },
-      value: {
-        html: "72 Guild Street<br>London<br>SE23 6FH"
+        text: "[Placeholder]"
       }
     }
   ]
 }) }}
-
-
-<h2 class="govuk-heading-m">Direct payment details</h2>
-
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Account name"
-      },
-      value: {
-        text: "Mrs Claire Smith"
-      }
-    },
-       {
-      key: {
-        text: "Sort code"
-      },
-      value: {
-        text: "000000"
-      }
-    },
-       {
-      key: {
-        text: "Account number"
-      },
-      value: {
-        text: "123456"
-      }
-    },
-       {
-      key: {
-        text: "Building society roll number"
-      },
-      value: {
-        text: "[exmple]"
-      }
-    },
-       {
-      key: {
-        text: "Bank or building society name"
-      },
-      value: {
-        text: "[exmple]"
-      }
-    },
-       {
-      key: {
-        text: "Branch title"
-      },
-      value: {
-        text: "[exmple]"
-      }
-    }
-  ]
-}) }}
-
-
 
 
 {% endset -%}
 
 
 
-
-
-
-
 {{ govukTabs({
   items: [
     {
-      label: "Payment breakdown",
+      label: "Calculation breakdown",
       id: "Payment breakdown",
       panel: {
         html: pastDayHtml
       }
     },
     {
-      label: "Payment location",
+      label: "Boarder breakdown",
       id: "Payment location",
       panel: {
         html: pastWeekHtml
-      }
-    },
-    {
-      label: "Control details",
-      id: "Control details",
-      panel: {
-        html: pastMonthHtml
       }
     }
   ]

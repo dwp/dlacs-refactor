@@ -31,36 +31,41 @@
 
   </section>
 
-  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  <a href="/childs-payment-details" class="govuk-back-link">Back</a>
 
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Clerical calculation summary",
-      href: "/clerical-calculation-summary-empty"
-    }
-  ]
-}) }}
+  <h1 class="govuk-heading-l">Add or amend account details</h1>
 
-  <h1 class="govuk-heading-l">Reason</h1>
-
+  <h1 class="govuk-heading-m">Bank or building society account details</h1>
   <div class="govuk-form-group">
+    <label class="govuk-label" for="name-on-the-account">
+      Name on the account
+    </label>
+    <input class="govuk-input" id="name-on-the-account" name="nameOnTheAccount" type="text" spellcheck="false" autocomplete="name">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort-code">
+      Sort code
+    </label>
+    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="account-number">
+      Account number
     </label>
     <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
   </div>
   <div class="govuk-form-group">
-    <label class="govuk-label" for="sort-code">
-      Enter year for reasons 520/920 or 531/532
+    <label class="govuk-label" for="roll-number">
+      Building society roll number
     </label>
-    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+    <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
   </div>
-
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Continue",
-  href: "/record-calc-503"
+  text: "Save",
+  href: "/child-payment-account-details"
 }) }}
 
 

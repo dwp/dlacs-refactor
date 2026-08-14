@@ -60,7 +60,8 @@
     </label>
     <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
   </div>
-{% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
   text: "Save",

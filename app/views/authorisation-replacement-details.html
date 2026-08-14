@@ -177,25 +177,25 @@
       </tbody>
   </table>    
 
-     <h2 class="govuk-heading-m">Authorisation for replacement</h2>
+     <h2 class="govuk-heading-m">Payment period</h2>
 
+  <div class="govuk-grid-row">
 
-  {{ govukSummaryList({
-  rows: [
-    {
-      key: { text: "Paid to" },
-      value: { text: "" },
-      actions: {
-        items: [
-          {
-            href: "authorisation-for-replacement-add",
-            text: "Amend"
-          }
-        ]
-      }
-    }
-  ]
-}) }}
+  <div class="govuk-grid-column-one-half">
+    <p class="govuk-body">
+      An authorisation for replacement has not been recorded.
+    </p>
+  </div>
+
+  <div class="govuk-grid-column-one-half" style="text-align: right;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button"
+      onclick="window.location.href='/authorisation-for-replacement-add'">
+      Authorisation for replacement
+    </button>
+  </div>
 
 
 {% endblock %}

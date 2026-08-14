@@ -35,70 +35,10 @@
 
 
         <div class="govuk-grid-column-full">
+  <a href="/amend-calc-period" class="govuk-back-link">Back</a>
 
-{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  <h1 class="govuk-heading-l">Amend a calculation period</h1>
 
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Clerical calculation summary",
-      href: "/clerical-calculation-summary"
-    },
-    {
-      text: "Calculation period",
-      href: "/calc-period-800"
-    },
-    {
-      text: "Deduct from underpayment",
-      href: "/deduct-from-underpayment-empty"
-    }
-  ]
-}) }}
-
-  <h1 class="govuk-heading-l">Add an underpayment deduction</h1>
-
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  name: "whereDoYouLive",
-  fieldset: {
-    legend: {
-      text: "Select an option",
-      isPageHeading: true,
-      classes: "govuk-heading-m" 
-    }
-  },
-  items: [
-    {
-      value: "Adj. Type",
-      text: "Adj. Type"
-    },
-    {
-      value: "Rec. AAC",
-      text: "Rec. AAC"
-    }
-  ]
-}) }}
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="cost">
-    Deduction amount/Weekly rate
-  </label>
-
-  <div class="govuk-input__wrapper">
-    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-    <input
-      class="govuk-input govuk-input--width-10"
-      id="cost"
-      name="cost"
-      type="text"
-      spellcheck="false">
-  </div>
-</div>
-
-<h2 class="govuk-heading-m govuk-!-margin-top-6">
-  Period for weekly rate
-</h2>
 
 </div>
         <div class="govuk-grid-column-one-half">
@@ -109,7 +49,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                      Day
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -117,7 +57,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                      Month
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -125,7 +65,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                      Year
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
                  </div>
                </div>
              </div>
@@ -140,7 +80,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
              Day
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -148,7 +88,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
              Month
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -156,7 +96,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
              Year
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
          </div>
        </div>
      </div>
@@ -164,18 +104,11 @@
 </div>
 
 
-
-  <button type="button"
-    class="govuk-button govuk-button--secondary"
-    onclick="window.location.href='/add-another-underpayment-deduction'">
-    Add another entry
-  </button>
-
   <br>
 
   {{ govukButton({
     text: "Continue",
-    href: "/deduct-from-underpayment"
+    href: "/amend-calc-period"
   }) }}
 
 </div>

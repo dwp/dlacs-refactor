@@ -31,16 +31,7 @@
 
   </section>
 
-  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Clerical calculation summary",
-      href: "/clerical-calculation-summary-empty"
-    }
-  ]
-}) }}
+  <a href="/clerical-calculation-summary-empty" class="govuk-back-link">Back</a>
 
   <h1 class="govuk-heading-l">Reason</h1>
 
@@ -60,7 +51,7 @@
 
 {{ govukButton({
   text: "Continue",
-  href: "/record-calc-503"
+  href: "/add-calc-period"
 }) }}
 
 

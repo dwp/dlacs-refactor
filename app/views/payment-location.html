@@ -34,7 +34,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "payment-history"
 }) }}
   
 
@@ -195,32 +195,29 @@
 
 
 
+<div class="govuk-tabs">
+  <ul class="govuk-tabs__list">
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Payment breakdown",
-      id: "Payment breakdown",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "Payment location",
-      id: "Payment location",
-      panel: {
-        html: pastWeekHtml
-      }
-    },
-    {
-      label: "Control details",
-      id: "Control details",
-      panel: {
-        html: pastMonthHtml
-      }
-    }
-  ]
-}) }}
+<li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="/payment-breakdown">Payment breakdown</a>
+
+    </li>
+
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+<a class="govuk-tabs__tab" href="/payment-location">Payment location</a>
+    </li>
+
+<li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="/control-details-tab">Control details</a>
+
+    </li>
+
+  </ul>
+
+  <div class="govuk-tabs__panel">
+    {{ pastDayHtml | safe }}
+  </div>
+</div>
 
 
 

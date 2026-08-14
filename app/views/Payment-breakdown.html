@@ -34,7 +34,7 @@
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "payment-history"
 }) }}
   
 
@@ -141,7 +141,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">01</a></td>
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">01</a></td>
       <td class="govuk-table__cell">£32.00</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
@@ -150,7 +150,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">02</a></td>
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">02</a></td>
       <td class="govuk-table__cell">£32.00</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
@@ -159,7 +159,7 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="#" class="govuk-link">03</a></td>
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">03</a></td>
       <td class="govuk-table__cell">£32.00</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
       <td class="govuk-table__cell">12 Jan 2026</td>
@@ -178,33 +178,32 @@
 
 
 
+<div class="govuk-tabs">
+  <ul class="govuk-tabs__list">
+
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+
+  <a class="govuk-tabs__tab" href="/payment-breakdown">Payment breakdown</a>
+
+    </li>
+
+<li class="govuk-tabs__list-item">
+<a class="govuk-tabs__tab" href="/payment-location">Payment location</a>
+    </li>
+
+    <li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="/control-details-tab">Control details</a>
+
+    </li>
+
+  </ul>
+
+  <div class="govuk-tabs__panel">
+    {{ pastDayHtml | safe }}
+  </div>
+</div>
 
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Payment breakdown",
-      id: "Payment breakdown",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "Payment location",
-      id: "Payment location",
-      panel: {
-        html: pastWeekHtml
-      }
-    },
-    {
-      label: "Control details",
-      id: "Control details",
-      panel: {
-        html: pastWeekHtml
-      }
-    }
-  ]
-}) }}
 
 
 

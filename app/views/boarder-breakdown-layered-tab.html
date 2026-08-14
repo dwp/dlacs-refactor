@@ -133,24 +133,24 @@
 
 
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Calculation breakdown",
-      id: "Payment breakdown",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "Boarder breakdown",
-      id: "Payment location",
-      panel: {
-        html: pastWeekHtml
-      }
-    }
-  ]
-}) }}
+<div class="govuk-tabs">
+  <ul class="govuk-tabs__list">
+<li class="govuk-tabs__list-item">
+
+  <a class="govuk-tabs__tab" href="/calculation-breakdown-layered-tab">Calculation breakdown</a>
+
+    </li>
+
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+<a class="govuk-tabs__tab" href="/boarder-breakdown-layered-tab">Boarder breakdown</a>
+    </li>
+
+  </ul>
+
+  <div class="govuk-tabs__panel">
+    {{ pastDayHtml | safe }}
+  </div>
+</div>
 
 
 

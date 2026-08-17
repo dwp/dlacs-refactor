@@ -105,3 +105,32 @@
 .govuk-table {
   max-width: 760px;
 }
+
+
+
+
+.service-tile {
+  border-top: 1px solid #b1b4b6;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  min-height: 180px;
+  position: relative;
+}
+
+.service-tile__link {
+  display: block;
+  position: relative;
+  padding-right: 24px;
+  text-decoration-thickness: max(1px, .0625rem);
+}
+
+.service-tile__link::after {
+  content: "›";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #505a5f;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 300;
+}

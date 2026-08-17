@@ -5,8 +5,15 @@
 {% endblock %}
 
 {% block header %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
 
-{% include './includes/_header.html' %}
+{{
+        dwpHeader({
+            serviceName: "Disability Living Allowance for Children",
+            serviceHref: '#',
+            container: true
+        })
+}}
 
 
 {% endblock %}
@@ -15,10 +22,12 @@
 
 <div class="govuk-grid-row">
 
+
 <div class="govuk-grid-column-full">
 
+<a href="home" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Cases for checking</h1>
+<h1 class="govuk-heading-xl">Cases for checking</h1>
 
   <table class="govuk-table">
   <thead class="govuk-table__head">
@@ -146,6 +155,8 @@
 </nav>
 
   </div>
+
+
 
 </div>
 

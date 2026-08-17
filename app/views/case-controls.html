@@ -15,7 +15,7 @@
 
 <div class="govuk-grid-row">
 
-<div class="govuk-grid-column-">
+<div class="govuk-grid-column-full">
   <section class="dwp-quick-reference" aria-label="Case information">
     <dl class="dwp-quick-reference__block">
       <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
@@ -38,14 +38,16 @@
     Case controls
   </h1>
 
-{{ govukButton({
-  text: "Add new case control",
-  href: "/add-case-controls",
-  classes: "govuk-button--secondary govuk-!-margin-bottom-0"
-}) }}
+  {{ govukButton({
+    text: "Add new case control",
+    href: "/add-case-controls",
+    classes: "govuk-button--secondary govuk-!-margin-bottom-0"
+  }) }}
+
 </div>
 
-  <table class="govuk-table">
+
+  <table class="govuk-table" style="width: 100%;">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Date</th>

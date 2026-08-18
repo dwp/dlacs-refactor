@@ -110,9 +110,12 @@
   },
   items: [
     {
+      value: "",
+      text: "Select an option"
+    },
+    {
       value: "published",
-      text: "Y",
-      selected: true
+      text: "Y"
     },
     {
       value: "updated",
@@ -121,23 +124,27 @@
   ]
 }) }}
 
+
 {{ govukSelect({
   id: "sort",
   name: "sort",
   label: {
-    text: "Exportability indicator"
+    text: "Alternative format flag"
   },
-  items: [
-    {
-      value: "published",
-      text: "02",
-      selected: true
-    },
-    {
-      value: "updated",
-      text: "01"
-    }
-  ]
+items: [
+  {
+    value: "",
+    text: "Select an option"
+  },
+  {
+    value: "published",
+    text: "02"
+  },
+  {
+    value: "updated",
+    text: "01"
+  }
+]
 }) }}
 
 

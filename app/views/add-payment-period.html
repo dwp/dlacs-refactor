@@ -37,627 +37,880 @@
         <div class="govuk-grid-column-full">
   <a href="boarder-payment" class="govuk-back-link">Back</a>
 
-  <h1 class="govuk-heading-l">Add and amend payment period</h1>
+  <h1 class="govuk-heading-l">Add or amend payment period</h1>
 </div>
 
 
 
 </div>
 
-<div style="display:flex; align-items:flex-start; gap:40px;">
-    <div class="govuk-grid-column-one-half">
-      <p>From</p>
-    <div class="govuk-date-input" id="passport-issued">
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-               Day
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-           </div>
-         </div>
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-               Month
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-           </div>
-         </div>
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-               Year
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-           </div>
-         </div>
-       </div>
-       </div>
 
+<div style="display:flex; align-items:flex-start; width:100%;">
 
-<div class="govuk-grid-column-one-half">
-<p>To</p>
-<div class="govuk-date-input" id="passport-issued">
- <div class="govuk-date-input__item">
-   <div class="govuk-form-group">
-     <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-       Day
-     </label>
-     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-   </div>
- </div>
- <div class="govuk-date-input__item">
-   <div class="govuk-form-group">
-     <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-       Month
-     </label>
-     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-   </div>
- </div>
- <div class="govuk-date-input__item">
-   <div class="govuk-form-group">
-     <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-       Year
-     </label>
-     <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-   </div>
- </div>
-</div>
-</div>
-  </div>
+  <div style="flex:1;">
+    <p>From</p>
 
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
 
-       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-         Delete
-       </button>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
 
- </div>   
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-        <p>From</p>
-      <div class="govuk-date-input" id="passport-issued">
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                 Day
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-             </div>
-           </div>
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                 Month
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-             </div>
-           </div>
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                 Year
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-             </div>
-           </div>
-         </div>
-
-         <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-           Delete
-         </button>
-
-
-  </div>
-
-  <div class="govuk-grid-column-one-half">
-  <p>To</p>
-  <div class="govuk-date-input" id="passport-issued">
-   <div class="govuk-date-input__item">
-     <div class="govuk-form-group">
-       <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-         Day
-       </label>
-       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-     </div>
-   </div>
-   <div class="govuk-date-input__item">
-     <div class="govuk-form-group">
-       <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-         Month
-       </label>
-       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-     </div>
-   </div>
-   <div class="govuk-date-input__item">
-     <div class="govuk-form-group">
-       <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-         Year
-       </label>
-       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-     </div>
-   </div>
-  </div>
-  </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-          <p>From</p>
-        <div class="govuk-date-input" id="passport-issued">
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                   Day
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-               </div>
-             </div>
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                   Month
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-               </div>
-             </div>
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                   Year
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-               </div>
-             </div>
-           </div>
-
-           <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-             Delete
-           </button>
-
-
-    </div>
-
-    <div class="govuk-grid-column-one-half">
+  <div style="flex:1;">
     <p>To</p>
-    <div class="govuk-date-input" id="passport-issued">
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-           Day
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-       </div>
-     </div>
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-           Month
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-       </div>
-     </div>
-     <div class="govuk-date-input__item">
-       <div class="govuk-form-group">
-         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-           Year
-         </label>
-         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-       </div>
-     </div>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
       </div>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-            <p>From</p>
-          <div class="govuk-date-input" id="passport-issued">
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                     Day
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                 </div>
-               </div>
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                     Month
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                 </div>
-               </div>
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                     Year
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                 </div>
-               </div>
-             </div>
-
-             <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-               Delete
-             </button>
-
-
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
       </div>
 
-      <div class="govuk-grid-column-one-half">
-      <p>To</p>
-      <div class="govuk-date-input" id="passport-issued">
-       <div class="govuk-date-input__item">
-         <div class="govuk-form-group">
-           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-             Day
-           </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-         </div>
-       </div>
-       <div class="govuk-date-input__item">
-         <div class="govuk-form-group">
-           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-             Month
-           </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-         </div>
-       </div>
-       <div class="govuk-date-input__item">
-         <div class="govuk-form-group">
-           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-             Year
-           </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-         </div>
-       </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
       </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
         </div>
+      </div>
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-half">
-              <p>From</p>
-            <div class="govuk-date-input" id="passport-issued">
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                       Day
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                       Month
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                       Year
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-               </div>
-
-               <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                 Delete
-               </button>
-
-
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="govuk-grid-column-one-half">
-        <p>To</p>
-        <div class="govuk-date-input" id="passport-issued">
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-               Day
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-           </div>
-         </div>
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-               Month
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-           </div>
-         </div>
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-               Year
-             </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-           </div>
-         </div>
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
         </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
         </div>
-          </div>
+      </div>
 
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-half">
-                <p>From</p>
-              <div class="govuk-date-input" id="passport-issued">
-                   <div class="govuk-date-input__item">
-                     <div class="govuk-form-group">
-                       <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                         Day
-                       </label>
-                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                     </div>
-                   </div>
-                   <div class="govuk-date-input__item">
-                     <div class="govuk-form-group">
-                       <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                         Month
-                       </label>
-                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                     </div>
-                   </div>
-                   <div class="govuk-date-input__item">
-                     <div class="govuk-form-group">
-                       <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                         Year
-                       </label>
-                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                     </div>
-                   </div>
-                 </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
 
-                 <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                   Delete
-                 </button>
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
 
+</div>
 
-          </div>
+<div style="display:flex; align-items:flex-start; width:100%;">
 
-          <div class="govuk-grid-column-one-half">
-          <p>To</p>
-          <div class="govuk-date-input" id="passport-issued">
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                 Day
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-             </div>
-           </div>
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                 Month
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-             </div>
-           </div>
-           <div class="govuk-date-input__item">
-             <div class="govuk-form-group">
-               <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                 Year
-               </label>
-               <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-             </div>
-           </div>
-          </div>
-          </div>
-            </div>
+  <div style="flex:1;">
+    <p>From</p>
 
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-half">
-                  <p>From</p>
-                <div class="govuk-date-input" id="passport-issued">
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-                         <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                           Day
-                         </label>
-                         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                       </div>
-                     </div>
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-                         <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                           Month
-                         </label>
-                         <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                       </div>
-                     </div>
-                     <div class="govuk-date-input__item">
-                       <div class="govuk-form-group">
-                         <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                           Year
-                         </label>
-                         <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                       </div>
-                     </div>
-                   </div>
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
 
-                   <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                     Delete
-                   </button>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
 
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
 
-            </div>
+  <div style="flex:1;">
+    <p>To</p>
 
-            <div class="govuk-grid-column-one-half">
-            <p>To</p>
-            <div class="govuk-date-input" id="passport-issued">
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                   Day
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-               </div>
-             </div>
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                   Month
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-               </div>
-             </div>
-             <div class="govuk-date-input__item">
-               <div class="govuk-form-group">
-                 <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                   Year
-                 </label>
-                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-               </div>
-             </div>
-            </div>
-            </div>
-              </div>
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
 
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-half">
-                    <p>From</p>
-                  <div class="govuk-date-input" id="passport-issued">
-                       <div class="govuk-date-input__item">
-                         <div class="govuk-form-group">
-                           <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                             Day
-                           </label>
-                           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                         </div>
-                       </div>
-                       <div class="govuk-date-input__item">
-                         <div class="govuk-form-group">
-                           <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                             Month
-                           </label>
-                           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                         </div>
-                       </div>
-                       <div class="govuk-date-input__item">
-                         <div class="govuk-form-group">
-                           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                             Year
-                           </label>
-                           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                         </div>
-                       </div>
-                     </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
 
-                     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                       Delete
-                     </button>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
 
-              </div>
+</div>
 
-              <div class="govuk-grid-column-one-half">
-              <p>To</p>
-              <div class="govuk-date-input" id="passport-issued">
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                     Day
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                 </div>
-               </div>
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                     Month
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                 </div>
-               </div>
-               <div class="govuk-date-input__item">
-                 <div class="govuk-form-group">
-                   <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                     Year
-                   </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                 </div>
-               </div>
-              </div>
-              </div>
-                </div>
+<div style="display:flex; align-items:flex-start; width:100%;">
 
+  <div style="flex:1;">
+    <p>From</p>
 
-                <div class="govuk-grid-row">
-                  <div class="govuk-grid-column-one-half">
-                      <p>From</p>
-                    <div class="govuk-date-input" id="passport-issued">
-                         <div class="govuk-date-input__item">
-                           <div class="govuk-form-group">
-                             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                               Day
-                             </label>
-                             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                           </div>
-                         </div>
-                         <div class="govuk-date-input__item">
-                           <div class="govuk-form-group">
-                             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                               Month
-                             </label>
-                             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                           </div>
-                         </div>
-                         <div class="govuk-date-input__item">
-                           <div class="govuk-form-group">
-                             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                               Year
-                             </label>
-                             <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                           </div>
-                         </div>
-                       </div>
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
 
-                       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                         Delete
-                       </button>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
 
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
 
-                </div>
+  <div style="flex:1;">
+    <p>To</p>
 
-                <div class="govuk-grid-column-one-half">
-                <p>To</p>
-                <div class="govuk-date-input" id="passport-issued">
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                       Day
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                       Month
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-                 <div class="govuk-date-input__item">
-                   <div class="govuk-form-group">
-                     <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                       Year
-                     </label>
-                     <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                   </div>
-                 </div>
-                </div>
-                </div>
-                  </div>
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div><div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
+
+<div style="display:flex; align-items:flex-start; width:100%;">
+
+  <div style="flex:1;">
+    <p>From</p>
+
+    <div class="govuk-date-input" id="from-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-day" type="text">
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="from-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="from-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="from-year" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="flex:1;">
+    <p>To</p>
+
+    <div class="govuk-date-input" id="to-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-day" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="to-month" type="text" >
+        </div>
+      </div>
+
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="to-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="to-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding-top:68px; margin-left:40px;">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+
+</div>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

@@ -1,0 +1,562 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{{
+        dwpHeader({
+            serviceName: "Disability Living Allowance for Children",
+            serviceHref: '#',
+            container: true
+        })
+}}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-full">
+
+<a href="register-claim" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Child details</h1>
+
+ <h2 class="govuk-heading-m">Name one</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Miss
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Forename
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Jane
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Surname
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Smith
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other names
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Requested name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+</dl>
+
+ <h2 class="govuk-heading-m">Name two</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Miss
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Forename
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Chloe
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Surname
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Smith
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other names
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Requested name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+</dl>
+
+ <h2 class="govuk-heading-m">Further personal details</h2>
+
+ 
+<dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Sex
+    </dt>
+    <dd class="govuk-summary-list__value">
+      F
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Preferred language
+    </dt>
+    <dd class="govuk-summary-list__value">
+      English
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Nationality type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Great Britain
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      9 May 2006
+    </dd>
+    <dd class="govuk-summary-list__actions">
+<strong class="govuk-tag">
+  Verified
+</strong>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of death
+    </dt>
+    <dd class="govuk-summary-list__value">
+      
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+        <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Scottish
+    </dt>
+    <dd class="govuk-summary-list__value">
+      N
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+</dl>
+
+
+ <h2 class="govuk-heading-m">Address</h2>
+
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Residential
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Normal
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country
+    </dt>
+    <dd class="govuk-summary-list__value">
+      England
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Correspondence
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Normal
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country
+    </dt>
+    <dd class="govuk-summary-list__value">
+      England
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+</dl>
+
+
+
+<h2 class="govuk-heading-m">Contact</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      077123456
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Mobile
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+<h1 class="govuk-heading-xl">Relationship details</h1>
+
+ <h2 class="govuk-heading-m">Name one</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Miss
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Forename
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Jane
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Surname
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Smith
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other names
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Requested name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+</dl>
+
+ <h2 class="govuk-heading-m">Name two</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Miss
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Forename
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Chloe
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Surname
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Smith
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other names
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Requested name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+</dl>
+
+ <h2 class="govuk-heading-m">Further personal details</h2>
+
+ 
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Preferred language
+    </dt>
+    <dd class="govuk-summary-list__value">
+      English
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      9 May 2006
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+</dl>
+
+
+ <h2 class="govuk-heading-m">Address</h2>
+
+<dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Residential
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Normal
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country
+    </dt>
+    <dd class="govuk-summary-list__value">
+      England
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Correspondence
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+      <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Normal
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Country
+    </dt>
+    <dd class="govuk-summary-list__value">
+      England
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+</dl>
+
+
+
+<h2 class="govuk-heading-m">Contact</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      077123456
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Mobile
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/reg-claim-case-details"
+}) }}
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}

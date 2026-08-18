@@ -20,20 +20,22 @@
 
   <div class="govuk-panel govuk-panel--confirmation">
             <h1 class="govuk-panel__title">
-              Case registered
+              Details entered
             </h1>
-            <div class="govuk-panel__body">
-              National Insurance number<br><strong>QQ 12 34 56 X</strong>
-            </div>
           </div>
-          <p class="govuk-body">This case is now registered. Go back to the homepage to access the registered claim and open the notepad.</p>
+          <p class="govuk-body">Content</p>
 
-          <button type="submit" class="govuk-button" data-module="govuk-button">
-          Return to homepage
-          </button>
+ 
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "CTA",
+  href: "/home"
+}) }}
+
+  </div>
 
 
-        </div>
 
 </div>
 

@@ -27,7 +27,8 @@
 
 <a href="home" class="govuk-back-link">Back</a>
 
-<h1 class="govuk-heading-xl">Search for a child</h1>
+<h1 class="govuk-heading-xl">Register claim</h1>
+<span class="govuk-caption-xl">Search for a child</span>
 
 <div class="govuk-form-group">
   <label class="govuk-label" for="national-insurance-number">
@@ -39,9 +40,12 @@
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
 </div>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-Search
-</button>
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Search",
+  href: "/reg-claim-child-details-pg"
+}) }}
 
   </div>
 

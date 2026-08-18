@@ -1,0 +1,99 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{{
+        dwpHeader({
+            serviceName: "Disability Living Allowance for Children",
+            serviceHref: '#',
+            container: true
+        })
+}}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+<div class="govuk-grid-column-full">
+
+<a href="reg-claim-case-details.html" class="govuk-back-link">Back</a>
+
+<h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+<h2 class="govuk-heading-m">Case details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Receipt date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      3 Jan 2026
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Effective date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 Jan 2025
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Flags
+    </dt>
+    <dd class="govuk-summary-list__value">
+      BCF
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Alternative format flag
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Exportability indicator
+    </dt>
+    <dd class="govuk-summary-list__value">
+      02
+    </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Suppress acknowledgement 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Y
+    </dd>
+  </div>
+</dl>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Register claim",
+  href: "/reg-claim-success"
+}) }}
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}

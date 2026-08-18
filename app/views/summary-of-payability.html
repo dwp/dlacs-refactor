@@ -203,8 +203,128 @@
     <td class="govuk-table__cell">£59.78</td>
     <td class="govuk-table__cell">N99</td>
 </tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">4</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">5</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">6</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">7</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">8</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">9</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
+<tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><p class="govuk-body">
+  <a href="component-details" class="govuk-link govuk-link--no-visited-state">10</a>
+</p></td>
+    <td class="govuk-table__cell">19/11/24 to 14/02/25</td>
+    <td class="govuk-table__cell">Q02</td>
+    <td class="govuk-table__cell">N</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">H</td>
+    <td class="govuk-table__cell">X</td>
+    <td class="govuk-table__cell">£59.78</td>
+    <td class="govuk-table__cell">N99</td>
+</tbody>
 </table>
 
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 
 </div>
 

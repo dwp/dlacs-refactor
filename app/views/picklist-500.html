@@ -1,0 +1,221 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+
+  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+      data-target="dwp-side-navigation-panel"
+      data-label-hide="Hide navigation"
+      data-label-show="Show navigation"
+      aria-expanded="false">
+      <span class="dwp-side-navigation__section-toggle-focus">
+        <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+        <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+      </span>
+    </button>
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Input          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="evidence-used-empty" href="" class="dwp-side-navigation__link">
+            Evidence used for decision
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="entitlement" href="" class="dwp-side-navigation__link">
+            Entitlement
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="other-benefits-empty" href="" class="dwp-side-navigation__link">
+            Other benefits
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Payability          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="hospital-and-scheduled-accommodation" href="" class="dwp-side-navigation__link">
+            Hospital and scheduled accommodation
+          </a>
+        </li>
+                    <li class="dwp-side-navigation__item">
+          <a id="lay-evidence-and-exclusions" href="" class="dwp-side-navigation__link">
+            Lay evidence and exclusions
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Summary          </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="evidence-summary" href="" class="dwp-side-navigation__link">
+            Evidence summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="decision-summary" href="" class="dwp-side-navigation__link">
+            Decision summary
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Enquiry         </p>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="decision-history" href="" class="dwp-side-navigation__link">
+            Decision history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="summary-of-payability" href="" class="dwp-side-navigation__link">
+            Summary of payability
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="previous-events" href="" class="dwp-side-navigation__link">
+            Previous events
+          </a>
+        </li>
+                <li class="dwp-side-navigation__item">
+          <a id="maintain-reasons-for-decision-empty" href="" class="dwp-side-navigation__link">
+            Maintain reasons for decision
+          </a>
+        </li>
+                  <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="picklist" href="" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Picklist
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <h1 class="govuk-heading-l">Picklist</h1>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="check-hint">
+
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check" name="check" type="checkbox" value="check1">
+          <label class="govuk-label govuk-checkboxes__label" for="check">
+            About you
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check-2" name="check" type="checkbox" value="check2">
+          <label class="govuk-label govuk-checkboxes__label" for="check-2">
+            Life history
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check-3" name="check" type="checkbox" value="check3">
+          <label class="govuk-label govuk-checkboxes__label" for="check-3">
+            Pick person
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check-4" name="check" type="checkbox" value="check4">
+          <label class="govuk-label govuk-checkboxes__label" for="check-4">
+          Payment location
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="check-5" name="check" type="checkbox" value="check5">
+          <label class="govuk-label govuk-checkboxes__label" for="check-5">
+          Evidence used - event?
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Earliest change requiring decision:</th>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Enquire from date:</th>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Claim effective date:</th>
+      <td class="govuk-table__cell">17/10/2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="check-hint">
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="check" name="check" type="checkbox" value="check1">
+        <label class="govuk-label govuk-checkboxes__label" for="check">
+          Entitlement
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="check-2" name="check" type="checkbox" value="check2">
+        <label class="govuk-label govuk-checkboxes__label" for="check-2">
+        Lay evidence and exclusions
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="check-3" name="check" type="checkbox" value="check3">
+        <label class="govuk-label govuk-checkboxes__label" for="check-3">
+          Other benefits
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="check-4" name="check" type="checkbox" value="check4">
+        <label class="govuk-label govuk-checkboxes__label" for="check-4">
+        Benefit week
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</div>
+
+{% endblock %}

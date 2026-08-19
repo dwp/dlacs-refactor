@@ -310,24 +310,23 @@
 
 
 
-{{ govukTabs({
-  items: [
-    {
-      label: "Relationship details",
-      id: "Relationship details",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
-      label: "CA claimant",
-      id: "A claimant",
-      panel: {
-        html: pastWeekHtml
-      }
-    }
-  ]
-}) }}
+<div class="govuk-tabs">
+  <ul class="govuk-tabs__list">
+
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="/relationship-details-pg">Relationship details</a>
+    </li>
+
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="/relationship-details-ca">CA claimant</a>
+    </li>
+
+  </ul>
+
+<div class="govuk-tabs__panel">
+  {{ pastDayHtml | safe }}
+
+</div>
 
 
 

@@ -1,8 +1,9 @@
 {
-    "serviceName": "Disability Living Allowance for Children",
+  "serviceName": "Disability Living Allowance for Children",
   "plugins": {
     "govuk-frontend": {
       "rebrand": false
-    }
+    },
+    "@x-govuk/govuk-prototype-components": {}
   }
 }

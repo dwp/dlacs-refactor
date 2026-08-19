@@ -30,6 +30,53 @@
   </section>
 
   <a href="#" class="govuk-back-link">Back</a>
+
+
+
+
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select an event",
+      href: "#"
+    },
+      {
+      text: "Enter a receipt date",
+      href: "#"
+    },
+      {
+      text: "Enter an effective date",
+      href: "#"
+    },
+      {
+      text: "Enter a decn made date",
+      href: "#"
+    },
+      {
+      text: "Enter an end/notf date",
+      href: "#"
+    },
+          {
+      text: "Select an evidence code",
+      href: "#"
+    },
+          {
+      text: "Select whether to suppress the acknowledgement",
+      href: "#"
+    },
+          {
+      text: "Select whether to suppress the no change letter",
+      href: "#"
+    }
+  ]
+}) }}
+
+
+
+
   <h1 class="govuk-heading-l">Add an event</h1>
 
 
@@ -168,7 +215,7 @@
     }
   },
   errorMessage: {
-    text: "Enter a end/notf"
+    text: "Enter an end/notf"
   },
   values: {
     day: 6,
@@ -266,26 +313,26 @@
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  name: "whereDoYouLive",
+  name: "Suppress acknowledgment?",
   fieldset: {
     legend: {
-      text: "Where do you live?",
+      text: "Suppress acknowledgment",
       isPageHeading: true,
       classes: "govuk-body"
     }
   },
   items: [
     {
-      value: "england",
-      text: "England"
+      value: "Yes",
+      text: "Yes"
     },
     {
-      value: "scotland",
-      text: "Scotland"
+      value: "No",
+      text: "No"
     }
   ],
   errorMessage: {
-    text: "Select the country where you live"
+    text: "Select whether to suppress the acknowledgement"
   }
 }) }}
 
@@ -296,28 +343,35 @@
 
 
 
-
-
-
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  name: "whereDoYouLive",
+  name: "Suppress no change letter?",
   fieldset: {
     legend: {
-      text: "Suppress no change letter?"
+      text: "Suppress acknowledgment",
+      isPageHeading: true,
+      classes: "govuk-body"
     }
   },
   items: [
     {
-      value: "england",
+      value: "Yes",
       text: "Yes"
     },
     {
-      value: "scotland",
+      value: "No",
       text: "No"
     }
-  ]
+  ],
+  errorMessage: {
+    text: "Select whether to suppress the no change letter"
+  }
 }) }}
+
+
+
+
 
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Save

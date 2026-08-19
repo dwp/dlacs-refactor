@@ -33,11 +33,15 @@
   <h1 class="govuk-heading-l">Add or amend evidence used</h1>
 
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="location">
     Evidence code
   </label>
-  <select class="govuk-select" id="sort" name="sort">
+  <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select an evidence code
+  </p>
+  <select class="govuk-select govuk-select--error" id="location"
+<option value="1">1 - New claim</option>
     <option value="published"></option>
     <option value="views">11 - Claim form</option>
     <option value="comments">12 - HCP examination report</option>
@@ -53,18 +57,16 @@
 
 
 
-<div class="govuk-form-group">
-    <label class="govuk-label" for="sort">
-    Evidence used for decision
-  </label>
-  <fieldset class="govuk-fieldset" aria-describedby="check-hint">
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="check" name="check" type="checkbox" value="one">
-        <label class="govuk-label govuk-checkboxes__label" for="check">
-          Claim form
-        </label>
-      </div>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="countries-error">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-label">
+        Evidence used for decision
+      </h1>
+    </legend>
+    <p id="countries-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select what evidence is used for the decision
+    </p>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="check-2" name="check" type="checkbox" value="two">
         <label class="govuk-label govuk-checkboxes__label" for="check-2">

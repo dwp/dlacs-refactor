@@ -74,10 +74,75 @@
       <td class="govuk-table__cell">DOB123</td>
       <td class="govuk-table__cell">21 January 2025</td>
     </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">4</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">5</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">6</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">7</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">8</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">9</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/Notification-details" class="govuk-link">10</a></td>
+      <td class="govuk-table__cell">Claim acknowledgementß</td>
+      <td class="govuk-table__cell">DOB123</td>
+      <td class="govuk-table__cell">21 January 2025</td>
+    </tr>
   </tbody>
 </table>
 
   </div>
+
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 
 </div>
 

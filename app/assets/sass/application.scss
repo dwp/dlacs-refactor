@@ -135,3 +135,14 @@
   font-weight: 300;
 }
 
+.app-important-banner {
+  border-color: #d4351c;
+}
+
+.app-important-banner .govuk-notification-banner__header {
+  background-color: #d4351c;
+}
+
+.app-important-banner .govuk-notification-banner__title {
+  color: #ffffff;
+}

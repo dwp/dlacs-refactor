@@ -39,37 +39,59 @@
 
   <h1 class="govuk-heading-l">Add a payment deduction</h1>
 
-  <label class="govuk-label" for="sort-code">
-      Select an option
-    </label>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            Adj. Type
-          </label>
-        </div>
-         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            Rec. AAC
-          </label>
-        </div>
-      </div>
-    </fieldset>
 
-  </div>
 
-{{ govukInput({
-  label: {
-    text: "Recovery Alt. NINO"
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set adjTypeHtml %}
+  {{ govukInput({
+    label: {
+      text: "Enter Adj. Type"
+    },
+    classes: "govuk-input--width-10",
+    id: "adj-type",
+    name: "adjType"
+  }) }}
+{% endset %}
+
+{% set recAacHtml %}
+  {{ govukInput({
+    label: {
+      text: "Enter Rec. AAC"
+    },
+    classes: "govuk-input--width-10",
+    id: "rec-aac",
+    name: "recAac"
+  }) }}
+{% endset %}
+
+{{ govukRadios({
+  name: "option",
+  fieldset: {
+    legend: {
+      text: "Select an option"
+    }
   },
-  id: "Recovery Alt. NINO",
-  name: "Recovery Alt. NINO",
-  classes: "govuk-input--width-10"
+  items: [
+    {
+      value: "adj-type",
+      text: "Adj. Type",
+      conditional: {
+        html: adjTypeHtml
+      }
+    },
+    {
+      value: "rec-aac",
+      text: "Rec. AAC",
+      conditional: {
+        html: recAacHtml
+      }
+    }
+  ]
 }) }}
+
+
 
 
 {% from "govuk/components/input/macro.njk" import govukInput %}

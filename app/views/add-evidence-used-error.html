@@ -30,18 +30,33 @@
   </section>
 
   <a href="evidence-used-empty" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Select what evidence is used for the decision</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
   <h1 class="govuk-heading-l">Add or amend evidence used</h1>
 
 
-<div class="govuk-form-group govuk-form-group--error">
-  <label class="govuk-label" for="location">
-    Evidence code
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Evidence code (optional)
   </label>
-  <p id="location-error" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Select an evidence code
-  </p>
-  <select class="govuk-select govuk-select--error" id="location"
-<option value="1">1 - New claim</option>
+  <select class="govuk-select" id="sort" name="sort">
     <option value="published"></option>
     <option value="views">11 - Claim form</option>
     <option value="comments">12 - HCP examination report</option>
@@ -53,7 +68,6 @@
     <option value="views">19 - Other</option>
   </select>
 </div>
-
 
 
 

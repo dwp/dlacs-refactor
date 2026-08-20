@@ -1,0 +1,1425 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+<div class="govuk-grid-column-full">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <a href="entitlement" class="govuk-back-link">Back</a>
+  <h1 class="govuk-heading-l">Add or amend entitlement</h1>
+
+
+     <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Effective date</th>
+        <td class="govuk-table__cell">21 August 2025</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="width-0">
+  </label>
+</div>
+
+
+
+
+
+
+
+   <div class="govuk-form-group--error" style="margin-top: 60px;">
+  <label class="govuk-label" for="width-5">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label" for="country">
+      Select a primary disability
+    </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a primary disability
+  </p>
+
+
+  </h1>
+  <select class="govuk-select" id="country" name="country"
+    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+    <option value="" selected disabled>Select an option</option>
+<option value="A01">A01 - Anaemia - Iron deficiency</option>
+<option value="A02">A02 - Anaemia - B12 (pernicious)/folate deficiency</option>
+<option value="A03">A03 - Anaemia Aplastic</option>
+<option value="A10">A10 - Anaemias - Other / type not known</option>
+<option value="A11">A11 - Hereditary spherocytosis</option>
+<option value="A12">A12 - Thalassaemia</option>
+<option value="A13">A13 - Anaemia - Sickle cell</option>
+<option value="A20">A20 - Haemolytic disorders - Other / type not known</option>
+<option value="A21">A21 - Glucose 6 phosphate dehydrogenase (G6PD) deficiency</option>
+<option value="A30">A30 - Metabolic red cell disorders - Other / type not known</option>
+<option value="A40">A40 - Polycythaemia</option>
+<option value="A41">A41 - Haemophilia A</option>
+<option value="A42">A42 - Haemophilia B (Christmas disease)</option>
+<option value="A43">A43 - Von Willebrand's disease</option>
+<option value="A50">A50 - Clotting disorders - Other / type not known</option>
+<option value="A51">A51 - Autoimmune (idiopathic) thrombocytopaenic purpura (ITP)</option>
+<option value="A60">A60 - Platelet disorders - Other / type not known</option>
+<option value="A99">A99 - Blood disorders - Type not known</option>
+<option value="B01">B01 - HIV/AIDS</option>
+<option value="B04">B04 - Coronavirus covid-19</option>
+<option value="B10">B10 - Viral diseases excluding hepatitis and poliomyelitis - Other / type not known</option>
+<option value="B11">B11 - Creutzfeldt Jacob disease (CJD)</option>
+<option value="B20">B20 - Prion diseases - Other / type not known</option>
+<option value="B21">B21 - Tuberculosis</option>
+<option value="B30">B30 - Bacterial diseases - Other / type not known</option>
+<option value="B31">B31 - Malaria</option>
+<option value="B40">B40 - Protozoal diseases - Other / type not known</option>
+<option value="B99">B99 - Infectious diseases - Other / type not known</option>
+<option value="C01">C01 - Mouth/tongue - cancer of</option>
+<option value="C02">C02 - Oesophagus - cancer of</option>
+<option value="C03">C03 - Stomach - cancer of</option>
+<option value="C04">C04 - Pancreas - cancer of</option>
+<option value="C05">C05 - Liver - cancer of</option>
+<option value="C06">C06 - Bowel (colon, rectum, anus) - cancer of</option>
+<option value="C10">C10 - Gastrointestinal tract - Other cancers of / type not known</option>
+<option value="C11">C11 - Larynx - cancer of</option>
+<option value="C12">C12 - Bronchus - cancer of</option>
+<option value="C13">C13 - Mesothelioma</option>
+<option value="C14">C14 - Lung cancers - Other</option>
+<option value="C20">C20 - Respiratory tract - Other cancers of / type not known</option>
+<option value="C21">C21 - Kidney - cancer of</option>
+<option value="C22">C22 - Bladder - cancer of</option>
+<option value="C23">C23 - Prostate - cancer of</option>
+<option value="C24">C24 - Ovary - cancer of</option>
+<option value="C25">C25 - Cervix - cancer of</option>
+<option value="C26">C26 - Endometrium (uterus / womb) - cancer of</option>
+<option value="C27">C27 - Testicle - cancer of</option>
+<option value="C28">C28 - Wilms tumour</option>
+<option value="C30">C30 - Genitourinary tract - Other cancers of / type not known</option>
+<option value="C31">C31 - Hodgkins lymphoma</option>
+<option value="C32">C32 - Non hodgkins lymphoma</option>
+<option value="C33">C33 - Myeloma</option>
+<option value="C34">C34 - Leukaemia - myelogenous (myeloid) acute</option>
+<option value="C35">C35 - Leukaemia - lymphoblastic acute</option>
+<option value="C36">C36 - Leukaemia - myeloid chronic</option>
+<option value="C37">C37 - Leukaemia - lymphocytic chronic</option>
+<option value="C38">C38 - Leukaemias - Other / type not known</option>
+<option value="C40">C40 - Haematological system - Other cancers of / type not known</option>
+<option value="C41">C41 - Melanoma</option>
+<option value="C50">C50 - Skin cancers - Other / type not known</option>
+<option value="C51">C51 - Brain and spinal cord - cancer of</option>
+<option value="C61">C61 - Osteosarcoma</option>
+<option value="C62">C62 - Chondrosarcoma</option>
+<option value="C63">C63 - Fibrosarcoma</option>
+<option value="C64">C64 - Ewing's sarcoma</option>
+<option value="C65">C65 - Angiosarcoma</option>
+<option value="C66">C66 - Giant cell tumour - malignant</option>
+<option value="C70">C70 - Bone - Other cancers of / type not known</option>
+<option value="C71">C71 - Breast - cancer of</option>
+<option value="C72">C72 - Primary cancer - site not known</option>
+<option value="C74">C74 - Neuroblastoma</option>
+<option value="C98">C98 - Sarcomas - Other / type not known</option>
+<option value="C99">C99 - Cancers - Other / type not known</option>
+<option value="D00">D00 - Nearing End Of Life</option>
+<option value="D95">D95 - Severely Visually Impaired (SVI)</option>
+<option value="D96">D96 - Severely Mentally Impaired (SMI)</option>
+<option value="D97">D97 - Double Amputee</option>
+<option value="D98">D98 - Deaf / Blind</option>
+<option value="D99">D99 - Haemodialysis</option>
+<option value="E01">E01 - Hyperlipidaemia</option>
+<option value="E02">E02 - Carbohydrate metabolism - disorders of</option>
+<option value="E03">E03 - Amino acid metabolism - disorders of</option>
+<option value="E10">E10 - Inborn errors of metabolism - Other / type not known</option>
+<option value="E11">E11 - Amyloidosis</option>
+<option value="E12">E12 - Porphyria</option>
+<option value="E14">E14 - Obesity</option>
+<option value="E99">E99 - Metabolic diseases - Other / type not known</option>
+<option value="F01">F01 - Personality disorder</option>
+<option value="F02">F02 - Speech or language disorder</option>
+<option value="F03">F03 - Dyslexia</option>
+<option value="F04">F04 - Dyspraxia</option>
+<option value="F05">F05 - Specific learning disorder</option>
+<option value="F11">F11 - Post traumatic stress disorder (PTSD)</option>
+<option value="F20">F20 - Stress reaction disorders - Other / type not known</option>
+<option value="F21">F21 - Generalised anxiety disorder</option>
+<option value="F22">F22 - Phobia - Specific</option>
+<option value="F23">F23 - Phobia - Social</option>
+<option value="F24">F24 - Agoraphobia</option>
+<option value="F25">F25 - Panic disorder</option>
+<option value="F30">F30 - Anxiety disorders - Other / type not known</option>
+<option value="F31">F31 - Obsessive compulsive disorder (OCD)</option>
+<option value="F32">F32 - Anxiety and depressive disorders - mixed</option>
+<option value="F33">F33 - Conversion disorder (hysteria)</option>
+<option value="F34">F34 - Body dysmorphic disorder (BDD)</option>
+<option value="F35">F35 - Dissociative disorders - Other / type not known</option>
+<option value="F40">F40 - Somatoform disorders - Other / type not known</option>
+<option value="F41">F41 - Depressive disorder</option>
+<option value="F42">F42 - Bipolar affective disorder (Hypomania / Mania)</option>
+<option value="F50">F50 - Mood disorders - Other / type not known</option>
+<option value="F51">F51 - Schizophrenia</option>
+<option value="F52">F52 - Schizoaffective disorder</option>
+<option value="F60">F60 - Psychotic disorders - Other / type not known</option>
+<option value="F61">F61 - Dementia</option>
+<option value="F62">F62 - Cognitive disorder due to stroke</option>
+<option value="F65">F65 - Cognitive disorders - Other / type not known</option>
+<option value="F66">F66 - Anorexia nervosa</option>
+<option value="F67">F67 - Bulimia nervosa</option>
+<option value="F68">F68 - Obesity</option>
+<option value="F70">F70 - Eating disorders not otherwise specified (EDNOS)</option>
+<option value="F71">F71 - Alcohol misuse</option>
+<option value="F75">F75 - Drug misuse</option>
+<option value="F81">F81 - Munchausen syndrome</option>
+<option value="F85">F85 - Factitious disorders - Other / type not known</option>
+<option value="F86">F86 - Down's syndrome</option>
+<option value="F87">F87 - Fragile X syndrome</option>
+<option value="F90">F90 - Learning disability - Other / type not known</option>
+<option value="F91">F91 - Autism</option>
+<option value="F92">F92 - Asperger syndrome</option>
+<option value="F94">F94 - Retts disorder</option>
+<option value="F95">F95 - ADHD / ADD</option>
+<option value="F96">F96 - Conduct disorder (including oppositional defiant disorder)</option>
+<option value="F97">F97 - Bedwetting (enuresis)</option>
+<option value="F98">F98 - Faecal soiling (encopresis)</option>
+<option value="F99">F99 - Psychiatric disorders of childhood - Other / type not known</option>
+<option value="G01">G01 - Cerebrovascular accident (stroke)</option>
+<option value="G02">G02 - Transient ischaemic attacks (TIAs)</option>
+<option value="G05">G05 - Cerebrovascular disease - Other / type not known</option>
+<option value="G06">G06 - Generalised seizures (without status epilepticus in last 12 months)</option>
+<option value="G07">G07 - Generalised seizures (with status epilepticus in last 12 months)</option>
+<option value="G08">G08 - Partial seizures (without status epilepticus in last 12 months)</option>
+<option value="G09">G09 - Partial seizures (with status epilepticus in last 12 months)</option>
+<option value="G10">G10 - Narcolepsy</option>
+<option value="G11">G11 - Cataplexy</option>
+<option value="G15">G15 - Seizures - unclassified</option>
+<option value="G16">G16 - Stokes Adams attacks (cardiovascular syncope)</option>
+<option value="G17">G17 - Syncope - Other / type not known</option>
+<option value="G18">G18 - Non epileptic Attack disorder (pseudoseizures)</option>
+<option value="G19">G19 - Drop attacks</option>
+<option value="G25">G25 - Disturbances of consciousness - Non-epileptic - Other / type not known</option>
+<option value="G26">G26 - Parkinson's disease</option>
+<option value="G27">G27 - Parkinson's syndrome / Parkinsonism</option>
+<option value="G28">G28 - Essential tremor - benign</option>
+<option value="G29">G29 - Huntington's disease</option>
+<option value="G30">G30 - Tourette's syndrome</option>
+<option value="G31">G31 - Torticollis</option>
+<option value="G32">G32 - Blepharospasm</option>
+<option value="G33">G33 - Writer's cramp</option>
+<option value="G35">G35 - Movement disorders - Other / type not known</option>
+<option value="G36">G36 - Multiple sclerosis</option>
+<option value="G37">G37 - Neurofibromatosis</option>
+<option value="G40">G40 - Tumours - benign - Other / type not known</option>
+<option value="G41">G41 - Hydrocephalus</option>
+<option value="G42">G42 - Migraine</option>
+<option value="G45">G45 - Headache - Other causes of / cause not known</option>
+<option value="G46">G46 - Head injury - Cognitive impairment</option>
+<option value="G47">G47 - Head injury - Sensorimotor impairment</option>
+<option value="G50">G50 - Head injury - Cognitive and sensorimotor impairment</option>
+<option value="G51">G51 - Paraplegia (traumatic)</option>
+<option value="G52">G52 - Tetraplegia (traumatic)</option>
+<option value="G53">G53 - Syringomyelia / Syringobulbia</option>
+<option value="G55">G55 - Spinal cord compression - Other causes of / cause not known</option>
+<option value="G56">G56 - Motor neurone disease</option>
+<option value="G59">G59 - Cerebral palsy - Quadriplegia</option>
+<option value="G60">G60 - Degenerative neuronal diseases - Other / type not known</option>
+<option value="G61">G61 - Spastic diplegia</option>
+<option value="G62">G62 - Cerebral palsy - athetoid</option>
+<option value="G63">G63 - Cerebral palsy - 
+<option value="H01">H01 - Scleritis</option>
+<option value="H02">H02 - Keratitis</option>
+<option value="H03">H03 - Corneal ulceration</option>
+<option value="H04">H04 - Herpes zoster - ophthalmic</option>
+<option value="H05">H05 - Keratoconus</option>
+<option value="H06">H06 - Orbital cellulitis</option>
+<option value="H07">H07 - Entropion</option>
+<option value="H08">H08 - Ptosis</option>
+<option value="H10">H10 - Conjunctiva, cornea, eyelids and lacrimal apparatus - Other / type not known</option>
+<option value="H11">H11 - Anterior Uveitis (iritis)</option>
+<option value="H13">H13 - Posterior uveitis (choroiditis)</option>
+<option value="H15">H15 - Chorioretinal disorders - Other / type not known</option>
+<option value="H16">H16 - Glaucoma</option>
+<option value="H21">H21 - Eyes - Injuries to</option>
+<option value="H26">H26 - Posterior vitreous detachment</option>
+<option value="H27">H27 - Vitreous haemorrhage</option>
+<option value="H30">H30 - Vitreous disease - Other / type not known</option>
+<option value="H31">H31 - Retinal detachment</option>
+<option value="H32">H32 - Retinal artery occlusion</option>
+<option value="H33">H33 - Retinal vein occlusion</option>
+<option value="H34">H34 - Macular degeneration</option>
+<option value="H35">H35 - Diabetic retinopathy</option>
+<option value="H36">H36 - Hypertensive retinopathy</option>
+<option value="H37">H37 - Retinopathy - Other / type not known</option>
+<option value="H38">H38 - Optic neuritis</option>
+<option value="H39">H39 - Optic atrophy</option>
+<option value="H40">H40 - Retinitis Pigmentosa</option>
+<option value="H41">H41 - Retina and optic nerve - Other diseases of / type not known</option>
+<option value="H42">H42 - Cataract</option>
+<option value="H46">H46 - Myopia (short-sighted)</option>
+<option value="H47">H47 - Hypermetropia (long-sighted)</option>
+<option value="H48">H48 - Presbyopia</option>
+<option value="H49">H49 - Astigmatism</option>
+<option value="H55">H55 - Refractive errors - Other / type not known</option>
+<option value="H56">H56 - Strabismus (Squint)</option>
+<option value="H57">H57 - Nystagmus</option>
+<option value="H65">H65 - Eye movement - Other disorders of / type not known</option>
+<option value="H66">H66 - Amblyopia</option>
+<option value="H67">H67 - Tunnel vision</option>
+<option value="H68">H68 - Scotoma</option>
+<option value="H69">H69 - Hemianopia</option>
+<option value="H70">H70 - Quadrantanopia</option>
+<option value="H71">H71 - Diplopia (double vision)</option>
+<option value="H72">H72 - Cortical blindness</option>
+<option value="H75">H75 - Visual field defects - Other / type not known</option>
+<option value="H99">H99 - Vision - Other diseases affecting / type not known</option>
+<option value="I01">I01 - Otitis externa - chronic</option>
+<option value="I02">I02 - Chronic suppurative otitis media</option>
+<option value="I03">I03 - Mastoiditis</option>
+<option value="I04">I04 - Otitis Media with effusion (OME)</option>
+<option value="I05">I05 - Otosclerosis</option>
+<option value="I06">I06 - Conductive hearing loss due to Trauma</option>
+<option value="I10">I10 - Conductive hearing loss - Other causes of / type not known</option>
+<option value="I11">I11 - Deafness - congenital</option>
+<option value="I12">I12 - Presbyacusis</option>
+<option value="I13">I13 - Labyrinthitis</option>
+<option value="I14">I14 - Menieres disease</option>
+<option value="I15">I15 - Sensorineural hearing loss due to Trauma</option>
+<option value="I20">I20 - Sensorineural hearing loss - Other causes of / type not known</option>
+<option value="I21">I21 - Hearing loss - mixed</option>
+<option value="I22">I22 - Hearing loss - Other / type not known</option>
+<option value="I23">I23 - Tinnitus</option>
+<option value="I24">I24 - Vertigo</option>
+<option value="I99">I99 - Disease affecting hearing & balance - Other / type not known</option>
+<option value="J01">J01 - Aneurysm - aortic</option>
+<option value="J02">J02 - Aneurysm - cerebral</option>
+<option value="J05">J05 - Aneurysms - Other / type not known</option>
+<option value="J06">J06 - Bradycardia</option>
+<option value="J07">J07 - Tachycardia</option>
+<option value="J08">J08 - Heart block</option>
+<option value="J09">J09 - Atrial fibrillation/flutter</option>
+<option value="J10">J10 - Cardiac arrhythmia - Pacemaker/implantable defibrillator fitted</option>
+<option value="J15">J15 - Cardiac arrhythmias - Other / type not known</option>
+<option value="J16">J16 - Cardiac failure</option>
+<option value="J21">J21 - Cardiomyopathy</option>
+<option value="J26">J26 - Atrioseptal defect (ASD)</option>
+<option value="J27">J27 - Ventriculoseptal defect (VSD)</option>
+<option value="J28">J28 - Patent ductus arteriosus (PDA)</option>
+<option value="J29">J29 - Coarctation of the aorta</option>
+<option value="J30">J30 - Fallots tetralogy</option>
+<option value="J35">J35 - Heart disease - Congenital - Other / type not known</option>
+<option value="J36">J36 - Heart transplantation</option>
+<option value="J41">J41 - Hypertension</option>
+<option value="J46">J46 - Angina</option>
+<option value="J47">J47 - Myocardial infarction</option>
+<option value="J55">J55 - Ischaemic heart disease - Other / type not known</option>
+<option value="J56">J56 - Pericarditis</option>
+<option value="J61">J61 - Aortic valve disease</option>
+<option value="J62">J62 - Pulmonary valve disease</option>
+<option value="J63">J63 - Mitral valve</option>
+<option value="J64">J64 - Tricuspid valve disease</option>
+<option value="J70">J70 - Malformations of the heart - Congenital - Other / type not known</option>
+<option value="J71">J71 - Buerger's disease</option>
+<option value="J72">J72 - Atherosclerosis (PVD / Claudication)</option>
+<option value="J73">J73 - Raynaud's disease/phenomenon</option>
+<option value="J75">J75 - Arterial disease excluding coronary - Other / type not known</option>
+<option value="J76">J76 - Deep vein thrombosis</option>
+<option value="J80">J80 - Peripheral venous disease - Other / type not known</option>
+<option value="J99">J99 - Cardiovascular disease - Other / type not known</option>
+<option value="L01">L01 - Hiatus hernia / gastroesophageal reflux disease / reflux oesophagitis</option>
+<option value="L02">L02 - Oesophageal varices</option>
+<option value="L03">L03 - Peptic ulcer (gastric and duodenal)/gastritis</option>
+<option value="L10">L10 - Oesophagus, stomach and duodenum - Other diseases of / type not known</option>
+<option value="L16">L16 - Coeliac disease</option>
+<option value="L25">L25 - Small bowel - Other diseases of / type not known</option>
+<option value="L26">L26 - Crohns disease</option>
+<option value="L30">L30 - Ulcerative colitis</option>
+<option value="L31">L31 - Constipation</option>
+<option value="L32">L32 - Diverticular disease / diverticulitis</option>
+<option value="L33">L33 - Colitis - Ischaemic</option>
+<option value="L40">L40 - Colon - Other diseases of / type not known</option>
+<option value="L41">L41 - Anorectal abscess</option>
+<option value="L42">L42 - Haemorrhoids</option>
+<option value="L43">L43 - Rectal prolapse</option>
+<option value="L44">L44 - Fistula in anus</option>
+<option value="L50">L50 - Rectum/anus - Other diseases of / type not known</option>
+<option value="L51">L51 - Irritable bowel syndrome (IBS)</option>
+<option value="L56">L56 - Mesenteric ischaemia</option>
+<option value="L61">L61 - Tumours of the gastrointestinal tract - benign</option>
+<option value="L71">L71 - Hernia</option>
+<option value="L81">L81 - Cleft lip</option>
+<option value="L82">L82 - Cleft lip with cleft palate</option>
+<option value="L83">L83 - Tracheo-oesophageal fistula/atresia</option>
+<option value="L84">L84 - Hirschprung disease</option>
+<option value="L98">L98 - Attention to colostomy/ileostomy/stoma - diagnosis not known</option>
+<option value="L99">L99 - Gastrointestinal tract - Other diseases of / type not known</option>
+<option value="M03">M03 - Autoimmune hepatitis</option>
+<option value="M04">M04 - Steatohepatitis - non-alcoholic (NASH)</option>
+<option value="M10">M10 - Hepatitis - Chronic - Other / type not known</option>
+<option value="M11">M11 - Cirrhosis - Alcohol induced</option>
+<option value="M12">M12 - Hepatitis B and D infection</option>
+<option value="M13">M13 - Hepatitis C infection</option>
+<option value="M14">M14 - Primary Biliary cirrhosis (PBC)</option>
+<option value="M15">M15 - Cirrhosis - Autoimmune</option>
+<option value="M16">M16 - Haemochromatosis</option>
+<option value="M17">M17 - Wilson's disease</option>
+<option value="M20">M20 - Cirrhosis - Other / type not known</option>
+<option value="M21">M21 - Ascites</option>
+<option value="M22">M22 - Hepatic encephalopathy</option>
+<option value="M23">M23 - Peritonitis</option>
+<option value="M30">M30 - Liver failure - Features of - Other / features not known</option>
+<option value="M31">M31 - Liver transplantation</option>
+<option value="M36">M36 - Gallstones</option>
+<option value="M45">M45 - Gallbladder and biliary tract - Other diseases of / type not known</option>
+<option value="M46">M46 - Pancreatitis - chronic</option>
+<option value="M55">M55 - Pancreas - Other diseases of / type not known</option>
+
+<option value="N01">N01 - Impetigo</option>
+<option value="N02">N02 - Cellulitis</option>
+<option value="N10">N10 - Infections - Other / type not known</option>
+<option value="N11">N11 - Eczema (dermatitis)</option>
+<option value="N12">N12 - Eczema - varicose</option>
+<option value="N13">N13 - Psoriasis</option>
+<option value="N14">N14 - Urticaria</option>
+<option value="N15">N15 - Acne vulgaris</option>
+<option value="N16">N16 - Rosacea</option>
+<option value="N20">N20 - Papulosquamous and inflammatory rashes - Other / type not known</option>
+<option value="N21">N21 - Pemphigus vulgaris</option>
+<option value="N22">N22 - Pemphigoid</option>
+<option value="N23">N23 - Dermatitis herpetiformis</option>
+<option value="N24">N24 - Epidermolysis bullosa</option>
+<option value="N30">N30 - Bullous disease - Other / type not known</option>
+<option value="N31">N31 - Leg ulcers (venous)</option>
+<option value="N32">N32 - Venous insufficiency - chronic</option>
+<option value="N33">N33 - Leg ulcers (arterial)</option>
+<option value="N34">N34 - Pressure sores</option>
+<option value="N35">N35 - Lymphoedema</option>
+<option value="N40">N40 - Blood vessels/lymphatics - Other diseases of / type not known</option>
+<option value="N41">N41 - Ehlers Danlos syndrome</option>
+<option value="N50">N50 - Collagen and elastic tissue - Other diseases of / type not known</option>
+<option value="N51">N51 - Burns</option>
+<option value="N99">N99 - Skin disease - Other / type not known</option>
+
+<option value="O01">O01 - Osteoarthritis of Hip</option>
+<option value="O02">O02 - Osteoarthritis of Knee</option>
+<option value="O03">O03 - Osteoarthritis of other single joint</option>
+<option value="O10">O10 - Generalised Osteoarthritis (of 2 or more joints)</option>
+<option value="O11">O11 - Fibromyalgia</option>
+<option value="O12">O12 - Chronic fatigue syndrome (CFS)</option>
+<option value="O15">O15 - Pain syndromes - Chronic - Other / type not known</option>
+<option value="O16">O16 - Rheumatoid arthritis</option>
+<option value="O17">O17 - Ankylosing spondylitis</option>
+<option value="O18">O18 - Arthritis - Psoriatic</option>
+<option value="O19">O19 - Arthritis - Reactive</option>
+<option value="O20">O20 - Juvenile chronic arthritis (Still's disease)</option>
+<option value="O25">O25 - Inflammatory arthritis - Other / type not known</option>
+<option value="O26">O26 - Gout</option>
+<option value="O27">O27 - Pseudogout</option>
+<option value="O30">O30 - Crystal deposition disorders - Other / type not known</option>
+<option value="O31">O31 - Osteonecrosis</option>
+<option value="O35">O35 - Osteochondritis</option>
+<option value="O36">O36 - Rickets</option>
+<option value="O37">O37 - Osteomalacia</option>
+<option value="O38">O38 - Osteoporosis</option>
+<option value="O39">O39 - Paget's disease</option>
+<option value="O40">O40 - Other metabolic & endocrine disorders of musculoskeletal system</option>
+<option value="O41">O41 - Hereditary multiple exostosis (diaphyseal aclasis)</option>
+<option value="O42">O42 - Achondroplasia</option>
+<option value="O43">O43 - Epiphyseal dysplasia - multiple</option>
+<option value="O44">O44 - Osteogenesis imperfecta</option>
+<option value="O45">O45 - Marfan's syndrome</option>
+<option value="O46">O46 - Hypermobility syndrome</option>
+<option value="O50">O50 - Genetic disorders, dysplasias and malformations - Other / type not known</option>
+<option value="O51">O51 - Tumours of bone - benign</option>
+<option value="O61">O61 - Compartment syndrome (Volkmann's ischaemia)</option>
+<option value="O62">O62 - Sudek's atrophy</option>
+<option value="O65">O65 - Fracture complications - Other / type not known</option>
+<option value="O99">O99 - Generalised musculoskeletal disease - Other / type not known</option>
+
+<option value="P01">P01 - Rotator cuff disorder</option>
+<option value="P02">P02 - Adhesive capsulitis (frozen shoulder)</option>
+<option value="P03">P03 - Shoulder instability</option>
+<option value="P05">P05 - Shoulder disorders - Other / type not known</option>
+<option value="P06">P06 - Tennis elbow (lateral epicondylitis)</option>
+<option value="P07">P07 - Golfer's elbow (medial epicondylitis)</option>
+<option value="P10">P10 - Elbow disorders - Other / type not known</option>
+<option value="P11">P11 - Tenosynovitis</option>
+<option value="P12">P12 - Carpal tunnel syndrome</option>
+<option value="P13">P13 - Dupuytrens contracture</option>
+<option value="P14">P14 - Tendon lesions</option>
+<option value="P15">P15 - Wrist and hand disorders - Other / type not known</option>
+<option value="P16">P16 - Cervical disc lesion</option>
+<option value="P17">P17 - Cervical spondylosis</option>
+<option value="P18">P18 - Whiplash injury</option>
+<option value="P20">P20 - Neck disorders - Other / type not known</option>
+<option value="P21">P21 - Back pain - Non specific (mechanical)</option>
+<option value="P22">P22 - Scoliosis</option>
+<option value="P23">P23 - Kyphosis</option>
+<option value="P24">P24 - Schuermann's disease</option>
+<option value="P25">P25 - Lumbar disc lesion</option>
+<option value="P26">P26 - Spinal stenosis</option>
+<option value="P27">P27 - Spondylolisthesis</option>
+<option value="P28">P28 - Lumbar spondylosis (OA spine)</option>
+<option value="P30">P30 - Back pain - Specific - Other / type not known</option>
+<option value="P31">P31 - Dislocation of the hip - congenital</option>
+<option value="P32">P32 - Perthes disease</option>
+<option value="P33">P33 - Slipped upper femoral epiphysis</option>
+<option value="P40">P40 - Hip disorders - Other / type not known</option>
+<option value="P41">P41 - Meniscal lesions</option>
+<option value="P42">P42 - Ligamentous instability of knee</option>
+<option value="P43">P43 - Osgood schlatters disease</option>
+<option value="P44">P44 - Osteochondritis dissecans</option>
+<option value="P45">P45 - Patellar dislocation - Recurrent</option>
+<option value="P46">P46 - Chondromalacia patellae</option>
+<option value="P47">P47 - Bursitis</option>
+<option value="P50">P50 - Knee disorders - Other / type not known</option>
+<option value="P51">P51 - Club foot (talipes)</option>
+<option value="P52">P52 - Hallux valgus / rigidus</option>
+<option value="P55">P55 - Fore foot pain (Metatarsalgia)</option>
+<option value="P60">P60 - Ankle and foot disorders - Other / type not known</option>
+<option value="P61">P61 - Amputation - Upper limb(s)</option>
+<option value="P66">P66 - Amputation - Lower limb(s)</option>
+<option value="P70">P70 - Amputations - Upper & Lower limb/s</option>
+<option value="P71">P71 - Spine - Injury/Fracture/Dislocation of</option>
+<option value="P72">P72 - Thorax - Injury/Fracture/Dislocation of</option>
+<option value="P73">P73 - Abdomen - Injury/Fracture/Dislocation of</option>
+<option value="P74">P74 - Pelvis - Injury/Fracture/Dislocation of</option>
+<option value="P75">P75 - Upper limb - Injury/Fracture/Dislocation of</option>
+<option value="P76">P76 - Multiple injury/fracture/dislocation</option>
+<option value="P80">P80 - Lower limb - Injury/Fracture/Dislocation of</option>
+<option value="P99">P99 - Musculoskeletal disease - Regional / Localised - Other / type not known</option>
+<option value="Q01">Q01 - Systemic lupus erythematosus (SLE)</option>
+<option value="Q02">Q02 - Antiphospholipid syndrome</option>
+<option value="Q03">Q03 - Systemic sclerosis (scleroderma)</option>
+<option value="Q04">Q04 - Sjogren's syndrome</option>
+<option value="Q05">Q05 - Polymyalgia rheumatica</option>
+<option value="Q06">Q06 - Temporal (giant cell) arteritis (Headache)</option>
+<option value="Q07">Q07 - Polyarteritis nodosa</option>
+<option value="Q08">Q08 - Behcet's disease</option>
+<option value="Q15">Q15 - Vasculitis - Other / type not known</option>
+<option value="Q99">Q99 - Autoimmune disease - Other / type not known</option>
+
+<option value="R01">R01 - Incontinence - urge</option>
+<option value="R02">R02 - Incontinence - stress</option>
+<option value="R03">R03 - Urinary Overflow</option>
+<option value="R10">R10 - Incontinence (not Enuresis / Bed wetting) - Other / type not known</option>
+<option value="R11">R11 - Glomerulonephritis</option>
+<option value="R12">R12 - Nephrotic syndrome</option>
+<option value="R13">R13 - Urinary tract infection</option>
+<option value="R14">R14 - Interstitial nephritis</option>
+<option value="R15">R15 - Renal artery stenosis</option>
+<option value="R16">R16 - Renal calculi</option>
+<option value="R17">R17 - Hydronephrosis</option>
+<option value="R20">R20 - Kidney disease - Other / type not known</option>
+<option value="R21">R21 - Renal failure - acute</option>
+<option value="R22">R22 - Renal failure - chronic</option>
+<option value="R23">R23 - Renal transplantation</option>
+<option value="R30">R30 - Transplant rejection - renal</option>
+<option value="R31">R31 - Prostatic disease</option>
+<option value="R40">R40 - Bladder, urethra, testes and penis - Other diseases of / type not known</option>
+<option value="R41">R41 - Ovarian cyst (benign)</option>
+<option value="R42">R42 - Pelvic inflammatory disease (PID)</option>
+<option value="R43">R43 - Endometriosis</option>
+<option value="R44">R44 - Fibroids</option>
+<option value="R45">R45 - Uterine prolapse</option>
+<option value="R50">R50 - Ovary, uterus, cervix, vagina and vulva - Other diseases of / type not known</option>
+<option value="R99">R99 - Genitourinary disease - Other / type not known</option>
+
+<option value="S01">S01 - Diabetes insipidus</option>
+<option value="S02">S02 - Growth hormone deficiency</option>
+<option value="S10">S10 - Hypothalamic and pituitary diseases - Other / type not known</option>
+<option value="S11">S11 - Diabetes mellitus Type 1 (insulin dependent)</option>
+<option value="S12">S12 - Diabetes mellitus Type 2 (non insulin dependent)</option>
+<option value="S13">S13 - Diabetes mellitus (category unknown)</option>
+<option value="S21">S21 - Hypothyroidism (myxoedema)</option>
+<option value="S22">S22 - Hyperthyroidism (thyrotoxicosis), including Graves disease</option>
+<option value="S23">S23 - Goitre</option>
+<option value="S30">S30 - Thyroid diseases - Other / type not known</option>
+<option value="S31">S31 - Addison's disease</option>
+<option value="S32">S32 - Cushing's syndrome</option>
+<option value="S40">S40 - Adrenal diseases - Other / type not known</option>
+<option value="S41">S41 - Hyperparathyroidism</option>
+<option value="S42">S42 - Hypoparathyroidism</option>
+<option value="S50">S50 - Parathyroid diseases - Other / type not known</option>
+<option value="S99">S99 - Endocrine diseases - Other / type not known</option>
+
+<option value="T01">T01 - Sleep apnoea - obstructive</option>
+<option value="T05">T05 - Upper respiratory tract - Other diseases of / type not known</option>
+<option value="T06">T06 - Chronic obstructive pulmonary disease (COPD) chronic bronchitis/emphysema</option>
+<option value="T11">T11 - Bronchiectasis</option>
+<option value="T16">T16 - Cystic fibrosis</option>
+<option value="T17">T17 - Asthma</option>
+<option value="T21">T21 - Pneumonia</option>
+<option value="T26">T26 - Extrinsic allergic alveolitis</option>
+<option value="T27">T27 - Fibrosing alveolitis</option>
+<option value="T30">T30 - Pulmonary fibrosis - Other / type not known</option>
+<option value="T31">T31 - Pneumoconiosis - coalworkers</option>
+<option value="T32">T32 - Silicosis</option>
+<option value="T33">T33 - Asbestosis</option>
+<option value="T40">T40 - Pneumoconiosis - Other / type not known</option>
+<option value="T41">T41 - Sarcoidosis</option>
+<option value="T50">T50 - Granulomatous lung disease / pulmonary infiltration - Other / type not known</option>
+<option value="T51">T51 - Pleural effusion</option>
+<option value="T52">T52 - Pneumothorax</option>
+<option value="T53">T53 - Empyema</option>
+<option value="T60">T60 - Pleura - Other diseases of / type not known</option>
+<option value="T61">T61 - Lung transplantation</option>
+<option value="T66">T66 - Heart and lung transplantation</option>
+<option value="T71">T71 - Pulmonary embolus</option>
+<option value="T90">T90 - Lower respiratory tract - Other diseases of / type not known</option>
+
+<option value="U01">U01 - Complications of prematurity</option>
+<option value="U02">U02 - Failure to thrive</option>
+<option value="U03">U03 - Chromosomal syndrome - Other/type not known</option>
+<option value="U10">U10 - Old age</option>
+<option value="V01">V01 - Allergy syndrome - multiple</option>
+<option value="V02">V02 - Allergy with risk of anaphylaxis</option>
+<option value="V03">V03 - Allergy - risk of anaphylaxis</option>
+<option value="V04">V04 - Allergy - no risk of anaphylaxis</option>
+<option value="V05">V05 - Oral allergy syndrome</option>
+<option value="V06">V06 - Food intolerance</option>
+<option value="V07">V07 - Angioedema</option>
+<option value="V10">V10 - Hypersensitivity diseases - Other / type not known</option>
+<option value="V99">V99 - Immune system - Other diseases of / type not known</option>
+
+<option value="Z01">Z01 - No illness or impairment has been claimed/identified</option>
+<option value="Z99">Z99 - No Secondary</option>
+  </select>
+</div>
+
+
+
+
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      From (optional)
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid from date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+ 
+
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+        <label class="govuk-label govuk-checkboxes__label" for="nationality">
+        Indefinite period
+        </label>
+      </div>
+    </div>
+
+
+    
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
+    Mobility rate
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a mobility rate
+  </p>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Higher</option>
+    <option value="comments">Lower</option>
+    <option value="comments">Not entitled</option>
+  </select>
+</div>
+
+   <div class="govuk-form-group--error" style="margin-top: 60px;">
+  <label class="govuk-label" for="width-5">
+Care rate
+</label>
+  <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a care rate
+  </p>
+<select class="govuk-select" id="sort" name="sort">
+<option value="published"></option>
+<option value="views">Highest</option>
+<option value="comments">Middle</option>
+<option value="comments">Lowest</option>
+<option value="comments">Not entitled</option>
+</select>
+</div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="width-0">
+  
+</div>
+
+
+
+   <div class="govuk-form-group--error" style="margin-top: 60px;">
+  <label class="govuk-label" for="width-5">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label" for="country">
+      Secondary disability
+    </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a secondary disability
+  </p>
+
+  </h1>
+  <select class="govuk-select" id="country" name="country"
+    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+    <option value="" selected disabled>Select an option</option>
+<option value="A01">A01 - Anaemia - Iron deficiency</option>
+<option value="A02">A02 - Anaemia - B12 (pernicious)/folate deficiency</option>
+<option value="A03">A03 - Anaemia Aplastic</option>
+<option value="A10">A10 - Anaemias - Other / type not known</option>
+<option value="A11">A11 - Hereditary spherocytosis</option>
+<option value="A12">A12 - Thalassaemia</option>
+<option value="A13">A13 - Anaemia - Sickle cell</option>
+<option value="A20">A20 - Haemolytic disorders - Other / type not known</option>
+<option value="A21">A21 - Glucose 6 phosphate dehydrogenase (G6PD) deficiency</option>
+<option value="A30">A30 - Metabolic red cell disorders - Other / type not known</option>
+<option value="A40">A40 - Polycythaemia</option>
+<option value="A41">A41 - Haemophilia A</option>
+<option value="A42">A42 - Haemophilia B (Christmas disease)</option>
+<option value="A43">A43 - Von Willebrand's disease</option>
+<option value="A50">A50 - Clotting disorders - Other / type not known</option>
+<option value="A51">A51 - Autoimmune (idiopathic) thrombocytopaenic purpura (ITP)</option>
+<option value="A60">A60 - Platelet disorders - Other / type not known</option>
+<option value="A99">A99 - Blood disorders - Type not known</option>
+<option value="B01">B01 - HIV/AIDS</option>
+<option value="B04">B04 - Coronavirus covid-19</option>
+<option value="B10">B10 - Viral diseases excluding hepatitis and poliomyelitis - Other / type not known</option>
+<option value="B11">B11 - Creutzfeldt Jacob disease (CJD)</option>
+<option value="B20">B20 - Prion diseases - Other / type not known</option>
+<option value="B21">B21 - Tuberculosis</option>
+<option value="B30">B30 - Bacterial diseases - Other / type not known</option>
+<option value="B31">B31 - Malaria</option>
+<option value="B40">B40 - Protozoal diseases - Other / type not known</option>
+<option value="B99">B99 - Infectious diseases - Other / type not known</option>
+<option value="C01">C01 - Mouth/tongue - cancer of</option>
+<option value="C02">C02 - Oesophagus - cancer of</option>
+<option value="C03">C03 - Stomach - cancer of</option>
+<option value="C04">C04 - Pancreas - cancer of</option>
+<option value="C05">C05 - Liver - cancer of</option>
+<option value="C06">C06 - Bowel (colon, rectum, anus) - cancer of</option>
+<option value="C10">C10 - Gastrointestinal tract - Other cancers of / type not known</option>
+<option value="C11">C11 - Larynx - cancer of</option>
+<option value="C12">C12 - Bronchus - cancer of</option>
+<option value="C13">C13 - Mesothelioma</option>
+<option value="C14">C14 - Lung cancers - Other</option>
+<option value="C20">C20 - Respiratory tract - Other cancers of / type not known</option>
+<option value="C21">C21 - Kidney - cancer of</option>
+<option value="C22">C22 - Bladder - cancer of</option>
+<option value="C23">C23 - Prostate - cancer of</option>
+<option value="C24">C24 - Ovary - cancer of</option>
+<option value="C25">C25 - Cervix - cancer of</option>
+<option value="C26">C26 - Endometrium (uterus / womb) - cancer of</option>
+<option value="C27">C27 - Testicle - cancer of</option>
+<option value="C28">C28 - Wilms tumour</option>
+<option value="C30">C30 - Genitourinary tract - Other cancers of / type not known</option>
+<option value="C31">C31 - Hodgkins lymphoma</option>
+<option value="C32">C32 - Non hodgkins lymphoma</option>
+<option value="C33">C33 - Myeloma</option>
+<option value="C34">C34 - Leukaemia - myelogenous (myeloid) acute</option>
+<option value="C35">C35 - Leukaemia - lymphoblastic acute</option>
+<option value="C36">C36 - Leukaemia - myeloid chronic</option>
+<option value="C37">C37 - Leukaemia - lymphocytic chronic</option>
+<option value="C38">C38 - Leukaemias - Other / type not known</option>
+<option value="C40">C40 - Haematological system - Other cancers of / type not known</option>
+<option value="C41">C41 - Melanoma</option>
+<option value="C50">C50 - Skin cancers - Other / type not known</option>
+<option value="C51">C51 - Brain and spinal cord - cancer of</option>
+<option value="C61">C61 - Osteosarcoma</option>
+<option value="C62">C62 - Chondrosarcoma</option>
+<option value="C63">C63 - Fibrosarcoma</option>
+<option value="C64">C64 - Ewing's sarcoma</option>
+<option value="C65">C65 - Angiosarcoma</option>
+<option value="C66">C66 - Giant cell tumour - malignant</option>
+<option value="C70">C70 - Bone - Other cancers of / type not known</option>
+<option value="C71">C71 - Breast - cancer of</option>
+<option value="C72">C72 - Primary cancer - site not known</option>
+<option value="C74">C74 - Neuroblastoma</option>
+<option value="C98">C98 - Sarcomas - Other / type not known</option>
+<option value="C99">C99 - Cancers - Other / type not known</option>
+<option value="D00">D00 - Nearing End Of Life</option>
+<option value="D95">D95 - Severely Visually Impaired (SVI)</option>
+<option value="D96">D96 - Severely Mentally Impaired (SMI)</option>
+<option value="D97">D97 - Double Amputee</option>
+<option value="D98">D98 - Deaf / Blind</option>
+<option value="D99">D99 - Haemodialysis</option>
+<option value="E01">E01 - Hyperlipidaemia</option>
+<option value="E02">E02 - Carbohydrate metabolism - disorders of</option>
+<option value="E03">E03 - Amino acid metabolism - disorders of</option>
+<option value="E10">E10 - Inborn errors of metabolism - Other / type not known</option>
+<option value="E11">E11 - Amyloidosis</option>
+<option value="E12">E12 - Porphyria</option>
+<option value="E14">E14 - Obesity</option>
+<option value="E99">E99 - Metabolic diseases - Other / type not known</option>
+<option value="F01">F01 - Personality disorder</option>
+<option value="F02">F02 - Speech or language disorder</option>
+<option value="F03">F03 - Dyslexia</option>
+<option value="F04">F04 - Dyspraxia</option>
+<option value="F05">F05 - Specific learning disorder</option>
+<option value="F11">F11 - Post traumatic stress disorder (PTSD)</option>
+<option value="F20">F20 - Stress reaction disorders - Other / type not known</option>
+<option value="F21">F21 - Generalised anxiety disorder</option>
+<option value="F22">F22 - Phobia - Specific</option>
+<option value="F23">F23 - Phobia - Social</option>
+<option value="F24">F24 - Agoraphobia</option>
+<option value="F25">F25 - Panic disorder</option>
+<option value="F30">F30 - Anxiety disorders - Other / type not known</option>
+<option value="F31">F31 - Obsessive compulsive disorder (OCD)</option>
+<option value="F32">F32 - Anxiety and depressive disorders - mixed</option>
+<option value="F33">F33 - Conversion disorder (hysteria)</option>
+<option value="F34">F34 - Body dysmorphic disorder (BDD)</option>
+<option value="F35">F35 - Dissociative disorders - Other / type not known</option>
+<option value="F40">F40 - Somatoform disorders - Other / type not known</option>
+<option value="F41">F41 - Depressive disorder</option>
+<option value="F42">F42 - Bipolar affective disorder (Hypomania / Mania)</option>
+<option value="F50">F50 - Mood disorders - Other / type not known</option>
+<option value="F51">F51 - Schizophrenia</option>
+<option value="F52">F52 - Schizoaffective disorder</option>
+<option value="F60">F60 - Psychotic disorders - Other / type not known</option>
+<option value="F61">F61 - Dementia</option>
+<option value="F62">F62 - Cognitive disorder due to stroke</option>
+<option value="F65">F65 - Cognitive disorders - Other / type not known</option>
+<option value="F66">F66 - Anorexia nervosa</option>
+<option value="F67">F67 - Bulimia nervosa</option>
+<option value="F68">F68 - Obesity</option>
+<option value="F70">F70 - Eating disorders not otherwise specified (EDNOS)</option>
+<option value="F71">F71 - Alcohol misuse</option>
+<option value="F75">F75 - Drug misuse</option>
+<option value="F81">F81 - Munchausen syndrome</option>
+<option value="F85">F85 - Factitious disorders - Other / type not known</option>
+<option value="F86">F86 - Down's syndrome</option>
+<option value="F87">F87 - Fragile X syndrome</option>
+<option value="F90">F90 - Learning disability - Other / type not known</option>
+<option value="F91">F91 - Autism</option>
+<option value="F92">F92 - Asperger syndrome</option>
+<option value="F94">F94 - Retts disorder</option>
+<option value="F95">F95 - ADHD / ADD</option>
+<option value="F96">F96 - Conduct disorder (including oppositional defiant disorder)</option>
+<option value="F97">F97 - Bedwetting (enuresis)</option>
+<option value="F98">F98 - Faecal soiling (encopresis)</option>
+<option value="F99">F99 - Psychiatric disorders of childhood - Other / type not known</option>
+<option value="G01">G01 - Cerebrovascular accident (stroke)</option>
+<option value="G02">G02 - Transient ischaemic attacks (TIAs)</option>
+<option value="G05">G05 - Cerebrovascular disease - Other / type not known</option>
+<option value="G06">G06 - Generalised seizures (without status epilepticus in last 12 months)</option>
+<option value="G07">G07 - Generalised seizures (with status epilepticus in last 12 months)</option>
+<option value="G08">G08 - Partial seizures (without status epilepticus in last 12 months)</option>
+<option value="G09">G09 - Partial seizures (with status epilepticus in last 12 months)</option>
+<option value="G10">G10 - Narcolepsy</option>
+<option value="G11">G11 - Cataplexy</option>
+<option value="G15">G15 - Seizures - unclassified</option>
+<option value="G16">G16 - Stokes Adams attacks (cardiovascular syncope)</option>
+<option value="G17">G17 - Syncope - Other / type not known</option>
+<option value="G18">G18 - Non epileptic Attack disorder (pseudoseizures)</option>
+<option value="G19">G19 - Drop attacks</option>
+<option value="G25">G25 - Disturbances of consciousness - Non-epileptic - Other / type not known</option>
+<option value="G26">G26 - Parkinson's disease</option>
+<option value="G27">G27 - Parkinson's syndrome / Parkinsonism</option>
+<option value="G28">G28 - Essential tremor - benign</option>
+<option value="G29">G29 - Huntington's disease</option>
+<option value="G30">G30 - Tourette's syndrome</option>
+<option value="G31">G31 - Torticollis</option>
+<option value="G32">G32 - Blepharospasm</option>
+<option value="G33">G33 - Writer's cramp</option>
+<option value="G35">G35 - Movement disorders - Other / type not known</option>
+<option value="G36">G36 - Multiple sclerosis</option>
+<option value="G37">G37 - Neurofibromatosis</option>
+<option value="G40">G40 - Tumours - benign - Other / type not known</option>
+<option value="G41">G41 - Hydrocephalus</option>
+<option value="G42">G42 - Migraine</option>
+<option value="G45">G45 - Headache - Other causes of / cause not known</option>
+<option value="G46">G46 - Head injury - Cognitive impairment</option>
+<option value="G47">G47 - Head injury - Sensorimotor impairment</option>
+<option value="G50">G50 - Head injury - Cognitive and sensorimotor impairment</option>
+<option value="G51">G51 - Paraplegia (traumatic)</option>
+<option value="G52">G52 - Tetraplegia (traumatic)</option>
+<option value="G53">G53 - Syringomyelia / Syringobulbia</option>
+<option value="G55">G55 - Spinal cord compression - Other causes of / cause not known</option>
+<option value="G56">G56 - Motor neurone disease</option>
+<option value="G59">G59 - Cerebral palsy - Quadriplegia</option>
+<option value="G60">G60 - Degenerative neuronal diseases - Other / type not known</option>
+<option value="G61">G61 - Spastic diplegia</option>
+<option value="G62">G62 - Cerebral palsy - athetoid</option>
+<option value="G63">G63 - Cerebral palsy - 
+<option value="H01">H01 - Scleritis</option>
+<option value="H02">H02 - Keratitis</option>
+<option value="H03">H03 - Corneal ulceration</option>
+<option value="H04">H04 - Herpes zoster - ophthalmic</option>
+<option value="H05">H05 - Keratoconus</option>
+<option value="H06">H06 - Orbital cellulitis</option>
+<option value="H07">H07 - Entropion</option>
+<option value="H08">H08 - Ptosis</option>
+<option value="H10">H10 - Conjunctiva, cornea, eyelids and lacrimal apparatus - Other / type not known</option>
+<option value="H11">H11 - Anterior Uveitis (iritis)</option>
+<option value="H13">H13 - Posterior uveitis (choroiditis)</option>
+<option value="H15">H15 - Chorioretinal disorders - Other / type not known</option>
+<option value="H16">H16 - Glaucoma</option>
+<option value="H21">H21 - Eyes - Injuries to</option>
+<option value="H26">H26 - Posterior vitreous detachment</option>
+<option value="H27">H27 - Vitreous haemorrhage</option>
+<option value="H30">H30 - Vitreous disease - Other / type not known</option>
+<option value="H31">H31 - Retinal detachment</option>
+<option value="H32">H32 - Retinal artery occlusion</option>
+<option value="H33">H33 - Retinal vein occlusion</option>
+<option value="H34">H34 - Macular degeneration</option>
+<option value="H35">H35 - Diabetic retinopathy</option>
+<option value="H36">H36 - Hypertensive retinopathy</option>
+<option value="H37">H37 - Retinopathy - Other / type not known</option>
+<option value="H38">H38 - Optic neuritis</option>
+<option value="H39">H39 - Optic atrophy</option>
+<option value="H40">H40 - Retinitis Pigmentosa</option>
+<option value="H41">H41 - Retina and optic nerve - Other diseases of / type not known</option>
+<option value="H42">H42 - Cataract</option>
+<option value="H46">H46 - Myopia (short-sighted)</option>
+<option value="H47">H47 - Hypermetropia (long-sighted)</option>
+<option value="H48">H48 - Presbyopia</option>
+<option value="H49">H49 - Astigmatism</option>
+<option value="H55">H55 - Refractive errors - Other / type not known</option>
+<option value="H56">H56 - Strabismus (Squint)</option>
+<option value="H57">H57 - Nystagmus</option>
+<option value="H65">H65 - Eye movement - Other disorders of / type not known</option>
+<option value="H66">H66 - Amblyopia</option>
+<option value="H67">H67 - Tunnel vision</option>
+<option value="H68">H68 - Scotoma</option>
+<option value="H69">H69 - Hemianopia</option>
+<option value="H70">H70 - Quadrantanopia</option>
+<option value="H71">H71 - Diplopia (double vision)</option>
+<option value="H72">H72 - Cortical blindness</option>
+<option value="H75">H75 - Visual field defects - Other / type not known</option>
+<option value="H99">H99 - Vision - Other diseases affecting / type not known</option>
+<option value="I01">I01 - Otitis externa - chronic</option>
+<option value="I02">I02 - Chronic suppurative otitis media</option>
+<option value="I03">I03 - Mastoiditis</option>
+<option value="I04">I04 - Otitis Media with effusion (OME)</option>
+<option value="I05">I05 - Otosclerosis</option>
+<option value="I06">I06 - Conductive hearing loss due to Trauma</option>
+<option value="I10">I10 - Conductive hearing loss - Other causes of / type not known</option>
+<option value="I11">I11 - Deafness - congenital</option>
+<option value="I12">I12 - Presbyacusis</option>
+<option value="I13">I13 - Labyrinthitis</option>
+<option value="I14">I14 - Menieres disease</option>
+<option value="I15">I15 - Sensorineural hearing loss due to Trauma</option>
+<option value="I20">I20 - Sensorineural hearing loss - Other causes of / type not known</option>
+<option value="I21">I21 - Hearing loss - mixed</option>
+<option value="I22">I22 - Hearing loss - Other / type not known</option>
+<option value="I23">I23 - Tinnitus</option>
+<option value="I24">I24 - Vertigo</option>
+<option value="I99">I99 - Disease affecting hearing & balance - Other / type not known</option>
+<option value="J01">J01 - Aneurysm - aortic</option>
+<option value="J02">J02 - Aneurysm - cerebral</option>
+<option value="J05">J05 - Aneurysms - Other / type not known</option>
+<option value="J06">J06 - Bradycardia</option>
+<option value="J07">J07 - Tachycardia</option>
+<option value="J08">J08 - Heart block</option>
+<option value="J09">J09 - Atrial fibrillation/flutter</option>
+<option value="J10">J10 - Cardiac arrhythmia - Pacemaker/implantable defibrillator fitted</option>
+<option value="J15">J15 - Cardiac arrhythmias - Other / type not known</option>
+<option value="J16">J16 - Cardiac failure</option>
+<option value="J21">J21 - Cardiomyopathy</option>
+<option value="J26">J26 - Atrioseptal defect (ASD)</option>
+<option value="J27">J27 - Ventriculoseptal defect (VSD)</option>
+<option value="J28">J28 - Patent ductus arteriosus (PDA)</option>
+<option value="J29">J29 - Coarctation of the aorta</option>
+<option value="J30">J30 - Fallots tetralogy</option>
+<option value="J35">J35 - Heart disease - Congenital - Other / type not known</option>
+<option value="J36">J36 - Heart transplantation</option>
+<option value="J41">J41 - Hypertension</option>
+<option value="J46">J46 - Angina</option>
+<option value="J47">J47 - Myocardial infarction</option>
+<option value="J55">J55 - Ischaemic heart disease - Other / type not known</option>
+<option value="J56">J56 - Pericarditis</option>
+<option value="J61">J61 - Aortic valve disease</option>
+<option value="J62">J62 - Pulmonary valve disease</option>
+<option value="J63">J63 - Mitral valve</option>
+<option value="J64">J64 - Tricuspid valve disease</option>
+<option value="J70">J70 - Malformations of the heart - Congenital - Other / type not known</option>
+<option value="J71">J71 - Buerger's disease</option>
+<option value="J72">J72 - Atherosclerosis (PVD / Claudication)</option>
+<option value="J73">J73 - Raynaud's disease/phenomenon</option>
+<option value="J75">J75 - Arterial disease excluding coronary - Other / type not known</option>
+<option value="J76">J76 - Deep vein thrombosis</option>
+<option value="J80">J80 - Peripheral venous disease - Other / type not known</option>
+<option value="J99">J99 - Cardiovascular disease - Other / type not known</option>
+<option value="L01">L01 - Hiatus hernia / gastroesophageal reflux disease / reflux oesophagitis</option>
+<option value="L02">L02 - Oesophageal varices</option>
+<option value="L03">L03 - Peptic ulcer (gastric and duodenal)/gastritis</option>
+<option value="L10">L10 - Oesophagus, stomach and duodenum - Other diseases of / type not known</option>
+<option value="L16">L16 - Coeliac disease</option>
+<option value="L25">L25 - Small bowel - Other diseases of / type not known</option>
+<option value="L26">L26 - Crohns disease</option>
+<option value="L30">L30 - Ulcerative colitis</option>
+<option value="L31">L31 - Constipation</option>
+<option value="L32">L32 - Diverticular disease / diverticulitis</option>
+<option value="L33">L33 - Colitis - Ischaemic</option>
+<option value="L40">L40 - Colon - Other diseases of / type not known</option>
+<option value="L41">L41 - Anorectal abscess</option>
+<option value="L42">L42 - Haemorrhoids</option>
+<option value="L43">L43 - Rectal prolapse</option>
+<option value="L44">L44 - Fistula in anus</option>
+<option value="L50">L50 - Rectum/anus - Other diseases of / type not known</option>
+<option value="L51">L51 - Irritable bowel syndrome (IBS)</option>
+<option value="L56">L56 - Mesenteric ischaemia</option>
+<option value="L61">L61 - Tumours of the gastrointestinal tract - benign</option>
+<option value="L71">L71 - Hernia</option>
+<option value="L81">L81 - Cleft lip</option>
+<option value="L82">L82 - Cleft lip with cleft palate</option>
+<option value="L83">L83 - Tracheo-oesophageal fistula/atresia</option>
+<option value="L84">L84 - Hirschprung disease</option>
+<option value="L98">L98 - Attention to colostomy/ileostomy/stoma - diagnosis not known</option>
+<option value="L99">L99 - Gastrointestinal tract - Other diseases of / type not known</option>
+<option value="M03">M03 - Autoimmune hepatitis</option>
+<option value="M04">M04 - Steatohepatitis - non-alcoholic (NASH)</option>
+<option value="M10">M10 - Hepatitis - Chronic - Other / type not known</option>
+<option value="M11">M11 - Cirrhosis - Alcohol induced</option>
+<option value="M12">M12 - Hepatitis B and D infection</option>
+<option value="M13">M13 - Hepatitis C infection</option>
+<option value="M14">M14 - Primary Biliary cirrhosis (PBC)</option>
+<option value="M15">M15 - Cirrhosis - Autoimmune</option>
+<option value="M16">M16 - Haemochromatosis</option>
+<option value="M17">M17 - Wilson's disease</option>
+<option value="M20">M20 - Cirrhosis - Other / type not known</option>
+<option value="M21">M21 - Ascites</option>
+<option value="M22">M22 - Hepatic encephalopathy</option>
+<option value="M23">M23 - Peritonitis</option>
+<option value="M30">M30 - Liver failure - Features of - Other / features not known</option>
+<option value="M31">M31 - Liver transplantation</option>
+<option value="M36">M36 - Gallstones</option>
+<option value="M45">M45 - Gallbladder and biliary tract - Other diseases of / type not known</option>
+<option value="M46">M46 - Pancreatitis - chronic</option>
+<option value="M55">M55 - Pancreas - Other diseases of / type not known</option>
+
+<option value="N01">N01 - Impetigo</option>
+<option value="N02">N02 - Cellulitis</option>
+<option value="N10">N10 - Infections - Other / type not known</option>
+<option value="N11">N11 - Eczema (dermatitis)</option>
+<option value="N12">N12 - Eczema - varicose</option>
+<option value="N13">N13 - Psoriasis</option>
+<option value="N14">N14 - Urticaria</option>
+<option value="N15">N15 - Acne vulgaris</option>
+<option value="N16">N16 - Rosacea</option>
+<option value="N20">N20 - Papulosquamous and inflammatory rashes - Other / type not known</option>
+<option value="N21">N21 - Pemphigus vulgaris</option>
+<option value="N22">N22 - Pemphigoid</option>
+<option value="N23">N23 - Dermatitis herpetiformis</option>
+<option value="N24">N24 - Epidermolysis bullosa</option>
+<option value="N30">N30 - Bullous disease - Other / type not known</option>
+<option value="N31">N31 - Leg ulcers (venous)</option>
+<option value="N32">N32 - Venous insufficiency - chronic</option>
+<option value="N33">N33 - Leg ulcers (arterial)</option>
+<option value="N34">N34 - Pressure sores</option>
+<option value="N35">N35 - Lymphoedema</option>
+<option value="N40">N40 - Blood vessels/lymphatics - Other diseases of / type not known</option>
+<option value="N41">N41 - Ehlers Danlos syndrome</option>
+<option value="N50">N50 - Collagen and elastic tissue - Other diseases of / type not known</option>
+<option value="N51">N51 - Burns</option>
+<option value="N99">N99 - Skin disease - Other / type not known</option>
+
+<option value="O01">O01 - Osteoarthritis of Hip</option>
+<option value="O02">O02 - Osteoarthritis of Knee</option>
+<option value="O03">O03 - Osteoarthritis of other single joint</option>
+<option value="O10">O10 - Generalised Osteoarthritis (of 2 or more joints)</option>
+<option value="O11">O11 - Fibromyalgia</option>
+<option value="O12">O12 - Chronic fatigue syndrome (CFS)</option>
+<option value="O15">O15 - Pain syndromes - Chronic - Other / type not known</option>
+<option value="O16">O16 - Rheumatoid arthritis</option>
+<option value="O17">O17 - Ankylosing spondylitis</option>
+<option value="O18">O18 - Arthritis - Psoriatic</option>
+<option value="O19">O19 - Arthritis - Reactive</option>
+<option value="O20">O20 - Juvenile chronic arthritis (Still's disease)</option>
+<option value="O25">O25 - Inflammatory arthritis - Other / type not known</option>
+<option value="O26">O26 - Gout</option>
+<option value="O27">O27 - Pseudogout</option>
+<option value="O30">O30 - Crystal deposition disorders - Other / type not known</option>
+<option value="O31">O31 - Osteonecrosis</option>
+<option value="O35">O35 - Osteochondritis</option>
+<option value="O36">O36 - Rickets</option>
+<option value="O37">O37 - Osteomalacia</option>
+<option value="O38">O38 - Osteoporosis</option>
+<option value="O39">O39 - Paget's disease</option>
+<option value="O40">O40 - Other metabolic & endocrine disorders of musculoskeletal system</option>
+<option value="O41">O41 - Hereditary multiple exostosis (diaphyseal aclasis)</option>
+<option value="O42">O42 - Achondroplasia</option>
+<option value="O43">O43 - Epiphyseal dysplasia - multiple</option>
+<option value="O44">O44 - Osteogenesis imperfecta</option>
+<option value="O45">O45 - Marfan's syndrome</option>
+<option value="O46">O46 - Hypermobility syndrome</option>
+<option value="O50">O50 - Genetic disorders, dysplasias and malformations - Other / type not known</option>
+<option value="O51">O51 - Tumours of bone - benign</option>
+<option value="O61">O61 - Compartment syndrome (Volkmann's ischaemia)</option>
+<option value="O62">O62 - Sudek's atrophy</option>
+<option value="O65">O65 - Fracture complications - Other / type not known</option>
+<option value="O99">O99 - Generalised musculoskeletal disease - Other / type not known</option>
+
+<option value="P01">P01 - Rotator cuff disorder</option>
+<option value="P02">P02 - Adhesive capsulitis (frozen shoulder)</option>
+<option value="P03">P03 - Shoulder instability</option>
+<option value="P05">P05 - Shoulder disorders - Other / type not known</option>
+<option value="P06">P06 - Tennis elbow (lateral epicondylitis)</option>
+<option value="P07">P07 - Golfer's elbow (medial epicondylitis)</option>
+<option value="P10">P10 - Elbow disorders - Other / type not known</option>
+<option value="P11">P11 - Tenosynovitis</option>
+<option value="P12">P12 - Carpal tunnel syndrome</option>
+<option value="P13">P13 - Dupuytrens contracture</option>
+<option value="P14">P14 - Tendon lesions</option>
+<option value="P15">P15 - Wrist and hand disorders - Other / type not known</option>
+<option value="P16">P16 - Cervical disc lesion</option>
+<option value="P17">P17 - Cervical spondylosis</option>
+<option value="P18">P18 - Whiplash injury</option>
+<option value="P20">P20 - Neck disorders - Other / type not known</option>
+<option value="P21">P21 - Back pain - Non specific (mechanical)</option>
+<option value="P22">P22 - Scoliosis</option>
+<option value="P23">P23 - Kyphosis</option>
+<option value="P24">P24 - Schuermann's disease</option>
+<option value="P25">P25 - Lumbar disc lesion</option>
+<option value="P26">P26 - Spinal stenosis</option>
+<option value="P27">P27 - Spondylolisthesis</option>
+<option value="P28">P28 - Lumbar spondylosis (OA spine)</option>
+<option value="P30">P30 - Back pain - Specific - Other / type not known</option>
+<option value="P31">P31 - Dislocation of the hip - congenital</option>
+<option value="P32">P32 - Perthes disease</option>
+<option value="P33">P33 - Slipped upper femoral epiphysis</option>
+<option value="P40">P40 - Hip disorders - Other / type not known</option>
+<option value="P41">P41 - Meniscal lesions</option>
+<option value="P42">P42 - Ligamentous instability of knee</option>
+<option value="P43">P43 - Osgood schlatters disease</option>
+<option value="P44">P44 - Osteochondritis dissecans</option>
+<option value="P45">P45 - Patellar dislocation - Recurrent</option>
+<option value="P46">P46 - Chondromalacia patellae</option>
+<option value="P47">P47 - Bursitis</option>
+<option value="P50">P50 - Knee disorders - Other / type not known</option>
+<option value="P51">P51 - Club foot (talipes)</option>
+<option value="P52">P52 - Hallux valgus / rigidus</option>
+<option value="P55">P55 - Fore foot pain (Metatarsalgia)</option>
+<option value="P60">P60 - Ankle and foot disorders - Other / type not known</option>
+<option value="P61">P61 - Amputation - Upper limb(s)</option>
+<option value="P66">P66 - Amputation - Lower limb(s)</option>
+<option value="P70">P70 - Amputations - Upper & Lower limb/s</option>
+<option value="P71">P71 - Spine - Injury/Fracture/Dislocation of</option>
+<option value="P72">P72 - Thorax - Injury/Fracture/Dislocation of</option>
+<option value="P73">P73 - Abdomen - Injury/Fracture/Dislocation of</option>
+<option value="P74">P74 - Pelvis - Injury/Fracture/Dislocation of</option>
+<option value="P75">P75 - Upper limb - Injury/Fracture/Dislocation of</option>
+<option value="P76">P76 - Multiple injury/fracture/dislocation</option>
+<option value="P80">P80 - Lower limb - Injury/Fracture/Dislocation of</option>
+<option value="P99">P99 - Musculoskeletal disease - Regional / Localised - Other / type not known</option>
+<option value="Q01">Q01 - Systemic lupus erythematosus (SLE)</option>
+<option value="Q02">Q02 - Antiphospholipid syndrome</option>
+<option value="Q03">Q03 - Systemic sclerosis (scleroderma)</option>
+<option value="Q04">Q04 - Sjogren's syndrome</option>
+<option value="Q05">Q05 - Polymyalgia rheumatica</option>
+<option value="Q06">Q06 - Temporal (giant cell) arteritis (Headache)</option>
+<option value="Q07">Q07 - Polyarteritis nodosa</option>
+<option value="Q08">Q08 - Behcet's disease</option>
+<option value="Q15">Q15 - Vasculitis - Other / type not known</option>
+<option value="Q99">Q99 - Autoimmune disease - Other / type not known</option>
+
+<option value="R01">R01 - Incontinence - urge</option>
+<option value="R02">R02 - Incontinence - stress</option>
+<option value="R03">R03 - Urinary Overflow</option>
+<option value="R10">R10 - Incontinence (not Enuresis / Bed wetting) - Other / type not known</option>
+<option value="R11">R11 - Glomerulonephritis</option>
+<option value="R12">R12 - Nephrotic syndrome</option>
+<option value="R13">R13 - Urinary tract infection</option>
+<option value="R14">R14 - Interstitial nephritis</option>
+<option value="R15">R15 - Renal artery stenosis</option>
+<option value="R16">R16 - Renal calculi</option>
+<option value="R17">R17 - Hydronephrosis</option>
+<option value="R20">R20 - Kidney disease - Other / type not known</option>
+<option value="R21">R21 - Renal failure - acute</option>
+<option value="R22">R22 - Renal failure - chronic</option>
+<option value="R23">R23 - Renal transplantation</option>
+<option value="R30">R30 - Transplant rejection - renal</option>
+<option value="R31">R31 - Prostatic disease</option>
+<option value="R40">R40 - Bladder, urethra, testes and penis - Other diseases of / type not known</option>
+<option value="R41">R41 - Ovarian cyst (benign)</option>
+<option value="R42">R42 - Pelvic inflammatory disease (PID)</option>
+<option value="R43">R43 - Endometriosis</option>
+<option value="R44">R44 - Fibroids</option>
+<option value="R45">R45 - Uterine prolapse</option>
+<option value="R50">R50 - Ovary, uterus, cervix, vagina and vulva - Other diseases of / type not known</option>
+<option value="R99">R99 - Genitourinary disease - Other / type not known</option>
+
+<option value="S01">S01 - Diabetes insipidus</option>
+<option value="S02">S02 - Growth hormone deficiency</option>
+<option value="S10">S10 - Hypothalamic and pituitary diseases - Other / type not known</option>
+<option value="S11">S11 - Diabetes mellitus Type 1 (insulin dependent)</option>
+<option value="S12">S12 - Diabetes mellitus Type 2 (non insulin dependent)</option>
+<option value="S13">S13 - Diabetes mellitus (category unknown)</option>
+<option value="S21">S21 - Hypothyroidism (myxoedema)</option>
+<option value="S22">S22 - Hyperthyroidism (thyrotoxicosis), including Graves disease</option>
+<option value="S23">S23 - Goitre</option>
+<option value="S30">S30 - Thyroid diseases - Other / type not known</option>
+<option value="S31">S31 - Addison's disease</option>
+<option value="S32">S32 - Cushing's syndrome</option>
+<option value="S40">S40 - Adrenal diseases - Other / type not known</option>
+<option value="S41">S41 - Hyperparathyroidism</option>
+<option value="S42">S42 - Hypoparathyroidism</option>
+<option value="S50">S50 - Parathyroid diseases - Other / type not known</option>
+<option value="S99">S99 - Endocrine diseases - Other / type not known</option>
+
+<option value="T01">T01 - Sleep apnoea - obstructive</option>
+<option value="T05">T05 - Upper respiratory tract - Other diseases of / type not known</option>
+<option value="T06">T06 - Chronic obstructive pulmonary disease (COPD) chronic bronchitis/emphysema</option>
+<option value="T11">T11 - Bronchiectasis</option>
+<option value="T16">T16 - Cystic fibrosis</option>
+<option value="T17">T17 - Asthma</option>
+<option value="T21">T21 - Pneumonia</option>
+<option value="T26">T26 - Extrinsic allergic alveolitis</option>
+<option value="T27">T27 - Fibrosing alveolitis</option>
+<option value="T30">T30 - Pulmonary fibrosis - Other / type not known</option>
+<option value="T31">T31 - Pneumoconiosis - coalworkers</option>
+<option value="T32">T32 - Silicosis</option>
+<option value="T33">T33 - Asbestosis</option>
+<option value="T40">T40 - Pneumoconiosis - Other / type not known</option>
+<option value="T41">T41 - Sarcoidosis</option>
+<option value="T50">T50 - Granulomatous lung disease / pulmonary infiltration - Other / type not known</option>
+<option value="T51">T51 - Pleural effusion</option>
+<option value="T52">T52 - Pneumothorax</option>
+<option value="T53">T53 - Empyema</option>
+<option value="T60">T60 - Pleura - Other diseases of / type not known</option>
+<option value="T61">T61 - Lung transplantation</option>
+<option value="T66">T66 - Heart and lung transplantation</option>
+<option value="T71">T71 - Pulmonary embolus</option>
+<option value="T90">T90 - Lower respiratory tract - Other diseases of / type not known</option>
+
+<option value="U01">U01 - Complications of prematurity</option>
+<option value="U02">U02 - Failure to thrive</option>
+<option value="U03">U03 - Chromosomal syndrome - Other/type not known</option>
+<option value="U10">U10 - Old age</option>
+<option value="V01">V01 - Allergy syndrome - multiple</option>
+<option value="V02">V02 - Allergy with risk of anaphylaxis</option>
+<option value="V03">V03 - Allergy - risk of anaphylaxis</option>
+<option value="V04">V04 - Allergy - no risk of anaphylaxis</option>
+<option value="V05">V05 - Oral allergy syndrome</option>
+<option value="V06">V06 - Food intolerance</option>
+<option value="V07">V07 - Angioedema</option>
+<option value="V10">V10 - Hypersensitivity diseases - Other / type not known</option>
+<option value="V99">V99 - Immune system - Other diseases of / type not known</option>
+
+<option value="Z01">Z01 - No illness or impairment has been claimed/identified</option>
+<option value="Z99">Z99 - No Secondary</option>
+  </select>
+</div>
+
+
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      To (optional)
+    </legend>
+      <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid to date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" value="AB" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" value="CD" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" value="EFGH" inputmode="numeric">
+        </div>
+      </div>  
+         </div>  
+        
+         </fieldset>
+</div>
+   
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--invisible">
+
+
+
+      
+
+    
+   <div class="govuk-form-group--error" style="margin-top: 60px;">
+  <label class="govuk-label" for="width-5">
+    Mobility reason
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a mobility reason
+  </p>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+<option value="M50">M50 - Conditions not satisfied</option>
+<option value="M52">M52 - Prospective test not satisfied</option>
+<option value="M53">M53 - Failure to establish conditions satisfied</option>
+<option value="M54">M54 - Child – conditions not satisfied</option>
+<option value="M55">M55 - Qualifying period not satisfied</option>
+<option value="M56">M56 - Unable to benefit</option>
+<option value="M57">M57 - Child - Higher Rate (HR) conditions not satisfied</option>
+<option value="M61">M61 - Not considered – under age (periods up to and including 8 April 2001)</option>
+<option value="M62">M62 - Not considered - under age (for periods starting on or after 9 April 2001)</option>
+<option value="M63">M63 - Scottish Gov Transfer OUT</option>
+<option value="M65">M65 - Not exportable</option>
+<option value="M67">M67 - PIP mobility not awarded</option>
+<option value="M68">M68 - PIP mobility standard</option>
+<option value="M69">M69 - PIP mobility enhanced</option>
+<option value="M70">M70 - Not considered</option>
+<option value="M72">M72 - Not considered - for renewal</option>
+<option value="M73">M73 - PIP claim invite non-response</option>
+<option value="M74">M74 - PIP claim withdrawn</option>
+  </select>
+</div>
+
+
+
+
+
+
+   <div class="govuk-form-group--error" style="margin-top: 60px;">
+  <label class="govuk-label" for="width-5">
+    Care reason
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a care reason
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="published">C14 - Rising 16 PIP Extension</option>
+<option value="published">C15 - PIP Extension</option>
+<option value="published">C16 - Rising 16 PIP Extension</option>
+<option value="published">C17 - PIP Extension</option>
+<option value="published">C18 - Rising 16 PIP Extension</option>
+<option value="published">C19 - PIP Extension</option>
+<option value="published">C41 - Limit care – child</option>
+<option value="published">C42 - Limited care in connection with bodily functions</option>
+<option value="published">C50 - Conditions not satisfied</option>
+<option value="published">C52 - Prospective test not satisfied</option>
+<option value="published">C53 - Failure to establish conditions satisfied</option>
+<option value="published">C54 - Child - conditions not satisfied</option>
+<option value="published">C55 - Qualifying period not satisfied</option>
+<option value="published">C63 - Scottish Gov Transfer OUT</option>
+<option value="published">C65 - Not exportable</option>
+<option value="published">C67 - PIP daily living not awarded</option>
+<option value="published">C68 - PIP daily living standard</option>
+<option value="published">C69 - PIP daily living enhanced</option>
+<option value="published">C70 - Not considered</option>
+<option value="published">C72 - Not considered - for renewal</option>
+<option value="published">C73 - PIP claim invite non-response</option>
+<option value="published">C74 - PIP claim withdrawn</option>
+<option value="published">C80 - Day attention</option>
+<option value="published">C81 - Day supervision</option>
+<option value="published">C82 - Night attention</option>
+<option value="published">C84 - Renal dialysis</option>
+<option value="published">C87 - Night watching over</option>
+<option value="published">C90 - Night attention and Day attention</option>
+<option value="published">C91 - Night attention and Day supervision</option>
+<option value="published">C92 - Night watching over and Day attention</option>
+<option value="published">C94 - Night watching over and Day supervision</option>
+<option value="published">C97 - SR – 3 year award</option>
+  </select>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break">
+
+</div>
+
+  <div class="govuk-grid-column-full">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button"
+    onclick="window.location.href='entitlement-add-another'">
+  Add another entitlement
+    </button>
+    <br>
+    <button type="submit" class="govuk-button" data-module="govuk-button"
+    onclick="window.location.href='entitlement-added'">
+      Save
+    </button>
+</div>
+
+  </div>
+  <div class="govuk-grid-row">
+
+
+
+  </div>
+
+</div>
+
+
+
+{% endblock %}

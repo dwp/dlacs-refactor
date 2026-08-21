@@ -62,12 +62,13 @@
       </tr>
   </table>
 
-
-
-      <div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
     Reason
   </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a reason
+  </p>
   <select class="govuk-select" id="sort" name="sort">
     <option value="published"></option>
     <option value="views">00</option>
@@ -91,6 +92,11 @@
     <option value="views">42</option>
   </select>
 </div>
+
+<br>
+
+
+
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

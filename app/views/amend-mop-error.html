@@ -33,6 +33,18 @@
 
   </section>
 <a href="/payment-frequency" class="govuk-back-link">Back</a>
+
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select a weeks in arrears",
+      href: "#"
+    }
+  ]
+}) }}
   <h1 class="govuk-heading-l">Amend method of payment</h1>
 
 
@@ -52,6 +64,7 @@
       
   ]
 }) }}
+
 
   <label class="govuk-label" for="sort-code">
       Frequency
@@ -76,32 +89,36 @@
 
     <br>
 
-      <label class="govuk-label" for="sort-code">
-      Weeks in arrears
+    <div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="Frequency-error">
+  <label class="govuk-label" for="sort-code">
+    Weeks in arrears
     </label>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
+    <p id="whereDoYouLive-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select a weeks in arrears
+    </p>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="weeks">
             0
           </label>
-        </div>
-         <div class="govuk-radios__item">
+      </div>
+      <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="weeks">
             3
           </label>
-        </div>
+      </div>
                  <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="weeks">
             4
           </label>
-        </div>
       </div>
-    </fieldset>
+    </div>
+  </fieldset>
+</div>
 
 
 

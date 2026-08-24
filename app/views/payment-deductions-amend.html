@@ -47,7 +47,7 @@
 {% set adjTypeHtml %}
   {{ govukInput({
     label: {
-      text: "Enter Adj. Type"
+      text: "Enter adjustment type"
     },
     classes: "govuk-input--width-10",
     id: "adj-type",
@@ -77,7 +77,7 @@
   items: [
     {
       value: "adj-type",
-      text: "Adj. Type",
+      text: "Adjustment type",
       checked: true,
       conditional: {
         html: adjTypeHtml

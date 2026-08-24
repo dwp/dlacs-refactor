@@ -47,7 +47,7 @@
 {% set adjTypeHtml %}
   {{ govukInput({
     label: {
-      text: "Enter Adj. Type"
+      text: "Enter adjustment type"
     },
     classes: "govuk-input--width-10",
     id: "adj-type",
@@ -70,13 +70,15 @@
   name: "option",
   fieldset: {
     legend: {
-      text: "Select an option"
+      text: "Select an option",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--m"
     }
   },
   items: [
     {
       value: "adj-type",
-      text: "Adj. Type",
+      text: "Adjustment type",
       conditional: {
         html: adjTypeHtml
       }

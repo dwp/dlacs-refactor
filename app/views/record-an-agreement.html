@@ -35,9 +35,23 @@
 
 <h1 class="govuk-heading-l">Add or amend agreement</h1>
 
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Supplier reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+</dl>
+
 {{ govukInput({
   label: {
-    text: "Supplier reference"
+    text: "Customer reference number"
   },
   classes: "govuk-!-width-one-half",
   id: "one-half",
@@ -46,7 +60,7 @@
 
 {{ govukInput({
   label: {
-    text: "Customer ref no."
+    text: "Agrmt reference number"
   },
   classes: "govuk-!-width-one-half",
   id: "one-half",
@@ -55,16 +69,7 @@
 
 {{ govukInput({
   label: {
-    text: "Agrmt ref no"
-  },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
-}) }}
-
-{{ govukInput({
-  label: {
-    text: "Join X-ref no."
+    text: "Join X-ref no. (optional)"
   },
   classes: "govuk-!-width-one-half",
   id: "one-half",
@@ -86,24 +91,43 @@
   }
 }) }}
 
-{{ govukInput({
-  label: {
-    text: "Cancel?"
-  },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  items: [
+    {
+      value: "farm",
+      text: "Cancel? (optional)"
+    }
+  ]
 }) }}
 
 <h2 class="govuk-heading-m">Agreement</h2>
 
-{{ govukInput({
-  label: {
-    text: "Agreement type"
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "Agreement type"
+    }
   },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  items: [
+    {
+      value: "carcasses",
+      text: "FA - Fixed amount"
+    },
+    {
+      value: "mines",
+      text: "VA - Variable amount"
+    },
+    {
+      value: "farm",
+      text: "PR - Provisional agreement"
+    }
+  ]
 }) }}
 
 
@@ -153,7 +177,7 @@
   id: "cost",
   name: "cost",
   label: {
-    text: "4 weekly ammount",
+    text: "4 weekly amount",
     classes: "govuk-body--m",
     isPageHeading: true
   },
@@ -169,20 +193,23 @@
 
 {{ govukInput({
   label: {
-    text: "No. weekly payments"
+    text: "Number of weekly payments"
   },
   classes: "govuk-!-width-one-half",
   id: "one-half",
   name: "oneHalf"
 }) }}
 
-{{ govukInput({
-  label: {
-    text: "Wheelchair?"
-  },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  items: [
+    {
+      value: "farm",
+      text: "Wheelchair? (optional)"
+    }
+  ]
 }) }}
 
 {{ govukInput({

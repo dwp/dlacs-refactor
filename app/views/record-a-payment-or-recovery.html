@@ -54,15 +54,74 @@
       Add or amend a payment/recovery
     </h1>
 
-    {{ govukInput({
-      id: "supplier-reference",
-      name: "supplierReference",
-      label: {
-        text: "Payment reason"
-      },
-      classes: "govuk-!-width-one-half",
-      value: ""
-    }) }}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Alternative format flag (optional)"
+  },
+  items: [
+    {
+      value: "published",
+      text: "51 - "
+    },
+    {
+      value: "updated",
+      text: "52 - ",
+      selected: true
+    },
+    {
+      value: "views",
+      text: "53 - "
+    },
+    {
+      value: "comments",
+      text: "54 -"
+    },
+    {
+      value: "views",
+      text: "55 - "
+    },
+    {
+      value: "comments",
+      text: "56 - "
+    },
+    {
+      value: "views",
+      text: "57 - "
+    },
+    {
+      value: "comments",
+      text: "58 - "
+    },
+    {
+      value: "views",
+      text: "61 - "
+    },
+    {
+      value: "comments",
+      text: "62 - "
+    },
+    {
+      value: "views",
+      text: "63 - "
+    },
+    {
+      value: "comments",
+      text: "64 - "
+    },
+    {
+      value: "views",
+      text: "65 - "
+    },
+    {
+      value: "comments",
+      text: "66 - "
+    }
+  ]
+}) }}
 
     <h2 class="govuk-heading-m">
       Relevent details for supplier
@@ -195,15 +254,17 @@
     }) }}
 
 
-    {{ govukInput({
-      id: "agreement-type",
-      name: "agreementType",
-      label: {
-        text: "Cancel clerical payment?"
-      },
-      classes: "govuk-!-width-one-half",
-      value: ""
-    }) }}
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  items: [
+    {
+      value: "farm",
+      text: "Cancel clerical payment? (optional)"
+    }
+  ]
+}) }}
 
    {{ govukButton({
   text: "Save",

@@ -27,7 +27,7 @@
 
 <a href="reg-claim-child-details-pg" class="govuk-back-link">Back</a>
 
-<h1 class="govuk-heading-xl">Case details</h1>
+<h1 class="govuk-heading-l">Add case details</h1>
 
 <p>Receipt date</p>
 
@@ -39,7 +39,7 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
               Day
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
           </div>
         </div>
         <div class="govuk-date-input__item">
@@ -47,7 +47,7 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
               Month
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
           </div>
         </div>
         <div class="govuk-date-input__item">
@@ -55,7 +55,7 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
               Year
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
               Day
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="">
           </div>
         </div>
         <div class="govuk-date-input__item">
@@ -80,7 +80,7 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
               Month
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="">
           </div>
         </div>
         <div class="govuk-date-input__item">
@@ -88,65 +88,12 @@
             <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
               Year
             </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" >
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="">
           </div>
         </div>
       </div>
     </fieldset>
   </div>
-
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="width-10">
-      Flags
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text" >
-  </div>
-
-{{ govukSelect({
-  id: "sort",
-  name: "sort",
-  label: {
-    text: "Alternative format flag"
-  },
-  items: [
-    {
-      value: "",
-      text: "Select an option"
-    },
-    {
-      value: "published",
-      text: "Y"
-    },
-    {
-      value: "updated",
-      text: "N"
-    }
-  ]
-}) }}
-
-
-{{ govukSelect({
-  id: "sort",
-  name: "sort",
-  label: {
-    text: "Alternative format flag"
-  },
-items: [
-  {
-    value: "",
-    text: "Select an option"
-  },
-  {
-    value: "published",
-    text: "02"
-  },
-  {
-    value: "updated",
-    text: "01"
-  }
-]
-}) }}
-
 
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -154,30 +101,245 @@ items: [
   name: "waste",
   fieldset: {
     legend: {
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
+      text: "Indicators (optional)"
     }
   },
   items: [
     {
       value: "carcasses",
-      text: "Suppress acknowledgement"
+      text: "B - Boarder case"
+    },
+    {
+      value: "mines",
+      text: "D - Renal dialysis"
+    },
+    {
+      value: "farm",
+      text: "F - proven fraud"
+    },
+    {
+      value: "farm",
+      text: "I - Fraud - under investigation"
+    },
+    {
+      value: "farm",
+      text: "L - Motability publicity required - DLA only"
+    },
+    {
+      value: "farm",
+      text: "N - Notepad"
+    },
+    {
+      value: "farm",
+      text: "P - Overpayment interest"
+    },
+    {
+      value: "farm",
+      text: "S - SR"
+    },
+    {
+      value: "farm",
+      text: "U - No Motability publicity required - DLA only"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Alternative format flag (optional)"
+  },
+  items: [
+    {
+      value: "published",
+      text: "00 - Normal"
+    },
+    {
+      value: "updated",
+      text: "01 - Welsh"
+    },
+    {
+      value: "views",
+      text: "02 - Braille"
+    },
+    {
+      value: "comments",
+      text: "03 - Foreign language"
+    },
+    {
+      value: "views",
+      text: "04 - Audio Tape"
+    },
+    {
+      value: "comments",
+      text: "05 - Large Font"
+    },
+    {
+      value: "views",
+      text: "06 - British Sign Language"
+    },
+    {
+      value: "comments",
+      text: "07 - Telephone"
+    },
+    {
+      value: "views",
+      text: "08 - Email"
+    },
+    {
+      value: "comments",
+      text: "09 - Textphone or Typetalk or Relay UK"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Exportability indicator"
+  },
+  items: [
+    {
+      value: "published",
+      text: "00 - No exportability interest"
+    },
+    {
+      value: "updated",
+      text: "01 - Exportability decision pending"
+    },
+    {
+      value: "views",
+      text: "02 - Not in sickness Insurance period"
+    },
+    {
+      value: "comments",
+      text: "03 - In receipt of Foreign Pension"
+    },
+    {
+      value: "views",
+      text: "04 - In receipt of Foreign Sickness Benefit"
+    },
+    {
+      value: "comments",
+      text: "05 - Has Foreign Insurance"
+    },
+    {
+      value: "views",
+      text: "06 - Is a family member of someone in receipt of Foreign Sickness Benefit"
+    },
+    {
+      value: "comments",
+      text: "07 - Is a family member of someone with Foreign Insurance"
+    },
+    {
+      value: "views",
+      text: "08 - Past Presence Test not satisfied"
+    },
+    {
+      value: "comments",
+      text: "09 - Past Presence test not satisfied for close period at start of award"
+    },
+    {
+      value: "views",
+      text: "10 - Mobility component only"
+    },
+    {
+      value: "comments",
+      text: "11 - Exported - in receipt of State Pension"
+    },
+    {
+      value: "views",
+      text: "12 - Exported - in receipt of Incapacity Benefit"
+    },
+    {
+      value: "comments",
+      text: "13 - Exported - inside Sickness Insurance period"
+    },
+    {
+      value: "views",
+      text: "14 - Exported - currently paying United Kingdom (UK) National Insurance contributions"
+    },
+    {
+      value: "comments",
+      text: "15 - Exported - family member of someone within Sickness Insurance period"
+    },
+    {
+      value: "comments",
+      text: "16 - Exported - family member of someone paying UK National Insurance contributions"
+    },
+    {
+      value: "views",
+      text: "17 - Exported - other reasons"
+    },
+    {
+      value: "comments",
+      text: "21 - New Claim - in receipt of State Pension"
+    },
+    {
+      value: "views",
+      text: "22 - New Claim - in receipt of Incapacity Benefit"
+    },
+    {
+      value: "comments",
+      text: "23 - New Claim - inside Sickness Insurance period"
+    },
+    {
+      value: "views",
+      text: "24 - New Claim - currently paying UK National Insurance contributions"
+    },
+    {
+      value: "comments",
+      text: "25 - New CLaim - family member of someone within Sickness Insurance period"
+    },
+    {
+      value: "views",
+      text: "26 - New Claim - family member of someone paying UK National Insurance contributions"
+    },
+    {
+      value: "comments",
+      text: "27 - New CLaim - other reason"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  items: [
+    {
+      value: "suppress-ack",
+      text: "Suppress acknowledgement (optional)"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  name: "waste",
+  items: [
+    {
+      value: "farm",
+      text: "Scottish? (optional)"
     }
   ]
 }) }}
 
 
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-
-{{ govukButton({
-  text: "Continue",
-  href: "/reg-claim-check-answers"
-}) }}
+<button type="submit" class="govuk-button" data-module="govuk-button" onclick="window.location.href='case-details'">
+  Save
+</button>
 
   </div>
-
-
 
 </div>
 
 {% endblock %}
+

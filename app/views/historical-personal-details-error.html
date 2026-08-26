@@ -76,6 +76,18 @@
 
   </section>
 
+  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Enter a valid date of enquiry",
+      href: "#"
+    }
+  ]
+}) }}
+
   <h1 class="govuk-heading-l">Historical personal details</h1>
 
 
@@ -104,24 +116,21 @@
 
 
 
-<div class="date-row">
-  <div class="date-input-wrapper">
-    {{ govukDateInput({
-      id: "start-date",
-      namePrefix: "start-date",
-      fieldset: {
-        legend: {
-          text: "Date of enquiry (optional)"
-        }
-      }
-    }) }}
-  </div>
-  {{ govukButton({
-    text: "Search",
-    classes: "date-button"
-  }) }}
-</div>
-
+{{ govukDateInput({
+  id: "start-date",
+  namePrefix: "start-date",
+  fieldset: {
+    legend: {
+      text: "Date of enquiry (optional)"
+    }
+  },
+  errorMessage: {
+    text: "Enter a valid date"
+  },
+  year: {
+    error: true
+  }
+}) }}
 
 
   <table class="govuk-table">

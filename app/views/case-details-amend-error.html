@@ -32,71 +32,106 @@
   <a href="case-details" class="govuk-back-link">Back</a>
   <h1 class="govuk-heading-l">Amend case details</h1>
 
-<p>Receipt date</p>
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Enter a valid receipt date  </li>
+        <li>
+          <li>
+          <a href="#">Enter a valid effective date  </li>
+        <li>
+          <li>
+          <a href="#">Select an exportability indicator  </li>
+        <li>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-      <div class="govuk-date-input" id="passport-issued">
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="03">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="01">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2026">
-          </div>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      Receipt date
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid receipt date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
         </div>
       </div>
-    </fieldset>
-  </div>
-
-  <p>Effective date</p>
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-      <div class="govuk-date-input" id="passport-issued">
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-              Day
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="14">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-              Month
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="01">
-          </div>
-        </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-              Year
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2025">
-          </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
         </div>
       </div>
-    </fieldset>
-  </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      Effective date 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid effective date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -202,26 +237,35 @@
   ]
 }) }}
 
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 
+
 {{ govukSelect({
-  id: "sort",
-  name: "sort",
+  id: "exportability-indicator",
+  name: "exportabilityIndicator",
   label: {
     text: "Exportability indicator"
   },
+  errorMessage: {
+    text: "Select an exportability indicator"
+  },
   items: [
     {
-      value: "published",
-      text: "00 - No exportability interest",
-      selected:true
+      value: "",
+      text: "Select an exportability indicator",
+      selected: true
     },
     {
-      value: "updated",
+      value: "00",
+      text: "00 - No exportability interest"
+    },
+    {
+      value: "01",
       text: "01 - Exportability decision pending"
     },
     {
-      value: "views",
+      value: "02",
       text: "02 - Not in sickness Insurance period"
     },
     {
@@ -315,18 +359,6 @@
   ]
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  name: "waste",
-  items: [
-    {
-      value: "farm",
-      text: "Suppress acknowledgment? (optional)"
-    }
-  ]
-}) }}
-
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
@@ -338,14 +370,17 @@
   },
   items: [
     {
-      value: "wales",
+      value: "england",
       text: "Yes"
     },
     {
-      value: "northern-ireland",
+      value: "scotland",
       text: "No"
     }
-  ]
+  ],
+  errorMessage: {
+    text: "Select an option"
+  }
 }) }}
 
 

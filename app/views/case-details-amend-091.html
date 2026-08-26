@@ -348,6 +348,74 @@
   ]
 }) }}
 
+{{ govukSelect({
+  id: "pipIndicator",
+  name: "pipIndicator",
+  label: {
+    text: "PIP Indicator"
+  },
+  items: [
+    { value: "0", text: "00 - NOT SELECTED FOR PIP REASSESSMENT" },
+    { value: "1", text: "01 - MANUALLY INSTIGATED RENEWAL" },
+    { value: "2", text: "02 - SUPERSESSION REQUESTED" },
+    { value: "3", text: "03 - MANUALLY IDENTIFIED FOR PIP REASSESSMENT" },
+    { value: "4", text: "04 - MANUALLY INSTIGATED REASSESSMENT" },
+    { value: "7", text: "07 - MANUALLY INSTIGATED FOR 'RISING 16'" },
+    { value: "11", text: "11 - SYSTEM IDENTIFIED FOR RENEWAL REASSESSMENT" },
+    { value: "15", text: "15 - 'VOLUNTARY' REASSESSMENT" },
+
+    { value: "21", text: "21 - RENEWAL SELECTED FOR PIP" },
+    { value: "22", text: "22 - SUPERSESSION SELECTED FOR PIP" },
+    { value: "23", text: "23 - MANUALLY IDENTIFIED AND SELECTED FOR PIP" },
+    { value: "24", text: "24 - MANAGED REASSESSMENT SELECTED FOR PIP" },
+    { value: "27", text: "27 - ORIGINALLY UNDER AGE 16 SELECTED FOR PIP" },
+
+    { value: "31", text: "31 - RENEWAL REASSESSMENT DATA RETURNED BY PIP" },
+    { value: "32", text: "32 - SUPERSESSION REASSESSMENT DATA RETURNED BY PIP" },
+    { value: "33", text: "33 - MANUAL REASSESSMENT DATA RETURNED BY PIP" },
+    { value: "34", text: "34 - MANAGED REASSESSMENT DATA RETURNED BY PIP" },
+    { value: "35", text: "35 - 'VOLUNTARY' REASSESSMENT DATA RETURNED BY PIP" },
+    { value: "37", text: "37 - ORIGINALLY UNDER AGE 16 DATA RETURNED BY PIP" },
+
+    { value: "41", text: "41 - RENEWAL REASSESSMENT - PIP CLAIM NOT MADE" },
+    { value: "42", text: "42 - SUPERSESSION REASSESSMENT - PIP CLAIM NOT MADE" },
+    { value: "43", text: "43 - MANUAL REASSESSMENT - PIP CLAIM NOT MADE" },
+    { value: "44", text: "44 - MANAGED REASSESSMENT - PIP CLAIM NOT MADE" },
+    { value: "47", text: "47 - ORIGINALLY UNDER AGE 16 - PIP CLAIM NOT MADE" },
+
+    { value: "51", text: "51 - RENEWAL REASSESSMENT - FAILED LAY CONDITIONS" },
+    { value: "52", text: "52 - SUPERSESSION REASSESSMENT - FAILED LAY CONDITIONS" },
+    { value: "53", text: "53 - MANUAL REASSESSMENT - FAILED LAY CONDITIONS" },
+    { value: "54", text: "54 - MANAGED REASSESSMENT - FAILED LAY CONDITIONS" },
+    { value: "55", text: "55 - 'VOLUNTARY' REASSESSMENT - FAILED LAY CONDITIONS" },
+    { value: "57", text: "57 - ORIGINALLY UNDER AGE 16 - FAILED LAY CONDITIONS" },
+
+    { value: "61", text: "61 - RENEWAL REASSESSMENT - PIP DECN NOT ENTLD/WITHDRAWN" },
+    { value: "62", text: "62 - SUPERSESSION REASSESSMENT - PIP DECN NOT ENTLD/WITHDRAWN" },
+    { value: "63", text: "63 - MANUAL REASSESSMENT - PIP DECN NOT ENTLD/WITHDRAWN" },
+    { value: "64", text: "64 - MANAGED REASSESSMENT - PIP DECN NOT ENTLD/WITHDRAWN" },
+    { value: "65", text: "65 - 'VOLUNTARY' REASSESSMENT - PIP DECN NOT ENTLD/WITHDRAWN" },
+    { value: "67", text: "67 - ORIGINALLY UNDER AGE 16 - PIP DECN NOT ENTLD/WITHDRAWN" },
+
+    { value: "71", text: "71 - RENEWAL REASSESSMENT - PIP DECISION ENTITLED" },
+    { value: "72", text: "72 - SUPERSESSION REASSESSMENT - PIP DECISION ENTITLED" },
+    { value: "73", text: "73 - MANUAL REASSESSMENT - PIP DECISION ENTITLED" },
+    { value: "74", text: "74 - MANAGED REASSESSMENT - PIP DECISION ENTITLED" },
+    { value: "75", text: "75 - 'VOLUNTARY' REASSESSMENT - PIP DECISION ENTITLED" },
+    { value: "77", text: "77 - ORIGINALLY UNDER AGE 16 - PIP DECISION ENTITLED" },
+
+    { value: "81", text: "81 - RENEWAL REASSESSMENT - PIP DECISION NON-COMPLIANT" },
+    { value: "82", text: "82 - SUPERSESSION REASSESSMENT - PIP DECISION NON-COMPLIANT" },
+    { value: "83", text: "83 - MANUAL REASSESSMENT - PIP DECISION NON-COMPLIANT" },
+    { value: "84", text: "84 - MANAGED REASSESSMENT - PIP DECISION NON-COMPLIANT" },
+    { value: "85", text: "85 - 'VOLUNTARY' REASSESSMENT - PIP DECISION NON-COMPLIANT" },
+    { value: "87", text: "87 - ORIGINALLY UNDER AGE 16 - PIP DECISION NON-COMPLIANT" },
+
+    { value: "I", text: "I - INITIAL CONTACT LETTER SENT PRE AGE 16" },
+    { value: "S", text: "S - CLAIMANT CLAIMED UNDER SPECIAL RULES" }
+  ]
+}) }}
+
 
 <button type="submit" class="govuk-button" data-module="govuk-button" onclick="window.location.href='case-details'">
   Save

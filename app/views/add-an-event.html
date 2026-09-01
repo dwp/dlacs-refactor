@@ -43,9 +43,9 @@
   </label>
   <select class="govuk-select" id="sort" name="sort">
     <option value="published"></option>
-<option value="11">11 - Renewal claim both components – DLA only</option>
-<option value="12">12 - Renewal claim – DLA care or AA</option>
-<option value="13">13 - Renewal claim mobility – DLA only</option>
+<option value="11">11 - Renewal claim both components</option>
+<option value="12">12 - Renewal claim</option>
+<option value="13">13 - Renewal claim mobility</option>
 <option value="16">16 - Renewal or Supersession – care component</option>
 <option value="17">17 - Renewal or Supersession – mobility component</option>
 <option value="20">20 - Supersession – age 3</option>
@@ -209,7 +209,7 @@
 <option value="2">2 - Claim form (with or without statement of disability and corroborative statement) and further information from customer and/or another person. This can either be sent in with the claim form, or sent in later, but before the decision has been given.</option>
 <option value="3">3 - Claim form (with or without statement of disability and corroborative statement) General Practitioner's Factual Report (GPFR) (DBD370) and all SR claims.</option>
 <option value="5">5 - Claim form (with or without statement of disability and corroborative statement) and any non-fee paying factual report (inclusive of hospitals).</option>
-<option value="99">99 - Other. This code can only be used with event type; 3, 9, 10, 20, 25, 28, 29, 30, 31, 40, 44, 45, 46, 47, 61, 62, 63, 64, 65, 66, 92, 93, 96, 97, 98 and 99.</option>
+<option value="99">99 - Other</option>
   </select>
 </div>
 
@@ -258,9 +258,9 @@
 <option value="R03">R03 - Renewal pack system issued</option>
 <option value="R11">R11 - Renewal of DLA registered</option>
 <option value="R12">R12 - Renewal of care component registered</option>
-<option value="R13">R13 - Renewal of mobility component registered - DLA only</option>
-<option value="R14">R14 - Renewal supersession of care component - DLA only</option>
-<option value="R15">R15 - Renewal supersession of mobility component - DLA only</option>
+<option value="R13">R13 - Renewal of mobility component registered</option>
+<option value="R14">R14 - Renewal supersession of care component</option>
+<option value="R15">R15 - Renewal supersession of mobility component</option>
 <option value="R16">R16 - Renewal cleared on registration of subsequent CC365</option>
 <option value="R17">R17 - Renewal system cleared at end of entitlement</option>
 <option value="R18">R18 - Renewal cleared due to DOD</option>
@@ -282,24 +282,6 @@
 
 
 
-{{ govukRadios({
-  name: "whereDoYou",
-  fieldset: {
-    legend: {
-      text: "Suppress acknowledgment?"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "Yes"
-    },
-    {
-      value: "scotland",
-      text: "No"
-    }
-  ]
-}) }}
 
 {{ govukRadios({
   name: "whereDoYouLive",

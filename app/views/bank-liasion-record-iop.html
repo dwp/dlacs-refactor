@@ -29,9 +29,81 @@
 
 <h1 class="govuk-heading-xl">Record returned IOP details</h1>
 
+<table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Customer initiated?</th>
+        <td class="govuk-table__cell">[populated]]</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>Receipt date of change</th>
+        <td class="govuk-table__cell">00/00/0000</td>
+      </tr>
+    </tbody>
+  </table>
+ 
+{{ govukInput({
+  label: {
+    text: "NINO"
+  },
+  id: "NINO",
+  name: "NINO",
+  classes: "govuk-input--width-10"
+}) }}
 
- 
- 
+{{ govukInput({
+  label: {
+    text: "MOP"
+  },
+  id: "MOP",
+  name: "MOP",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Payment number"
+  },
+  id: "payment number",
+  name: "Payment number",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Return reason"
+  },
+  id: "Return reason",
+  name: "Retrun reason",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Date first uncashed order"
+  },
+  id: "Date first uncashed order",
+  name: "Date first uncashed order",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Returned by PO (Y/N)?"
+  },
+  id: "Returned by PO (Y/N)?",
+  name: "Returned by PO (Y/N)?",
+  classes: "govuk-input--width-10"
+}) }}
+
+{{ govukInput({
+  label: {
+    text: "Owning MU"
+  },
+  id: "Owning MU",
+  name: "Owning MU",
+  classes: "govuk-input--width-10"
+}) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

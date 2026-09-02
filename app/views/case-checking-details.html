@@ -77,52 +77,45 @@
   <h1 class="govuk-heading-m">Case checking outcome</h1>
 
 
-
   <label class="govuk-label" for="sort-code">
-      Accepted? (optional)
+      Accepted?
     </label>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            Y
-          </label>
-        </div>
-         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            N
-          </label>
-        </div>
-      </div>
-    </fieldset>
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
-    <br>
+{% set errortypeHtml %}
+  {{ govukInput({
+    label: {
+      text: "Error type"
+    },
+    classes: "govuk-input--width-10",
+    id: "rec-aac",
+    name: "recAac"
+  }) }}
+{% endset %}
 
-  <label class="govuk-label" for="sort-code">
-      Error type (optional)
-    </label>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            1
-          </label>
-        </div>
-         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-            2
-          </label>
-        </div>
-      </div>
-    </fieldset>
+{{ govukRadios({
+  name: "suspensionAction",
+  items: [
+    {
+      value: "Y",
+      text: "Y"
+    },
+    {
+      value: "N",
+      text: "N",
+      conditional: {
+        html: errortypeHtml
+      }
+    },
+    {
+      value: "B",
+      text: "Neither"
+    }
+  ]
+}) }}        
 
-        <br>
+<br>
         
 
 <button type="submit" class="govuk-button" data-module="govuk-button">

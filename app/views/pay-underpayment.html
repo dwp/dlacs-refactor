@@ -32,89 +32,34 @@
 
 
   </section>
-<a href="/payment-frequency" class="govuk-back-link">Back</a>
-
-{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-
-{{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-    {
-      text: "Select a weeks in arrears",
-      href: "#"
-    }
-  ]
-}) }}
-  <h1 class="govuk-heading-l">Amend method of payment</h1>
+<a href="/recalculation-results" class="govuk-back-link">Back</a>
+  <h1 class="govuk-heading-l">Amend pay underpayment</h1>
 
 
 
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Method of payment"
-      },
-      value: {
-        text: "AC"
-      }
-    }
-      
-  ]
-}) }}
-
 
   <label class="govuk-label" for="sort-code">
-      Frequency
+      Pay underpayment?
     </label>
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
       <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="Frequency" name="Frequency" type="radio" value="scotland">
+          <input class="govuk-radios__input" id="Frequency" name="Frequency" type="radio" value="scotland" checked>
           <label class="govuk-label govuk-radios__label" for="Frequency">
-            1
+            Y
           </label>
         </div>
          <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="Frequency" type="radio" value="scotland" checked>
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="Frequency" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="Frequency">
-            4
+            N
           </label>
         </div>
       </div>
     </fieldset>
-
-    <br>
-
-    <div class="govuk-form-group govuk-form-group--error">
-  <fieldset class="govuk-fieldset" aria-describedby="Frequency-error">
-  <label class="govuk-label" for="sort-code">
-    Weeks in arrears
-    </label>
-    <p id="whereDoYouLive-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Select a weeks in arrears
-    </p>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="weeks">
-            0
-          </label>
-      </div>
-                 <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="weeks">
-            4
-          </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-
 
     <br>
 

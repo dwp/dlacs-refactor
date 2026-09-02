@@ -283,17 +283,25 @@
       }
     },
             {
-      key: {
+            key: {
         text: "Pay underpayment?"
       },
       value: {
-        text: "[Data value]"
+        text: "1234"
+      },
+      actions: {
+        items: [
+          {
+            href: "pay-underpayment",
+            text: "Amend",
+            visuallyHiddenText: "name"
+          }
+        ]
       }
     }
       
   ]
 }) }}
-
 
 
 {% from "govuk/components/button/macro.njk" import govukButton %}

@@ -41,57 +41,14 @@
 
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{% set adjTypeHtml %}
-  {{ govukInput({
-    label: {
-      text: "Enter adjustment type"
-    },
-    classes: "govuk-input--width-10",
-    id: "adj-type",
-    name: "adjType",
-    value: "Placeholder"
-  }) }}
-{% endset %}
-
-{% set recAacHtml %}
-  {{ govukInput({
-    label: {
-      text: "Enter Rec. AAC"
-    },
-    classes: "govuk-input--width-10",
-    id: "rec-aac",
-    name: "recAac"
-  }) }}
-{% endset %}
-
-{{ govukRadios({
-  name: "option",
-  fieldset: {
-    legend: {
-      text: "Select an option"
-    }
-  },
-  items: [
-    {
-      value: "adj-type",
-      text: "Adjustment type",
-      checked: true,
-      conditional: {
-        html: adjTypeHtml
-      }
-    },
-    {
-      value: "rec-aac",
-      text: "Rec. AAC",
-      conditional: {
-        html: recAacHtml
-      }
-    }
-  ]
-}) }}
+<div class="govuk-form-group">
+  <label class="govuk-label" for="roll-number">
+    Adjustment type
+  </label>
+  <div id="roll-number-hint" class="govuk-hint">
+  </div>
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint" value="placeholder">
+</div>
 
 
 </div>

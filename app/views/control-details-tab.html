@@ -66,10 +66,6 @@
         <th scope="row" class="govuk-table__header">MOP</th>
         <td class="govuk-table__cell">[Placeholder content]</td>
       </tr>
-       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Serial no</th>
-        <td class="govuk-table__cell">[Placeholder content]</td>
-      </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
@@ -79,45 +75,6 @@
     </tbody>
   </table>
 
-<br>
-
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
-    <h2 class="govuk-heading-m">Missing details</h2>
-            
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Date of loss</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Type of loss</th>
-          <td class="govuk-table__cell">[Data value] </td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Declaration issued</th>
-          <td class="govuk-table__cell">[Data value]</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Declaration obtained</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">First uncashed order</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Nortif/search issued</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-
-      </tbody>
-    </table>
 
     <br>
 
@@ -135,16 +92,7 @@
           <td class="govuk-table__cell">[Data value] </td>
           <td class="govuk-table__cell"></td>
         </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Last encashment date</th>
-          <td class="govuk-table__cell">[Data value]</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Manual OB recall</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
+
 
       </tbody>
     </table>
@@ -178,21 +126,6 @@
 
     <table class="govuk-table">
       <tbody class="govuk-table__body">
-    <h2 class="govuk-heading-m">Stop notice</h2>
-            
-          <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Stop notice issued</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-
-      </tbody>
-    </table>
-
-<br>
-
-    <table class="govuk-table">
-      <tbody class="govuk-table__body">
     <h2 class="govuk-heading-m">Replacement details</h2>
             
           <tr class="govuk-table__row">
@@ -201,24 +134,9 @@
           <td class="govuk-table__cell" style="width: 10%"></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Repl.auth.date</th>
+          <th scope="row" class="govuk-table__header">Replacement authorisation date</th>
           <td class="govuk-table__cell">[Data value] </td>
           <td class="govuk-table__cell"></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">First foil replaced</th>
-          <td class="govuk-table__cell">[Data value]</td>
-          <td class="govuk-table__cell"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Replacement payment MOP</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
-        </tr>
-         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="width: 45%">Replacemnet serial No</th>
-          <td class="govuk-table__cell" style="width: 45%">[Data value]</td>
-          <td class="govuk-table__cell" style="width: 10%"></td>
         </tr>
          <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header" style="width: 45%">Replacement issue date</th>
@@ -246,17 +164,28 @@
 <div class="govuk-tabs">
   <ul class="govuk-tabs__list">
 
-<li class="govuk-tabs__list-item">
-  <a class="govuk-tabs__tab" href="/payment-breakdown">Payment breakdown</a>
+    <li class="govuk-tabs__list-item">
+
+  <a class="govuk-tabs__tab" href="/payment-breakdown">Payment<br>breakdown</a>
+
+    </li>
+        <li class="govuk-tabs__list-item">
+
+<a class="govuk-tabs__tab" href="/payment-location">Payment<br>location</a>
+    </li>
+
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+  <a class="govuk-tabs__tab" href="/control-details-tab">Control<br>details</a>
 
     </li>
 
-<li class="govuk-tabs__list-item">
-<a class="govuk-tabs__tab" href="/payment-location">Payment location</a>
+        <li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="/payment-adjustment-tab">Payment<br>adjustment</a>
+
     </li>
 
-      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-  <a class="govuk-tabs__tab" href="/control-details-tab">Control details</a>
+        <li class="govuk-tabs__list-item">
+  <a class="govuk-tabs__tab" href="/clerical-calcs-tab">Clerical<br>calculations</a>
 
     </li>
 

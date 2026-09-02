@@ -30,8 +30,21 @@
 
   </section>
 
-<a href="/payment-adjustment" class="govuk-back-link">Back</a>
 
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Payment history",
+      href: "/payment-history"
+    },
+    {
+      text: "Payment adjustment",
+      href: "payment-adjustment"
+    }
+  ]
+}) }}
   
 
 {% from "govuk/components/tabs/macro.njk" import govukTabs %}

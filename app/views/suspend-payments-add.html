@@ -72,12 +72,26 @@
   ]
 }) }}
 
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="sort-code">
-      Reason code for suspension
-    </label>
-    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
-  </div>
+
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Reason code for suspension
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">00 - Other</option>
+    <option value="views">10 - Hospitalisation / Certain Other Accommodation</option>
+    <option value="views">15 - Suspected Fraud</option>
+    <option value="views">16 - Absence Abroad</option>
+    <option value="views">17 - On remand / Imprisonment</option>
+    <option value="views">28 - Voluntary relinquishment</option>
+    <option value="views">29 - Reported Improvement (not confirmed)</option>
+    <option value="views">30 - Age 16 - where details of appointee are required (DLA only)</option>
+    <option value="views">31 - No Response to PIP Claim (DLA only)</option>
+    <option value="views">39 - Gone Away (Full suspension only)</option>
+    <option value="views">40 - Failure to Comply (Full suspension only)</option>
+  </select>
+</div>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

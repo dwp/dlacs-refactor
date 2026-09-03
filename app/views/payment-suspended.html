@@ -144,7 +144,7 @@
         Suspension action
       </th>
       <td class="govuk-table__cell">
-        F
+        A
       </td>
     </tr>
 
@@ -167,6 +167,14 @@
     </tr>
   </tbody>
 </table>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel suspension",
+  href: "cancel-suspension",
+  classes: "govuk-button--warning"
+}) }}
 
   </div>
 

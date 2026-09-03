@@ -47,9 +47,28 @@
   </label>
   <div id="roll-number-hint" class="govuk-hint">
   </div>
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint" value="placeholder">
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint" value="Placeholder">
 </div>
 
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+{{ govukInput({
+  id: "Weekly rate",
+  name: "Weekly rate",
+  value: "-150",
+  label: {
+    text: "Weekly rate"
+  },
+  hint: {
+    text: "Enter a positive (+) amount for a weekly rate offset or a negative (-) amount for a deduction."
+  },
+  prefix: {
+    text: "£"
+  },
+  classes: "govuk-input--width-5",
+  spellcheck: false
+}) }}
 
 </div>
         <div class="govuk-grid-column-one-half">

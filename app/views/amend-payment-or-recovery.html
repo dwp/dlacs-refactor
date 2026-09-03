@@ -54,15 +54,74 @@
       Add or amend a payment/recovery
     </h1>
 
-    {{ govukInput({
-      id: "supplier-reference",
-      name: "supplierReference",
-      label: {
-        text: "Payment reason"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
+   {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "sort",
+  name: "sort",
+  label: {
+    text: "Payment reason"
+  },
+  items: [
+    {
+      value: "51",
+      text: "51 - Actual term date later (not in hosp)"
+    },
+    {
+      value: "52",
+      text: "52 - Customer PUTD included MOB",
+      selected: true
+    },
+    {
+      value: "53",
+      text: "53 - SoFS allows payment at end of agreement"
+    },
+    {
+      value: "54",
+      text: "54 - Supplier query - payment correction"
+    },
+    {
+      value: "55",
+      text: "55 - Payment correction"
+    },
+    {
+      value: "56",
+      text: "56 - Part payment to customer returned"
+    },
+    {
+      value: "57",
+      text: "57 - No further entitlement to HRMC"
+    },
+    {
+      value: "58",
+      text: "58 - Actual term date later (in hosp)"
+    },
+    {
+      value: "61",
+      text: "61 - Actual term date earlier"
+    },
+    {
+      value: "62",
+      text: "62 - No further entitlement to HRMC"
+    },
+    {
+      value: "63",
+      text: "63 - No payability for period"
+    },
+    {
+      value: "64",
+      text: "64 - Supplier query recovery to correct payment"
+    },
+    {
+      value: "65",
+      text: "65 - Recovery to correct payment"
+    },
+    {
+      value: "66",
+      text: "66 - Part payment to customer realised"
+    }
+  ]
+}) }}
 
     <h2 class="govuk-heading-m">
       Relevent details for supplier
@@ -195,15 +254,26 @@
     }) }}
 
 
-    {{ govukInput({
-      id: "agreement-type",
-      name: "agreementType",
-      label: {
-        text: "Cancel clerical payment?"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
+   {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{{ govukRadios({
+  name: "wheelchair",
+  fieldset: {
+    legend: {
+      text: "Cancel clerical payment? (optional)"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No",
+      checked: true
+    }
+  ]
+}) }}
 
    {{ govukButton({
   text: "Save",

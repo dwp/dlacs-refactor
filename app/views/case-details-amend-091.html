@@ -32,6 +32,29 @@
   <a href="case-details" class="govuk-back-link">Back</a>
   <h1 class="govuk-heading-l">Amend case details</h1>
 
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Enter a valid receipt date  </li>
+        <li>
+          <li>
+          <a href="#">Enter a valid effective date  </li>
+        <li>
+          <li>
+          <a href="#">Select an exportability indicator  </li>
+        <li>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <p>Receipt date</p>
 
   <div class="govuk-form-group">
@@ -315,14 +338,23 @@
   ]
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukCheckboxes({
-  name: "waste",
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Suppress acknowledgment?"
+    }
+  },
   items: [
     {
-      value: "farm",
-      text: "Suppress acknowledgment? (optional)"
+      value: "wales",
+      text: "Yes"
+    },
+    {
+      value: "northern-ireland",
+      text: "No"
     }
   ]
 }) }}

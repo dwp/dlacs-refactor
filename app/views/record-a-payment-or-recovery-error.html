@@ -54,23 +54,71 @@
       Add or amend a payment/recovery
     </h1>
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Select a valid payment reason</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid details for supplier date</li>
+        <li>
+          <li>
+             <li>
+          <li>
+          <a href="#">Enter a valid amount</li>
+        <li>
+          </li>
+           <li>
+          <li>
+          <a href="#">Enter a valid from date</li>
+        <li>
+            <li>
+                <li>
+          <li>
+          <a href="#">Enter a valid to date</li>
+        <li>
+            <li>
+                  <li>
+                <li>
+          <li>
+          <a href="#">Enter a valid amount</li>
+        <li>
+            <li>
+          <li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
 {% from "govuk/components/select/macro.njk" import govukSelect %}
 
 {{ govukSelect({
   id: "sort",
   name: "sort",
+  errorMessage: {
+    text: "Must select a payment reason"
+  },
   label: {
     text: "Payment reason"
   },
   items: [
+    {
+      value: "",
+      text: "Select a payment reason"
+    },
     {
       value: "51",
       text: "51 - Actual term date later (not in hosp)"
     },
     {
       value: "52",
-      text: "52 - Customer PUTD included MOB",
-      selected: true
+      text: "52 - Customer PUTD included MOB"
     },
     {
       value: "53",
@@ -128,45 +176,36 @@
     </h2>
 
     {{ govukDateInput({
-      id: "provisional-from",
-      namePrefix: "provisional-from",
-      fieldset: {
-        legend: {
-          text: "Date",
-          classes: "govuk-fieldset__legend--s"
-        }
-      },
-      items: [
-        {
-          name: "day",
-          classes: "govuk-input--width-2",
-          value: ""
-        },
-        {
-          name: "month",
-          classes: "govuk-input--width-2",
-          value: ""
-        },
-        {
-          name: "year",
-          classes: "govuk-input--width-4",
-          value: ""
-        }
-      ]
-    }) }}
+  id: "provisional-from-date",
+  namePrefix: "provisional-from-date",
+  fieldset: {
+    legend: {
+      text: "From"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2007"
+  },
+  errorMessage: {
+    text: "Enter a valid from date"
+  }
+}) }}
 
-    {{ govukInput({
-      id: "weekly-amount",
-      name: "weeklyAmount",
-      label: {
-        text: "Amount"
-      },
-      prefix: {
-        text: "£"
-      },
-      value: "",
-      classes: "govuk-input--width-10"
-    }) }}
+   {{ govukInput({
+  id: "weekly-amount",
+  name: "weeklyAmount",
+  label: {
+    text: "Amount"
+  },
+  prefix: {
+    text: "£"
+  },
+  errorMessage: {
+    text: "Must enter valid amount"
+  },
+  value: "",
+  classes: "govuk-input--width-10"
+}) }}
 
     <h2 class="govuk-heading-m">
       Payment/recovery period
@@ -177,82 +216,60 @@
       <div class="govuk-grid-column-one-half">
 
         {{ govukDateInput({
-          id: "agreement-from",
-          namePrefix: "agreement-from",
-          fieldset: {
-            legend: {
-              text: "From",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: ""
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: ""
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4",
-              value: ""
-            }
-          ]
-        }) }}
+  id: "provisional-from-date",
+  namePrefix: "provisional-from-date",
+  fieldset: {
+    legend: {
+      text: "From"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2007"
+  },
+  errorMessage: {
+    text: "Enter a valid from date"
+  }
+}) }}
 
       </div>
 
       <div class="govuk-grid-column-one-half">
 
         {{ govukDateInput({
-          id: "agreement-to",
-          namePrefix: "agreement-to",
-          fieldset: {
-            legend: {
-              text: "To",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: ""
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: ""
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4",
-              value: ""
-            }
-          ]
-        }) }}
+  id: "provisional-from-date",
+  namePrefix: "provisional-from-date",
+  fieldset: {
+    legend: {
+      text: "To"
+    }
+  },
+  hint: {
+    text: "For example, 27 3 2007"
+  },
+  errorMessage: {
+    text: "Enter a valid to date"
+  }
+}) }}
 
       </div>
 
     </div>
 
-    {{ govukInput({
-      id: "weekly-amount",
-      name: "weeklyAmount",
-      label: {
-        text: "Amount"
-      },
-      prefix: {
-        text: "£"
-      },
-      value: "",
-      classes: "govuk-input--width-10"
-    }) }}
-
+   {{ govukInput({
+  id: "weekly-amount",
+  name: "weeklyAmount",
+  label: {
+    text: "Amount"
+  },
+  prefix: {
+    text: "£"
+  },
+  errorMessage: {
+    text: "Must enter valid amount"
+  },
+  value: "",
+  classes: "govuk-input--width-10"
+}) }}
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({

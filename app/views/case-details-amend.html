@@ -315,14 +315,23 @@
   ]
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukCheckboxes({
-  name: "waste",
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Suppress acknowledgment? (optional)"
+    }
+  },
   items: [
     {
-      value: "farm",
-      text: "Suppress acknowledgment? (optional)"
+      value: "wales",
+      text: "Yes"
+    },
+    {
+      value: "northern-ireland",
+      text: "No"
     }
   ]
 }) }}

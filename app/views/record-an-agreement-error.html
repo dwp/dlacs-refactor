@@ -35,6 +35,55 @@
 
 <h1 class="govuk-heading-l">Add or amend agreement</h1>
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Enter a valid customer reference number</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid agreement reference number</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid Join X-Ref. number</li>
+        <li>
+           <li>
+          <li>
+          <a href="#">Enter a valid provisional from date</li>
+        <li>
+          <li>
+             <li>
+          <li>
+          <a href="#">Select an agreement type</li>
+        <li>
+          </li>
+           <li>
+          <li>
+          <a href="#">Enter a valid from date</li>
+        <li>
+            <li>
+                <li>
+          <li>
+          <a href="#">Enter a valid to date</li>
+        <li>
+            <li>
+                  <li>
+                <li>
+          <li>
+          <a href="#">Enter a valid number of weekly payments</li>
+        <li>
+            <li>
+          <li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -54,8 +103,11 @@
     text: "Customer reference number"
   },
   classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  id: "customer-reference-number",
+  name: "customerReferenceNumber",
+  errorMessage: {
+    text: "Enter a customer reference number in the correct format"
+  }
 }) }}
 
 {{ govukInput({
@@ -63,8 +115,11 @@
     text: "Agreement reference number"
   },
   classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  id: "agreement-reference-number",
+  name: "agreementReferenceNumber",
+  errorMessage: {
+    text: "Enter an agreement reference number in the correct format"
+  }
 }) }}
 
 {{ govukInput({
@@ -72,29 +127,36 @@
     text: "Join X-ref no. (optional)"
   },
   classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  id: "join-xref-number",
+  name: "joinXrefNumber",
+  errorMessage: {
+    text: "Enter a Join X-ref number in the correct format"
+  }
 }) }}
 
 
 <h2 class="govuk-heading-m">Provisional</h2>
 
-{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
 {{ govukDateInput({
-  id: "passport-issued",
-  namePrefix: "passport-issued",
+  id: "provisional-from-date",
+  namePrefix: "provisional-from-date",
   fieldset: {
     legend: {
       text: "From"
     }
+  },
+  hint: {
+    text: "For example, 27 3 2007"
+  },
+  errorMessage: {
+    text: "Enter a valid provisional from date"
   }
 }) }}
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  name: "cancel",
+  name: "cancelAgreement",
   fieldset: {
     legend: {
       text: "Cancel? (optional)"
@@ -112,32 +174,37 @@
   ]
 }) }}
 
+
 <h2 class="govuk-heading-m">Agreement</h2>
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  name: "waste",
+  name: "agreementType",
   fieldset: {
     legend: {
       text: "Agreement type"
     }
   },
+  errorMessage: {
+    text: "Select an agreement type"
+  },
   items: [
     {
-      value: "carcasses",
+      value: "FA",
       text: "FA - Fixed amount"
     },
     {
-      value: "mines",
+      value: "VA",
       text: "VA - Variable amount"
     },
     {
-      value: "farm",
+      value: "PR",
       text: "PR - Provisional agreement"
     }
   ]
 }) }}
+
 
 
 
@@ -149,15 +216,18 @@
     <p class="govuk-body">From</p>
 
     {{ govukDateInput({
-      id: "from-date",
-      namePrefix: "from-date",
-      fieldset: {
-        legend: {
-          text: "",
-          classes: "govuk-visually-hidden"
-        }
-      }
-    }) }}
+  id: "from-date",
+  namePrefix: "from-date",
+  errorMessage: {
+    text: "Enter a valid from date"
+  },
+  fieldset: {
+    legend: {
+      text: "",
+      classes: "govuk-visually-hidden"
+    }
+  }
+}) }}
 
   </div>
 
@@ -166,15 +236,18 @@
     <p class="govuk-body">To</p>
 
     {{ govukDateInput({
-      id: "to-date",
-      namePrefix: "to-date",
-      fieldset: {
-        legend: {
-          text: "",
-          classes: "govuk-visually-hidden"
-        }
-      }
-    }) }}
+  id: "to-date",
+  namePrefix: "to-date",
+  errorMessage: {
+    text: "Enter a valid to date"
+  },
+  fieldset: {
+    legend: {
+      text: "",
+      classes: "govuk-visually-hidden"
+    }
+  }
+}) }}
 
   </div>
 </div>
@@ -183,8 +256,8 @@
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
 {{ govukInput({
-  id: "cost",
-  name: "cost",
+  id: "four-weekly-amount",
+  name: "fourWeeklyAmount",
   label: {
     text: "4 weekly amount",
     classes: "govuk-body--m",
@@ -193,7 +266,11 @@
   prefix: {
     text: "£"
   },
+  errorMessage: {
+    text: "Enter the 4 weekly amount as a numeric value"
+  },
   classes: "govuk-input--width-5",
+  inputmode: "decimal",
   spellcheck: false
 }) }}
 
@@ -205,13 +282,18 @@
     text: "Number of weekly payments"
   },
   classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  id: "number-of-weekly-payments",
+  name: "numberOfWeeklyPayments",
+  inputmode: "numeric",
+  errorMessage: {
+    text: "Enter the number of weekly payments as a numeric value"
+  }
 }) }}
 
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 {{ govukRadios({
-  name: "wheelchair",
+  name: "cancelAgreement",
   fieldset: {
     legend: {
       text: "Wheelchair? (optional)"

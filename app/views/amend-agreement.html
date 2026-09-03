@@ -40,215 +40,267 @@
 
       </dl>
 
+
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     </section>
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "motability-payment-with-agreement"
-}) }}
+    {{ govukBackLink({
+      text: "Back",
+      href: "motability-payment-with-agreement"
+    }) }}
 
     <h1 class="govuk-heading-l">
       Add or amend agreement
     </h1>
 
+  <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Supplier reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+</dl>
+
     {{ govukInput({
-      id: "supplier-reference",
-      name: "supplierReference",
+      id: "customer-reference",
+      name: "customerReference",
       label: {
-        text: "Supplier reference"
+        text: "Customer reference number"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: "123456"
     }) }}
 
     {{ govukInput({
-      id: "customer-ref",
-      name: "customerRef",
+      id: "agreement-reference",
+      name: "agreementReference",
       label: {
-        text: "Customer Ref No."
+        text: "Agreement reference number"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
-
-    {{ govukInput({
-      id: "agreement-ref",
-      name: "agreementRef",
-      label: {
-        text: "Agrmt Ref No."
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: "AGR12345"
     }) }}
 
     {{ govukInput({
       id: "join-xref",
       name: "joinXRef",
       label: {
-        text: "Join X-Ref No."
+        text: "Join X-ref no. (optional)"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: "JX123"
     }) }}
 
-    <h2 class="govuk-heading-m">
-      Provisional agreement
-    </h2>
+    <h2 class="govuk-heading-m">Provisional</h2>
 
-    {{ govukDateInput({
-      id: "provisional-from",
-      namePrefix: "provisional-from",
+    {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+<p>From</p>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="03">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="01">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2026">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+
+    {{ govukRadios({
+      name: "cancel",
       fieldset: {
         legend: {
-          text: "From",
-          classes: "govuk-fieldset__legend--s"
+          text: "Cancel? (optional)"
         }
       },
       items: [
         {
-          name: "day",
-          classes: "govuk-input--width-2",
-          value: "00"
+          value: "yes",
+          text: "Yes"
         },
         {
-          name: "month",
-          classes: "govuk-input--width-2",
-          value: "00"
-        },
-        {
-          name: "year",
-          classes: "govuk-input--width-4",
-          value: "0000"
+          value: "no",
+          text: "No",
+          checked: true
         }
       ]
     }) }}
 
-    {{ govukInput({
-      id: "cancel",
-      name: "cancel",
-      label: {
-        text: "Cancel?"
-      },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
-    }) }}
+    <h2 class="govuk-heading-m">Agreement</h2>
 
-    <h2 class="govuk-heading-m">
-      Agreement
-    </h2>
-
-    {{ govukInput({
-      id: "agreement-type",
+    {{ govukRadios({
       name: "agreementType",
-      label: {
-        text: "Agreement Type"
+      fieldset: {
+        legend: {
+          text: "Agreement type"
+        }
       },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      items: [
+        {
+          value: "FA",
+          text: "FA - Fixed amount",
+          checked: true
+        },
+        {
+          value: "VA",
+          text: "VA - Variable amount"
+        },
+        {
+          value: "PR",
+          text: "PR - Provisional agreement"
+        }
+      ]
     }) }}
 
-    <div class="govuk-grid-row">
+   <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
 
-      <div class="govuk-grid-column-one-half">
+    <p>From</p>
 
-        {{ govukDateInput({
-          id: "agreement-from",
-          namePrefix: "agreement-from",
-          fieldset: {
-            legend: {
-              text: "From",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: "00"
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: "00"
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4",
-              value: "0000"
-            }
-          ]
-        }) }}
-
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="03">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="01">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2026">
+          </div>
+        </div>
       </div>
+    </fieldset>
+  </div>
 
-      <div class="govuk-grid-column-one-half">
 
-        {{ govukDateInput({
-          id: "agreement-to",
-          namePrefix: "agreement-to",
-          fieldset: {
-            legend: {
-              text: "To",
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              name: "day",
-              classes: "govuk-input--width-2",
-              value: "00"
-            },
-            {
-              name: "month",
-              classes: "govuk-input--width-2",
-              value: "00"
-            },
-            {
-              name: "year",
-              classes: "govuk-input--width-4",
-              value: "0000"
-            }
-          ]
-        }) }}
+  </div>
 
+  <div class="govuk-grid-column-one-half">
+
+    <p>To</p>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="03">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="01">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2026">
+          </div>
+        </div>
       </div>
+    </fieldset>
+  </div>
 
-    </div>
+
+  </div>
+</div>
 
     {{ govukInput({
-      id: "weekly-amount",
-      name: "weeklyAmount",
+      id: "cost",
+      name: "cost",
       label: {
         text: "4 weekly amount"
       },
       prefix: {
         text: "£"
       },
-      value: "[input]",
-      classes: "govuk-input--width-10"
+      classes: "govuk-input--width-5",
+      value: "69.00",
+      spellcheck: false
     }) }}
 
     {{ govukInput({
       id: "weekly-payments",
       name: "weeklyPayments",
       label: {
-        text: "No. of weekly pymnts"
+        text: "Number of weekly payments"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: "52"
     }) }}
 
-    {{ govukInput({
-      id: "wheelchair",
+    {{ govukRadios({
       name: "wheelchair",
-      label: {
-        text: "Wheelchair?"
+      fieldset: {
+        legend: {
+          text: "Wheelchair? (optional)"
+        }
       },
-      classes: "govuk-!-width-one-half",
-      value: "[input]"
+      items: [
+        {
+          value: "yes",
+          text: "Yes",
+          checked: true
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
     }) }}
 
     {{ govukInput({
@@ -258,13 +310,13 @@
         text: "Transferred agreement - pay supplier from"
       },
       classes: "govuk-!-width-one-half",
-      value: "[input]"
+      value: "01/04/2025"
     }) }}
 
-   {{ govukButton({
-  text: "Save",
-  href: "motability-payment-with-agreement"
-}) }}
+    {{ govukButton({
+      text: "Save",
+      href: "motability-payment-with-agreement"
+    }) }}
 
   </div>
 </div>

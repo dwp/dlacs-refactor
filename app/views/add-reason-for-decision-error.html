@@ -35,6 +35,16 @@
 
   <h1 class="govuk-heading-l">Add reason for decision</h1>
 
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Must enter at least one character",
+      href: "#more-detail"
+    }
+  ]
+}) }}
+
    {% from "govuk/components/radios/macro.njk" import govukRadios %}
 {{ govukRadios({
   name: "wheelchair",
@@ -56,9 +66,24 @@
   ]
 }) }}
 
-  <div class="govuk-form-group">
-    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-  </div>
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="more-detail">
+    Reason for decision
+  </label>
+
+  <p id="more-detail-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+    Must enter at least one character
+  </p>
+
+  <textarea
+    class="govuk-textarea govuk-input--error"
+    id="more-detail"
+    name="moreDetail"
+    rows="5"
+    aria-describedby="more-detail-error"
+  ></textarea>
+</div>
 
 <button type="submit" class="govuk-button" data-module="govuk-button"
 onclick="window.location.href='maintain-reasons-for-decision'">

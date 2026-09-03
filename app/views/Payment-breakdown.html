@@ -157,9 +157,93 @@
       <td class="govuk-table__cell">12 Jan 2026</td>
     </tr>
       <tbody class="govuk-table__body">
+          <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">04</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">05</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">06</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">07</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">08</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">09</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="/calculation-breakdown-layered-tab" class="govuk-link">10</a></td>
+      <td class="govuk-table__cell">£32.00</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+      <td class="govuk-table__cell">12 Jan 2026</td>
+    </tr>
+        </tr>
+  </thead>
 </table>
 
+  {% from "govuk/components/pagination/macro.njk" import govukPagination %}
 
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 
 
 
@@ -174,31 +258,30 @@
   <ul class="govuk-tabs__list">
 
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-
   <a class="govuk-tabs__tab" href="/payment-breakdown">Payment<br>breakdown</a>
-
     </li>
 
 <li class="govuk-tabs__list-item">
 <a class="govuk-tabs__tab" href="/payment-location">Payment<br>location</a>
     </li>
-
     <li class="govuk-tabs__list-item">
   <a class="govuk-tabs__tab" href="/control-details-tab">Control<br>details</a>
-
     </li>
 
         <li class="govuk-tabs__list-item">
   <a class="govuk-tabs__tab" href="/payment-adjustment-tab">Payment<br>adjustment</a>
-
     </li>
 
         <li class="govuk-tabs__list-item">
   <a class="govuk-tabs__tab" href="/clerical-calcs-tab">Clerical<br>calculations</a>
-
     </li>
 
+    
+
   </ul>
+
+
+
 
   <div class="govuk-tabs__panel">
     {{ pastDayHtml | safe }}

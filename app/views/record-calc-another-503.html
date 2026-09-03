@@ -65,14 +65,33 @@
   </button>
 </div>
 
-{{ govukInput({
-  label: {
-    text: "Component"
-  },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
-}) }}
+      <label class="govuk-label" for="sort-code">
+      Component
+    </label>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" checked>
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            C
+          </label>
+          </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            M
+          </label>
+                    </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            Blank
+          </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
 
 </div>
         <div class="govuk-grid-column-one-half">
@@ -83,7 +102,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                      Day
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -91,7 +110,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                      Month
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
                  </div>
                </div>
                <div class="govuk-date-input__item">
@@ -99,7 +118,7 @@
                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
                      Year
                    </label>
-                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
                  </div>
                </div>
              </div>
@@ -114,7 +133,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
              Day
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -122,7 +141,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
              Month
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="00">
          </div>
        </div>
        <div class="govuk-date-input__item">
@@ -130,7 +149,7 @@
            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
              Year
            </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="0000">
          </div>
        </div>
      </div>
@@ -145,7 +164,7 @@
       <label class="govuk-label" for="width-10">
         Rate
       </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text" value="Placehodler">
     </div>
 
 
@@ -154,7 +173,7 @@
       <label class="govuk-label" for="width-10">
         Rate
       </label>
-      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+      <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text" value="Placeholder">
     </div>
 
       <br>
@@ -172,14 +191,33 @@
   </button>
 </div>
 
-{{ govukInput({
-  label: {
-    text: "Component"
-  },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
-}) }}
+      <label class="govuk-label" for="sort-code">
+      Component
+    </label>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            C
+          </label>
+          </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            M
+          </label>
+                    </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            Blank
+          </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
 
 </div>
         <div class="govuk-grid-column-one-half">

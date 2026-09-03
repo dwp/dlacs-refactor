@@ -53,14 +53,35 @@
 
   <h1 class="govuk-heading-l">Record calculation</h1>
 
-{{ govukInput({
-  label: {
-    text: "Component"
-  },
-  id: "cmp",
-  name: "cmp",
-  classes: "govuk-input--width-10"
-}) }}
+
+      <label class="govuk-label" for="sort-code">
+      Component
+    </label>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            C
+          </label>
+          </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            M
+          </label>
+                    </div>
+          <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            Blank
+          </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
 
 </div>
         <div class="govuk-grid-column-one-half">

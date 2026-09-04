@@ -160,7 +160,7 @@
     },
     {
       value: "farm",
-      text: "L - Motability publicity required - DLA only"
+      text: "L - Motability publicity required"
     },
     {
       value: "farm",
@@ -176,7 +176,7 @@
     },
     {
       value: "farm",
-      text: "U - No Motability publicity required - DLA only"
+      text: "U - No Motability publicity required"
     }
   ]
 }) }}
@@ -352,6 +352,27 @@
     {
       value: "comments",
       text: "27 - New CLaim - other reason"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Suppress acknowledgement?"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "Yes"
+    },
+    {
+      value: "scotland",
+      text: "No"
     }
   ]
 }) }}

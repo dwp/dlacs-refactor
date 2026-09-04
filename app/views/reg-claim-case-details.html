@@ -123,7 +123,7 @@
     },
     {
       value: "farm",
-      text: "L - Motability publicity required - DLA only"
+      text: "L - Motability publicity required"
     },
     {
       value: "farm",
@@ -139,7 +139,7 @@
     },
     {
       value: "farm",
-      text: "U - No Motability publicity required - DLA only"
+      text: "U - No Motability publicity required"
     }
   ]
 }) }}
@@ -308,26 +308,44 @@
   ]
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukCheckboxes({
-  name: "waste",
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Suppress acknowledgment?"
+    }
+  },
   items: [
     {
-      value: "suppress-ack",
-      text: "Suppress acknowledgement (optional)"
+      value: "england",
+      text: "Yes"
+    },
+    {
+      value: "scotland",
+      text: "No"
     }
   ]
 }) }}
 
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukCheckboxes({
-  name: "waste",
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Scottish?"
+    }
+  },
   items: [
     {
-      value: "farm",
-      text: "Scottish? (optional)"
+      value: "england",
+      text: "Yes"
+    },
+    {
+      value: "scotland",
+      text: "No"
     }
   ]
 }) }}

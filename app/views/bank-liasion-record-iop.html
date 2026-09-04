@@ -33,11 +33,15 @@
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Customer initiated?</th>
-        <td class="govuk-table__cell">[populated]]</td>
+        <td class="govuk-table__cell">[populated]</td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header"><label for=""></label>Receipt date of change</th>
         <td class="govuk-table__cell">00/00/0000</td>
+      </tr>
+            <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header"><label for=""></label>MOP</th>
+        <td class="govuk-table__cell">AC</td>
       </tr>
     </tbody>
   </table>
@@ -53,15 +57,6 @@
 
 {{ govukInput({
   label: {
-    text: "MOP"
-  },
-  id: "MOP",
-  name: "MOP",
-  classes: "govuk-input--width-10"
-}) }}
-
-{{ govukInput({
-  label: {
     text: "Payment number"
   },
   id: "payment number",
@@ -69,41 +64,38 @@
   classes: "govuk-input--width-10"
 }) }}
 
-{{ govukInput({
-  label: {
-    text: "Return reason"
-  },
-  id: "Return reason",
-  name: "Retrun reason",
-  classes: "govuk-input--width-10"
-}) }}
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+     Return reason
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+<option value="00">00	- Other </option>
+<option value="05">05 - Change of Circs – increased award  </option>
+<option value="06">06 - 	Change of Circs – decreased award  </option>
+<option value="07">07 - Change of Circs – award cessation  </option>
+<option value="08">08 - Change of MOP </option>
 
-{{ govukInput({
-  label: {
-    text: "Date first uncashed order"
-  },
-  id: "Date first uncashed order",
-  name: "Date first uncashed order",
-  classes: "govuk-input--width-10"
-}) }}
+<option value="10">10 - Hospitalisation / Certain Other Accom  </option>
+<option value="11">11 - Change of Appointee </option>
+<option value="12">12 - Change of name </option>
+<option value="13">13 - Motability Start – DLA only </option>
 
-{{ govukInput({
-  label: {
-    text: "Returned by PO (Y/N)?"
-  },
-  id: "Returned by PO (Y/N)?",
-  name: "Returned by PO (Y/N)?",
-  classes: "govuk-input--width-10"
-}) }}
+<option value="14">14 - Motability End – DLA only </option>
+<option value="16">16 - Absence Abroad </option>
+<option value="17">17 - On remand / Imprisonment</option>
+<option value="20">20 - Overlapping benefit </option>
 
-{{ govukInput({
-  label: {
-    text: "Owning MU"
-  },
-  id: "Owning MU",
-  name: "Owning MU",
-  classes: "govuk-input--width-10"
-}) }}
+<option value="21">21 - Death </option>
+<option value="22">22 - Defaced</option>
+<option value="23">23 - Expired</option>
+<option value="24">24 - IOP recalled  </option>
+
+<option value="25">25 - Returned by PO unclaimed </option>
+<option value="26">26 - Previously Reported Missing </option>
+<option value="27">27 - Reason Unknown </option>
+  </select>
+</div>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

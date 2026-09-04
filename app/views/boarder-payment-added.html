@@ -162,8 +162,72 @@
       <td class="govuk-table__cell">00/00/0000</td>
       <td class="govuk-table__cell">100</td>
     </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">00/00/0000</td>
+      <td class="govuk-table__cell">100</td>
+    </tr>
   </tbody>
 </table>
+
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    href: "#"
+  },
+  items: [
+    {
+      number: 1,
+      current: true,
+      href: "#"
+    },
+    {
+      number: 2,
+      href: "#"
+    },
+    {
+      number: 3,
+      href: "#"
+    }
+  ]
+}) }}
 
   <table class="govuk-table">
     <thead class="govuk-table__head">

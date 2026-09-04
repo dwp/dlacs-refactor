@@ -30,6 +30,20 @@
 
 <a href="/suspend-payments" class="govuk-back-link">Back</a>
 
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Select a reason code for suspension</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   <h1 class="govuk-heading-l">Suspend payments</h1>
   <label class="govuk-label" for="sort-code">
@@ -69,10 +83,13 @@
 }) }}
 
 
-        <div class="govuk-form-group">
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
   <label class="govuk-label" for="sort">
     Reason code for suspension
   </label>
+      <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a reason code for suspension
+  </p>
   <select class="govuk-select" id="sort" name="sort">
     <option value="published"Selected>Select an option</option>
     <option value="views">00 - Other</option>
@@ -88,6 +105,8 @@
     <option value="views">40 - Failure to Comply (Full suspension only)</option>
   </select>
 </div>
+
+<br>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

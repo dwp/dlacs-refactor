@@ -42,10 +42,32 @@
   ]
 }) }}
 
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Select a reason code</a> 
+          <br>
+           <a href="#">Enter year for reasons 520/920</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
   <h1 class="govuk-heading-l">Reason</h1>
 
-
-<div class="govuk-form-group">
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
+    Recall reason code
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a reason code
+  </p>
   <select class="govuk-select" id="sort" name="sort">
     <option value="published"Select>Select an option</option>
 <option value="044">044 - DLA RECOVERY</option>
@@ -83,18 +105,19 @@
   </select>
 </div>
 
+<br>
 
 
 
-
-
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="sort-code">
-      Enter year for reasons 520/920
-    </label>
-    <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
-  </div>
-
+  <div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="national-insurance-number">
+    Enter year for reasons 520/920
+  </label>
+  <p id="national-insurance-number-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter year for reasons 520/920
+  </p>
+  <input class="govuk-input govuk-input--width-5" id="national-insurance-number" name="nationalInsuranceNumber" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error">
+</div>
 
   {% from "govuk/components/button/macro.njk" import govukButton %}
 

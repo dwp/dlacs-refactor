@@ -1,0 +1,236 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+    </div>
+
+
+        <div class="govuk-grid-column-full">
+  <a href="/payment-deductions" class="govuk-back-link">Back</a>
+
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Select an adjustment type</a> 
+          <br>
+           <a href="#">Enter a valid weekly rate, for example +100</a>
+            <br>
+           <a href="#">Enter a valid From date, for example 27 3 2007</a>
+               <br>
+           <a href="#">EEnter a valid To date, for example 27 3 2007</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <h1 class="govuk-heading-l">Add a payment deduction</h1>
+
+
+
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
+    Adjustment type
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select an adjustment type
+  </p>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"Selected>Select an option</option>
+<option value="044">044 - DLA RECOVERY</option>
+<option value="102">102 - ENT WHICH CANNOT BE PAID</option>
+<option value="203">203 - OFFSET - PAID OFF SYSTEM</option>
+<option value="204">204 - O/SET TO CORRECT SYS PAY</option>
+<option value="211">211 - OFFSET MOB PAID 511 ADJ</option>
+
+<option value="502">502 - UNDERPAYMENT - C OF C</option>
+<option value="503">503 - UNDERPAYMENT - OTHER RSN</option>
+<option value="504">504 - U/PAY - TERM MOTA AG.</option>
+<option value="505">505 - U/PAY - PROV MOT AG. INC</option>
+<option value="511">511 - BEN SUSP - MOB PAYABLE</option>
+
+<option value="512">512 - SYS GEN U/PAY MOTA AG</option>
+<option value="514">514 - MANUAL CALC AUT IN DA480</option>
+<option value="520">520 - CHRISTMAS BONUS PAYABLE</option>
+<option value="525">525 - BOARDER PAYMENT</option>
+<option value="526">526 - BOARDER UNDERPAYMENT</option>
+<option value="551">551 - CORRECT SYS CALC'D UPYT</option>
+
+<option value="602">602 - EXTRA STATUTORY PAYMENT</option>
+<option value="604">604 - EXCEPTIONAL PAYMENT</option>
+<option value="605">605 - SPECIAL COMPEN PAYMENT</option>
+<option value="800">800 - SYSTEM CALCULATED UPYT</option>
+<option value="802">802 - REPLACEMNT SYS GENERATED</option>
+<option value="820">820 - XMAS BONUS SYS SCAN</option>
+
+<option value="850">850 - MOTA AGREEMENT DEDUCTION</option>
+<option value="852">852 - MOB OFFSET A/W NEW AGRMT</option>
+<option value="860">860 - XMAS BONUS SYS GENERATED</option>
+<option value="900">900 - SYSTEM CALCULATED OPYT</option>
+<option value="901">901 - CLERICAL CALC REQUIRED</option>
+<option value="951">951 - CORRECT SYS CALC'D OPYT</option>
+  </select>
+</div>
+
+<br>
+
+
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper">
+  <label class="govuk-label" for="national-insurance-number">
+    Weekly rate
+  </label>
+  </h1>
+    <div id="authentication-code-hint" class="govuk-hint">
+    Enter a positive (+) amount for a weekly rate offset, or a negative (-) amount for a deduction.
+  </div>
+    <p id="national-insurance-number-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid weekly rate, for example +100
+  </p>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+
+
+
+
+</div>
+        <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      From 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid from date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div>
+
+        <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      To 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid To date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+</div>
+
+
+  <br>
+
+  {{ govukButton({
+    text: "Save",
+    href: "/payment-deductions-added"
+  }) }}
+
+</div>
+
+
+  </div>
+
+</div>
+
+{% endblock %}

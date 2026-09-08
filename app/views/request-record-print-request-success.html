@@ -107,38 +107,22 @@
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
+<h1 class="govuk-heading-l">Request record print</h1>
 
-
-
-
-  {{ govukRadios({
-  name: "Request record print",
-  fieldset: {
-    legend: {
-      text: "Request record print",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "Request a DPA Record Print"
-    },
-    {
-      value: "scotland",
-      text: "Request an FRP of live and archived data"
-    },
-    {
-      value: "wales",
-      text: "Request an FRP of archived data only"
-    },
-    {
-      value: "northern-ireland",
-      text: "Request an FRP of live data only"
-    }
-  ]
-}) }}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Record print requested
+          </h1>
+          <div class="govuk-panel__body">
+            <br><strong></strong>
+          </div>
+      </div>
+    </div>
+  </main>
+</div>
 
 
 
@@ -147,13 +131,9 @@
 
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save",
-  href: "request-record-print-request-success",
-  classes: "govuk-button"
-}) }}
+
+
 
 
 

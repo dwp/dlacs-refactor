@@ -37,11 +37,23 @@
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-full">
-    <div class="govuk-form-group">
-  <label class="govuk-label" for="width-5">
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
     Exclusion reason
   </label>
-  <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+<option value="E01">E01 - R and P conditions not satisfied</option>
+<option value="E02">E02 - Defective claim</option>
+<option value="E03">E03 - Withdrawal</option>
+<option value="E04">E04 - Withdrawal following death</option>
+<option value="E10">E10 - Death during qualifying period</option>
+<option value="E11">E11 - Death before start of first possible benefit week</option>
+<option value="E12">E12 - Death between end of qualifying period and first payday</option>
+<option value="E13">E13 - Death between start of entitlement and first payday (no qualifying period)</option>
+<option value="E14">E14 - Death before receipt of claim or conversion claim effective date</option>
+<option value="E15">E15 - Posthumous claim</option>
+  </select>
 </div>
 
 <table class="govuk-table">
@@ -54,27 +66,111 @@
 </table>
 
 
-<div class="govuk-grid-row">
+<div class="entry-header">
+  <h3 class="govuk-heading-s">Entry 1</h3>
 
-  <div class="govuk-grid-column-one-half">
-    <h3 class="govuk-heading-s">Entry 1</h3>
-  </div>
+  <button
+    type="submit"
+    class="govuk-button govuk-button--secondary"
+    data-module="govuk-button">
+    Delete
+  </button>
+</div>
 
-  <div class="govuk-grid-column-one-half" style="text-align: right;">
-    <button
-      type="button"
-      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">
-      Delete
-    </button>
-  </div>
+
 
 </div>
 
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>From</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>To</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+        </div>
+    </div>
+
+        
+
+</div>
 <div class="govuk-form-group">
-<label class="govuk-label" for="width-5">
-Action
-</label>
-<input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+  <label class="govuk-label" for="sort">
+    Reason code
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">N99 - Uprating indicator</option>
+    <option value="comments">T02 - Absence abroad or Residence and Prescence (R and P) – claim terminated</option>
+    <option value="views">T03 - Transfer to NI or IOM – claim terminated</option>
+    <option value="views">T04 - Failure to comply – claim terminated</option>
+  </select>
+</div>
+
+
+
+
+
+<div class="entry-header">
+  <h3 class="govuk-heading-s">Entry 2</h3>
+
+  <button
+    type="submit"
+    class="govuk-button govuk-button--secondary"
+    data-module="govuk-button">
+    Delete
+  </button>
 </div>
 
 </div>
@@ -137,150 +233,39 @@ Action
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
               </div>
             </div>
-          </div>
+        </div>
     </div>
 
-        <div class="govuk-grid-column-full">
-          <div class="govuk-form-group">
-          <label class="govuk-label" for="width-5">
-          Reason code
-          </label>
-          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
-          </div>
-          <div class="govuk-form-group">
-
-  <h1 class="govuk-label-wrapper">
-    <p>Override amount</p>
-  </h1>
-  <div class="govuk-input__wrapper">
-    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
-  </div>
-</div>
-
-
-
-<div class="govuk-grid-row">
-
-  <div class="govuk-grid-column-one-half">
-    <h3 class="govuk-heading-s">Entry 2</h3>
-  </div>
-
-  <div class="govuk-grid-column-one-half" style="text-align: right;">
-    <button
-      type="button"
-      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" onclick="window.location.href='add-lay-evidence-and-exclusions'">
-      Delete
-    </button>
-  </div>
+        
 
 </div>
-
 <div class="govuk-form-group">
-<label class="govuk-label" for="width-5">
-Action
-</label>
-<input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+  <label class="govuk-label" for="sort">
+    Reason code
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">N99 - Uprating indicator</option>
+    <option value="comments">T02 - Absence abroad or Residence and Prescence (R and P) – claim terminated</option>
+    <option value="views">T03 - Transfer to NI or IOM – claim terminated</option>
+    <option value="views">T04 - Failure to comply – claim terminated</option>
+  </select>
 </div>
 
-</div>
-
-    <div class="govuk-grid-column-one-half">
-      <div class="govuk-date-input" id="passport-issued">
-        <p>From</p>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-
-    </div>
-
-    <div class="govuk-grid-column-one-half">
-      <div class="govuk-date-input" id="passport-issued">
-        <p>To</p>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-              </div>
-            </div>
-          </div>
-    </div>
-
-        <div class="govuk-grid-column-full">
-          <div class="govuk-form-group">
-          <label class="govuk-label" for="width-5">
-          Reason code
-          </label>
-          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
-          </div>
-          <div class="govuk-form-group">
-
-  <h1 class="govuk-label-wrapper">
-    <p>Override amount</p>
-  </h1>
-  <div class="govuk-input__wrapper">
-    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
-  </div>
-</div>
-          </div>
+  
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+          
 
 
-  <div class="govuk-grid-column-full">
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Add another lay evidence
-    </button>
-    <br>
-    <button type="submit" class="govuk-button" data-module="govuk-button"
-    onclick="window.location.href='lay-evidence-and-exclusions-saved'">
-      Save
-    </button>
+</button>
+</div>
 </div>
 
-  </div>
-  <div class="govuk-grid-row">
-
-
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save
+</button>
 
   </div>
 

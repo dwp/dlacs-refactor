@@ -276,7 +276,24 @@
 
 
 
-
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Suppress acknowledgement?"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "Yes"
+    },
+    {
+      value: "scotland",
+      text: "No"
+    }
+  ]
+}) }}
 
 
 

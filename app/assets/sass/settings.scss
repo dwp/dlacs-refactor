@@ -1,3 +1,22 @@
 $govuk-font-family: Arial, sans-serif;
 
 
+.delete-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* align tops */
+}
+
+.entry-header .govuk-heading-s {
+  margin-bottom: 0;
+}
+
+.entry-header .govuk-button {
+  margin-bottom: 0;
+}

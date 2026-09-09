@@ -184,6 +184,21 @@
 </table>
 
 
+
+
+
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  next: {
+    labelText: "Decision-summary",
+    href: "decision-summary"
+  }
+}) }}
+
+
+
 </div>
 
 {% endblock %}

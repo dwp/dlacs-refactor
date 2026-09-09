@@ -1,0 +1,138 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-three-quarters">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<a href="/suspend-payments" class="govuk-back-link">Back</a>
+
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Enter a valid effective suspension date, for example 27 3 2007</a>
+        </li>
+                <li>
+          <a href="#">Select a reason code for suspension</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <h1 class="govuk-heading-l">Suspend payments</h1>
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{% set awardDateHtml %}
+  {{ govukDateInput({
+    id: "effective-suspension-date",
+    namePrefix: "effectiveSuspensionDate",
+    fieldset: {
+      legend: {
+        text: "Effective suspension date",
+        classes: "govuk-body-s"
+      }
+    },
+    errorMessage: {
+      text: "Enter an effective suspension date, for example 27 3 2007"
+    }
+  }) }}
+{% endset %}
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "Suspension action",
+  fieldset: {
+    legend: {
+      text: "Suspension action",
+      isPageHeading: true,
+      classes: "govuk-body"
+    }
+  },
+  items: [
+    {
+      value: "Full",
+      text: "Full"
+    },
+{
+      value: "A",
+      text: "Award",
+      checked: true,
+      conditional: {
+        html: awardDateHtml
+      }
+    }
+  ]
+}) }}  
+
+
+
+
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="sort">
+    Reason code for suspension
+  </label>
+      <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a reason code for suspension
+  </p>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"Selected>Select an option</option>
+    <option value="views">00 - Other</option>
+    <option value="views">10 - Hospitalisation / Certain Other Accommodation</option>
+    <option value="views">15 - Suspected Fraud</option>
+    <option value="views">16 - Absence Abroad</option>
+    <option value="views">17 - On remand / Imprisonment</option>
+    <option value="views">28 - Voluntary relinquishment</option>
+    <option value="views">29 - Reported Improvement (not confirmed)</option>
+    <option value="views">30 - Age 16 - where details of appointee are required (DLA only)</option>
+    <option value="views">31 - No Response to PIP Claim (DLA only)</option>
+    <option value="views">39 - Gone Away (Full suspension only)</option>
+    <option value="views">40 - Failure to Comply (Full suspension only)</option>
+  </select>
+</div>
+
+<br>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/payment-suspended"
+}) }}
+
+
+</div>
+
+{% endblock %}

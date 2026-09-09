@@ -47,6 +47,23 @@
   ]
 }) }}
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Select an approve for payment</li>
+        <li>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
   <h1 class="govuk-heading-l">Calculation period</h1>
 
 
@@ -147,28 +164,33 @@
 
 
 
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  name: "whereDoYouLive",
-  fieldset: {
-    legend: {
-      text: "Approve for payment?",
-      isPageHeading: true,
-      classes: "govuk-heading-m" 
-    }
-  },
-  items: [
-    {
-      value: "Yes",
-      text: "Yes"
-    },
-    {
-      value: "No",
-      text: "No"
-    }
-  ]
-}) }}
+        <div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="Frequency-error">
+  <label class="govuk-label" for="sort-code">
+    Approve for payment?
+    </label>
+    <p id="whereDoYouLive-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select an approve for payment
+    </p>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            Yes
+          </label>
+      </div>
+                 <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="weeks">
+            No
+          </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <br>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

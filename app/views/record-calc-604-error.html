@@ -1,0 +1,197 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+    </div>
+
+
+        <div class="govuk-grid-column-full">
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Clerical calculation summary",
+      href: "/clerical-calculation-summary-empty"
+    },
+    {
+      text: "Reason",
+      href: "/Reason"
+    }
+  ]
+}) }}
+
+
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Enter a valid From date, for example 27 3 2007</a> 
+          <br>
+           <a href="#">Enter a valid To date, for example 27 3 2007</a>
+            <br>
+           <a href="#">Enter a valid net amount, for example 150</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <h1 class="govuk-heading-l">Record calculation</h1>
+
+
+        <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      From 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid From date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div>
+
+        <div class="govuk-grid-column-one-half">
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      To 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid To date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+
+ 
+
+
+  <div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper">
+  <label class="govuk-label" for="national-insurance-number">
+    Net amount
+  </label>
+    <p id="national-insurance-number-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid net amount, for example 150
+  </p>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+  </div>
+</div>
+
+
+  <br>
+
+  {{ govukButton({
+    text: "Continue",
+    href: "/calc-period-604"
+  }) }}
+
+</div>
+
+
+  </div>
+
+</div>
+
+{% endblock %}

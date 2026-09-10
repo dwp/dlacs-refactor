@@ -30,30 +30,24 @@
   </section>
 
   <a href="hospital-and-scheduled-accommodation.html" class="govuk-back-link">Back</a>
-  <h1 class="govuk-heading-l">Add or amend hospital and scheduled accommodation</h1>
+  <h1 class="govuk-heading-l">Add or amend hospital and residential accommodation</h1>
 
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-full">
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Customer initiated change?
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          No
-    </div>
-  </fieldset>
+  <label class="govuk-label" for="sort">
+    Customer initiated change?
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Yes</option>
+    <option value="comments">No</option>
+  </select>
 </div>
+  </fieldset>
+
+
 
 <div class="govuk-date-input" id="passport-issued">
   <p>Receipt date of change</p>
@@ -87,35 +81,34 @@
 
     
 
-<h3 class="govuk-heading-s">Entry 1</h3>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 1</h3>
+  </div>
 
-
-
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Type
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Hospital
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          Scheduled accommodation
-        </label>
-      </div>
-    </div>
-  </fieldset>
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
 </div>
 
 
 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
 
 
 
@@ -190,53 +183,1631 @@
           <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
           </div>
 
-          <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Links period?
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          No
-        </label>
-      </div>
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
     </div>
-  </fieldset>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
 </div>
 
 
 
 
 
-          <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Affects award?
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 2</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
 </div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 3</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 4</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 5</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 6</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 7</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 8</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 9</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 10</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 11</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-s">Entry 12</h3>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-text-align-right">
+    <button
+      type="submit"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button">
+      Delete
+    </button>
+  </div>
+</div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">Hospital</option>
+    <option value="comments">Residential accommodation</option>
+  </select>
+</div>
+  </fieldset>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Admission date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-date-input" id="passport-issued">
+        <p>Discharge date</p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+    </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="width-5">
+          Day count
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+          </div>
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="links-period">
+        Links period?
+      </label>
+      <select class="govuk-select" id="links-period" name="linksPeriod">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="affects-award">
+        Affects award?
+      </label>
+      <select class="govuk-select" id="affects-award" name="affectsAward">
+        <option value=""></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 
           </div>

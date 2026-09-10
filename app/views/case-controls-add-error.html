@@ -1,0 +1,140 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+  </section>
+
+  <a href="/case-controls-maintain" class="govuk-back-link">Back</a>
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Enter a valid date, for example 27 3 2007</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid code, for example 0001</li>
+        <li>
+          <li>
+          <a href="#">Enter a description between 2 and 40 characters</li>
+        <li>
+          </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <h1 class="govuk-heading-l">Add case control</h1>
+
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint passport-issued-error">
+    <legend class="govuk-fieldset__legend">
+      Date 
+    </legend>
+     </legend>
+    <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid from date, for example 27 3 2007
+    </p>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="AB">
+        
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="CD">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="EFGH">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div>
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="sort-code">
+    Code
+  </label>
+  <div id="sort-code-hint" class="govuk-hint">
+    Must be 4 digits long
+  </div>
+  <p id="sort-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid code, for example 0001
+  </p>
+  <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing govuk-input--error" id="sort-code" name="sortCode" type="text" spellcheck="false" value="12" aria-describedby="sort-code-hint sort-code-error" inputmode="numeric">
+</div>
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="sort-code">
+    Description
+  </label>
+  <div id="sort-code-hint" class="govuk-hint">
+    Enter a description between 2 and 40 characters
+  </div>
+  <p id="sort-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid code, for example 0001
+  </p>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/case-controls-maintain"
+}) }}
+
+  </div>
+
+</div>
+
+{% endblock %}

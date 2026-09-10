@@ -37,22 +37,6 @@
 
 
 
-{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Method of payment"
-      },
-      value: {
-        text: "AC"
-      }
-    }
-      
-  ]
-}) }}
-
   <label class="govuk-label" for="sort-code">
       Frequency
     </label>
@@ -60,13 +44,13 @@
     <fieldset class="govuk-fieldset">
       <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="Frequency" name="Frequency" type="radio" value="scotland">
+          <input class="govuk-radios__input" id="Frequency" name="Frequency" type="radio" value="scotland" checked>
           <label class="govuk-label govuk-radios__label" for="Frequency">
             1
           </label>
         </div>
          <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="whereDoYouLive-2" name="Frequency" type="radio" value="scotland" checked>
+          <input class="govuk-radios__input" id="whereDoYouLive-2" name="Frequency" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="Frequency">
             4
           </label>
@@ -83,19 +67,19 @@
     <fieldset class="govuk-fieldset">
       <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" checked>
           <label class="govuk-label govuk-radios__label" for="weeks">
             0
           </label>
           </div>
           <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland">
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
           <label class="govuk-label govuk-radios__label" for="weeks">
             3
           </label>
                     </div>
           <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" checked>
+          <input class="govuk-radios__input" id="weeks" name="weeks" type="radio" value="scotland" >
           <label class="govuk-label govuk-radios__label" for="weeks">
             4
           </label>
@@ -116,7 +100,7 @@
 
 {{ govukButton({
   text: "Save",
-  href: "/payment-frequency"
+  href: "/payment-frequency-next"
 }) }}
 
 

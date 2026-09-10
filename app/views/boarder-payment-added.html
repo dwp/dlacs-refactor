@@ -244,5 +244,11 @@
     </tbody>
   </table>
 
+  {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Reminder - Finalise payment",
+  iconFallbackText: "Warning"
+}) }}
 
 {% endblock %}

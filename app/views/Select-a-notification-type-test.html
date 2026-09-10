@@ -1,0 +1,145 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/notifications"
+}) }}
+
+
+    <h2 class="govuk-heading-m">Renewal and supersssion forms/notifications</h2>
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+    {
+      text: "Letter of entitlement",
+      value: "LoE"
+    },
+    {
+      text: "VED Certificate of Entitlement",
+      value: "VED"
+    },
+     {
+      text: "DBD225A Parent Guardian responsbilities",
+      value: "DBD225A"
+    },
+     {
+      text: "BF57B Review of appointment to act (P/G)",
+      value: "BF57B"
+    },
+         {
+      text: "DBD955 Change of account details",
+      value: "DBD955"
+    }
+  ]
+}) }}
+
+    <h2 class="govuk-heading-m">Renewal and supersssion forms/notifications</h2>
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD138 DLA Nighttime needs",
+      value: "DBD138"
+    },
+    {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
+    },
+     {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
+    }
+  ]
+}) }}
+
+
+
+    <h2 class="govuk-heading-m">Appeal/recon - enquiry forms/notifications</h2>
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD919 TS des rtd for corrective actions",
+      value: "DBD919"
+    },
+    {
+      text: "DBD4R Acknowledgment
+DBD4 Acknowledgment. DBD4R Acknowledgment",
+      value: "DBD4R"
+    },
+     {
+      text: "BD303 Non-payee request",
+      value: "BD303"
+    },
+     {
+      text: "DBD304 Confirm non-payee permission (or can be req after DBD303)",
+      value: "DBD304"
+    },
+      {
+      text: "PIPR11 Supersession",
+      value: "PIPR11"
+    },
+      {
+      text: "PIPR13 Termination",
+      value: "PIPR13"
+    },
+      {
+      text: "PIPR14 Chooses not to claim PIP",
+      value: "PIPR14"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/Confirm-notification-IF-address-autopopulated"
+}) }}
+
+
+  
+
+  </div>
+
+</div>
+
+{% endblock %}

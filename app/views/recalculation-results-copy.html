@@ -201,6 +201,37 @@
 </table>
      <br>
 
+
+  <thead class="govuk-table__head">
+  <tr class="govuk-table__row">
+    <th scope="col" rowspan="2" class="govuk-table__header">Cmp</th>
+
+    <th scope="colgroup" colspan="2" class="govuk-table__header">
+      Recalculation period
+    </th>
+
+    <th scope="colgroup" colspan="2" class="govuk-table__header">
+      Weekly rate
+    </th>
+
+    <th scope="colgroup" colspan="2" class="govuk-table__header">
+      Potential payment
+    </th>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">From</th>
+    <th scope="col" class="govuk-table__header">To</th>
+
+    <th scope="col" class="govuk-table__header">Paid</th>
+    <th scope="col" class="govuk-table__header">Due</th>
+
+    <th scope="col" class="govuk-table__header">Over</th>
+    <th scope="col" class="govuk-table__header">Under</th>
+      </tr>
+      </tbody>
+</table>
+
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {{ govukSummaryList({

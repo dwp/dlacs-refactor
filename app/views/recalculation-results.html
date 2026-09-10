@@ -156,49 +156,51 @@
 }) }}
 
      <br>
-     
+
 <table class="govuk-table">
   <thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-    <th scope="col" class="govuk-table__header">Cmp</th>
-    <th scope="col" class="govuk-table__header">Recalculation period<br>From</th>
-    <th scope="col" class="govuk-table__header">Recalculation period<br>To</th>
-    <th scope="col" class="govuk-table__header">Weekly rate<br>Paid</th>
-    <th scope="col" class="govuk-table__header">Weekly rate<br>Due</th>
-    <th scope="col" class="govuk-table__header">Potential payment<br>Over</th>
-    <th scope="col" class="govuk-table__header">Potential payment<br>Under</th>
-  </tr>
-</thead>
-<tbody class="govuk-table__body">
-  <tr class="govuk-table__row">
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-  </tr>  
-  <tr class="govuk-table__row">
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-  </tr>
     <tr class="govuk-table__row">
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-    <td class="govuk-table__cell">[Content]</td>
-  </tr>
-</tbody>
+      <th rowspan="2" class="govuk-table__header">Cmp</th>
+
+      <th colspan="2" class="govuk-table__header">
+        Recalculation period
+      </th>
+
+      <th colspan="2" class="govuk-table__header">
+        Weekly rate
+      </th>
+
+      <th colspan="2" class="govuk-table__header">
+        Potential payment
+      </th>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">From</th>
+      <th class="govuk-table__header">To</th>
+
+      <th class="govuk-table__header">Paid</th>
+      <th class="govuk-table__header">Due</th>
+
+      <th class="govuk-table__header">Over</th>
+      <th class="govuk-table__header">Under</th>
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+      <td class="govuk-table__cell">[Content]</td>
+    </tr>
+  </tbody>
 </table>
+
+
      <br>
 
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}

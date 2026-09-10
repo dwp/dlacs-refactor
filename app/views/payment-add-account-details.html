@@ -71,9 +71,15 @@
   </div>
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
 </div>
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Save
-</button>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save",
+  href: "/payment-account-details"
+}) }}
+
 
 
 

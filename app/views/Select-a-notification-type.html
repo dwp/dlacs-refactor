@@ -37,106 +37,96 @@
   href: "/notifications"
 }) }}
 
- {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+    <h2 class="govuk-heading-m">Renewal and supersssion forms/notifications</h2>
 {{ govukRadios({
-  name: "Select a notification type",
-  fieldset: {
-    legend: {
-      text: "Select a notification type",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
+  idPrefix: "notificationType",
+  name: "notificationType",
   items: [
     {
-      value: "Letter of entitlement",
-      text: "Letter of entitlement"
+      text: "Letter of entitlement",
+      value: "LoE"
     },
     {
-      value: "VED Certificate of Entitlement",
-      text: "VED Certificate of Entitlement"
+      text: "VED Certificate of Entitlement",
+      value: "VED"
     },
-    {
-      value: "DBD225A Parent Guardian responsbilities",
-      text: "DBD225A Parent Guardian responsbilities"
+     {
+      text: "DBD225A Parent Guardian responsbilities",
+      value: "DBD225A"
     },
-      {
-      value: "BF57B Review of appointment to act (P/G)",
-      text: "BF57B Review of appointment to act (P/G)"
+     {
+      text: "BF57B Review of appointment to act (P/G)",
+      value: "BF57B"
     },
-      {
-      value: "DBD955 Change of account details",
-      text: "DBD955 Change of account details"
+         {
+      text: "DBD955 Change of account details",
+      value: "DBD955"
     }
   ]
 }) }}
 
     <h2 class="govuk-heading-m">Renewal and supersssion forms/notifications</h2>
-  {{ govukRadios({
-  fieldset: {
-    legend: {
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [  
-      {
-      value: "DBD138 DLA Nighttime needs",
-      text: "DBD138 DLA Nighttime needs"
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD138 DLA Nighttime needs",
+      value: "DBD138"
     },
-      {
-      value: "DBD73 Child renewal invite",
-      text: "DBD73 Child renewal invite"
+    {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
     },
-      {
-      value: "DBD420 Child/Adult supersession request",
-      text: "DBD420 Child/Adult supersession request"
+     {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
     }
   ]
 }) }}
 
+
+
     <h2 class="govuk-heading-m">Appeal/recon - enquiry forms/notifications</h2>
-  {{ govukRadios({
-  fieldset: {
-    legend: {
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [  
-      {
-      value: "DBD919 TS des rtd for corrective actions",
-      text: "DBD919 TS des rtd for corrective action"
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD919 TS des rtd for corrective actions",
+      value: "DBD919"
     },
-      {
-      value: "DBD4R Acknowledgment
-DBD4 Acknowledgment",
+    {
       text: "DBD4R Acknowledgment
-DBD4 Acknowledgment"
+DBD4 Acknowledgment. DBD4R Acknowledgment",
+      value: "DBD4R"
+    },
+     {
+      text: "BD303 Non-payee request",
+      value: "BD303"
+    },
+     {
+      text: "DBD304 Confirm non-payee permission (or can be req after DBD303)",
+      value: "DBD304"
     },
       {
-      value: "DBD303 Non-payee request",
-      text: "DBD303 Non-payee request"
+      text: "PIPR11 Supersession",
+      value: "PIPR11"
     },
-    {
-      value: "DBD304 Confirm non-payee permission (or can be req after DBD303)",
-      text: "DBD304 Confirm non-payee permission (or can be req after DBD303)"
+      {
+      text: "PIPR13 Termination",
+      value: "PIPR13"
     },
-    {
-      value: "PIPR11 supersession",
-      text: "PIPR11 supersession"
-    },
-    {
-      value: "PIPR13 Termination",
-      text: "PIPR13 Termination"
-    },
-        {
-      value: "PIPR14 Chooses not to claim PIP",
-      text: "PIPR14 Chooses not to claim PIP"
+      {
+      text: "PIPR14 Chooses not to claim PIP",
+      value: "PIPR14"
     }
   ]
 }) }}
+
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

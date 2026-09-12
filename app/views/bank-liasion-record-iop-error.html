@@ -38,34 +38,63 @@
 
 <a href="home" class="govuk-back-link">Back</a>
 
+  <div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list"> 
+        <li>
+          <a href="#">Enter a valid National Insurance number, for example QQ123456C</a>
+          <br>
+          <a href="#">Enter a valid payment number, for example '?'</a>
+          <br>
+           <a href="#">Select a return reason</a>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <h1 class="govuk-heading-xl">Record returned IOP details</h1>
  
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="national-insurance-number">
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="sort-code">
     National Insurance number
   </label>
-  <div id="national-insurance-number-hint" class="govuk-hint">
+  <div id="sort-code-hint" class="govuk-hint">
     For example, ‘QQ123456C’
   </div>
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+  <p id="sort-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid National Insurance number, for example QQ123456C
+  </p>
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing govuk-input--error" id="sort-code" name="sortCode" type="text" spellcheck="false" value="12" aria-describedby="sort-code-hint sort-code-error" inputmode="numeric">
 </div>
 
-{{ govukInput({
-  label: {
-    text: "Payment number"
-  },
-  id: "payment number",
-  name: "Payment number",
-  classes: "govuk-input--width-10"
-}) }}
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-     Return reason
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="sort-code">
+    Payment number
   </label>
+  <p id="sort-code-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a valid payment number, for example '?'
+  </p>
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing govuk-input--error" id="sort-code" name="sortCode" type="text" spellcheck="false" value="12" aria-describedby="sort-code-hint sort-code-error" inputmode="numeric">
+</div>
+
+
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
+    Return reason
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select a return reason
+  </p>
   <select class="govuk-select" id="sort" name="sort">
-    <option value="published"></option>
+    <option value="published"Select>Select an option</option>
 <option value="00">00	- Other </option>
 <option value="05">05 - Change of Circs – increased award  </option>
 <option value="06">06 - 	Change of Circs – decreased award  </option>
@@ -92,7 +121,7 @@
 <option value="27">27 - Reason Unknown </option>
   </select>
 </div>
-
+<br>
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({

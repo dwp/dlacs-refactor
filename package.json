@@ -11,6 +11,6 @@
     "@x-govuk/govuk-prototype-components": "5.0.2",
     "audit": "0.0.6",
     "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "13.20.2"
+    "govuk-prototype-kit": "13.20.4"
   }
 }

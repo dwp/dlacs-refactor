@@ -49,12 +49,12 @@
         </li>
           <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
           <a id="delete-interest-or-undecided-claim" href="delete-interest-or-undecided-claim" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
-            Delete interest or undecided claim
+            Deregistration
           </a>
         </li>
         <li class="dwp-side-navigation__item">
           <a id="delete-decided-claim" href="delete-decided-claim" class="dwp-side-navigation__link">
-            Delete decided claim
+            Delete claim
           </a>
         </li>
         <li class="dwp-side-navigation__item">
@@ -110,7 +110,7 @@
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 
- <h1 class="govuk-heading-l">Delete interest or undecided claim</h1>
+ <h1 class="govuk-heading-l">Deregistration</h1>
 
 
 <dl class="govuk-summary-list">
@@ -190,106 +190,6 @@ Effective date
 
 
 
-
- <h2 class="govuk-heading-m">Name two</h2>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Title
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Miss
-    </dd>
-  </div>
-   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Forename
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Jane
-    </dd>
-  </div>
-   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Surname
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Smith
-    </dd>
-  </div>
-   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Other names
-    </dt>
-    <dd class="govuk-summary-list__value">
-      May
-    </dd>
-  </div>
-   <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Requested name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      May
-    </dd>
-</dl>
-
-
-
-
-
-
- <h2 class="govuk-heading-m">Further personal details</h2>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Date of birth
-    </dt>
-    <dd class="govuk-summary-list__value">
-      9 May 2006
-    </dd>
-    <dd class="govuk-summary-list__actions">
-<strong class="govuk-tag">
-  Verified
-</strong>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Date of death
-    </dt>
-    <dd class="govuk-summary-list__value">
-      
-    </dd>
-    <dd class="govuk-summary-list__actions">
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Sex
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Female
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-    </dd>
-     </div>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-    </dd>
-</dl>
-
-
-
-
-
-
-
-
-
  <h2 class="govuk-heading-m">Address</h2>
 
 <dl class="govuk-summary-list">
@@ -314,61 +214,14 @@ Effective date
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
     </dd>
      </div>
-     <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-Country code
-    </dt>
-    <dd class="govuk-summary-list__value">
-      114 - England
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-    </dd>
-     </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Post type
-    </dt>
-    <dd class="govuk-summary-list__value">
-      1 - Normal
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-    </dd>
-     </div>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-    </dd>
 </dl>
 
-
-
-
-
-
-
-
-
-
-<h2 class="govuk-heading-m">Contact</h2>
-
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Contact number
-    </dt>
-    <dd class="govuk-summary-list__value">
-      077123456
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
-</dl>
 
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Delete claim or interest",
+  text: "Confirm deregistration",
   href: "delete-interest",
   classes: "govuk-button--warning"
 }) }}

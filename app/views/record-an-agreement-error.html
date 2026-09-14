@@ -122,18 +122,6 @@
   }
 }) }}
 
-{{ govukInput({
-  label: {
-    text: "Join X-ref no. (optional)"
-  },
-  classes: "govuk-!-width-one-half",
-  id: "join-xref-number",
-  name: "joinXrefNumber",
-  errorMessage: {
-    text: "Enter a Join X-ref number in the correct format"
-  }
-}) }}
-
 
 <h2 class="govuk-heading-m">Provisional</h2>
 
@@ -279,7 +267,7 @@
 
 {{ govukInput({
   label: {
-    text: "Number of weekly payments"
+    text: "Number of 4 weekly payments"
   },
   classes: "govuk-!-width-one-half",
   id: "number-of-weekly-payments",
@@ -290,34 +278,21 @@
   }
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  name: "cancelAgreement",
+{{ govukDateInput({
+  id: "provisional-from-date",
+  namePrefix: "provisional-from-date",
   fieldset: {
     legend: {
-      text: "Wheelchair? (optional)"
+      text: "Transferred agreement - pay supplier from"
     }
   },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ]
-}) }}
-
-{{ govukInput({
-  label: {
-    text: "Transferred agreement - pay supplier from"
+  hint: {
+    text: "For example, 27 3 2007"
   },
-  classes: "govuk-!-width-one-half",
-  id: "one-half",
-  name: "oneHalf"
+  errorMessage: {
+    text: "Enter a valid date"
+  }
 }) }}
 
 

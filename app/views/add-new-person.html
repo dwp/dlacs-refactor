@@ -71,12 +71,53 @@
   <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
 </div>
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="width-20">
-    Relationship type
-  </label>
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-</div>
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "relationship-type",
+  name: "relationshipType",
+  label: {
+    text: "Relationship type"
+  },
+  items: [
+    {
+      value: "",
+      text: "Select a relationship type"
+    },
+    {
+      value: "6",
+      text: "6 - Other guardian"
+    },
+    {
+      value: "8",
+      text: "8 - Appointee"
+    },
+    {
+      value: "11",
+      text: "11 - Death Arrears Payee (DAP)"
+    },
+    {
+      value: "16",
+      text: "16 - Split Payment Payee (SPP)"
+    },
+    {
+      value: "30",
+      text: "30 - Carer's Allowance (CA) claimant"
+    },
+    {
+      value: "38",
+      text: "38 - Parent or guardian - DLA only"
+    },
+    {
+      value: "41",
+      text: "41 - Corporate Personal Acting Body (CPAB)"
+    },
+    {
+      value: "53",
+      text: "53 - Corporate Death Arrears Payee (CDAP)"
+    }
+  ]
+}) }}
 
 
 <button type="submit" class="govuk-button" data-module="govuk-button">

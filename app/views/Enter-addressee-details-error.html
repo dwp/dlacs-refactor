@@ -37,17 +37,55 @@
   href: "#"
 }) }}
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Enter an addressee name</li>
+        <li>
+        <li>
+          <a href="#">Enter an address line 1
+        <li>
+        <li>
+          <a href="#">Enter an address line 2
+        <li>
+        <li>
+          <a href="#">Address line 3 cannot contain consecutive spaces
+        <li>
+        <li>
+          <a href="#">Address line 4 requires 2 minimum characters
+        <li> 
+        <li>
+          <a href="#">Postcode must follow valid UK postcode format
+        <li>  
+        <li>
+          <a href="#">Select  a value
+        <li>
+        <li>
+          <a href="#">Select  a value
+        <li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <h1 class="govuk-heading-l">Enter addressee details</h1>
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
 {{ govukInput({
+  id: "addressee-name",
+  name: "addresseeName",
+  classes: "govuk-!-width-two-thirds",
   label: {
     text: "Addressee name"
   },
-  classes: "govuk-!-width-two-thirds",
-  id: "two-thirds",
-  name: "twoThirds"
+  errorMessage: {
+    text: "Enter an addressee name"
+  }
 }) }}
 
 
@@ -64,52 +102,115 @@
   }
 }) %}
 
-  {{ govukInput({
-    label: {
-      text: "Address line 1"
-    },
-    id: "address-line-1",
-    name: "addressLine1",
-    autocomplete: "address-line1"
-  }) }}
+{{ govukInput({
+  label: {
+    text: "Address line 1"
+  },
+  id: "address-line-1",
+  name: "addressLine1",
+  autocomplete: "address-line1",
+  errorMessage: {
+    text: "Enter an address line 1"
+  }
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: "Address line 2 (optional)"
-    },
-    id: "address-line-2",
-    name: "addressLine2",
-    autocomplete: "address-line2"
-  }) }}
+{{ govukInput({
+  label: {
+    text: "Address line 2"
+  },
+  id: "address-line-2",
+  name: "addressLine2",
+  autocomplete: "address-line2",
+  errorMessage: {
+    text: "Enter an address line 2"
+  }
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: "Town or city"
-    },
-    classes: "govuk-!-width-two-thirds",
-    id: "address-town",
-    name: "addressTown",
-    autocomplete: "address-level2"
-  }) }}
+ {{ govukInput({
+  label: {
+    text: "Address line 3 (optional)"
+  },
+  classes: "govuk-!-width-two-thirds",
+  id: "address-town",
+  name: "addressTown",
+  autocomplete: "address-level2",
+  errorMessage: {
+    text: "Address line 3 cannot contain consecutive spaces"
+  }
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: "County (optional)"
-    },
-    classes: "govuk-!-width-two-thirds",
-    id: "address-county",
-    name: "addressCounty"
-  }) }}
+{{ govukInput({
+  label: {
+    text: "Address line 4 (optional)"
+  },
+  classes: "govuk-!-width-two-thirds",
+  id: "address-county",
+  name: "addressCounty",
+  errorMessage: {
+    text: "Address line 4 requires 2 minimum characters"
+  }
+}) }}
 
-  {{ govukInput({
-    label: {
-      text: "Postcode"
+{{ govukInput({
+  label: {
+    text: "Postcode (optional)"
+  },
+  classes: "govuk-input--width-10",
+  id: "address-postcode",
+  name: "addressPostcode",
+  autocomplete: "postal-code",
+  errorMessage: {
+    text: "Postcode must follow valid UK postcode format"
+  }
+}) }}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Subsequent notification flag"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "Yes"
     },
-    classes: "govuk-input--width-10",
-    id: "address-postcode",
-    name: "addressPostcode",
-    autocomplete: "postal-code"
-  }) }}
+    {
+      value: "scotland",
+      text: "No"
+    }
+  ],
+  errorMessage: {
+    text: "Select an option"
+  }
+}) }}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Representative provided NINO flag"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "Yes"
+    },
+    {
+      value: "scotland",
+      text: "No"
+    }
+  ],
+  errorMessage: {
+    text: "Select an option"
+  }
+}) }}
 
 {% endcall %}
 

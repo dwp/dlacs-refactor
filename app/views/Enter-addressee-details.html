@@ -75,7 +75,7 @@
 
   {{ govukInput({
     label: {
-      text: "Address line 2 (optional)"
+      text: "Address line 2"
     },
     id: "address-line-2",
     name: "addressLine2",
@@ -84,7 +84,7 @@
 
   {{ govukInput({
     label: {
-      text: "Town or city"
+      text: "Address line 3 (optional)"
     },
     classes: "govuk-!-width-two-thirds",
     id: "address-town",
@@ -94,7 +94,7 @@
 
   {{ govukInput({
     label: {
-      text: "County (optional)"
+      text: "Address line 4 (optional)"
     },
     classes: "govuk-!-width-two-thirds",
     id: "address-county",
@@ -103,13 +103,53 @@
 
   {{ govukInput({
     label: {
-      text: "Postcode"
+      text: "Postcode (optional)"
     },
     classes: "govuk-input--width-10",
     id: "address-postcode",
     name: "addressPostcode",
     autocomplete: "postal-code"
   }) }}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Subsequent notification flag"
+    }
+  },
+  items: [
+    {
+      value: "wales",
+      text: "Yes"
+    },
+    {
+      value: "northern-ireland",
+      text: "No"
+    }
+  ]
+}) }}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "Representative provided NINO flag"
+    }
+  },
+  items: [
+    {
+      value: "wales",
+      text: "Yes"
+    },
+    {
+      value: "northern-ireland",
+      text: "No"
+    }
+  ]
+}) }}
 
 {% endcall %}
 

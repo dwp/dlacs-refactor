@@ -165,12 +165,12 @@
 <div style="text-align: right;">
   <button
     type="submit"
-    class="govuk-button govuk-button--secondary govuk-!-margin-bottom-10"
-    data-module="govuk-button">
-    Amend decision summary
+      class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0"
+      data-module="govuk-button"
+      onclick="window.location.href='/add-decision-summary'">
+      Amend decision summary
   </button>
 </div>
-
 
 
 
@@ -202,11 +202,13 @@
   </table>
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Finalise decision"
+  text: "Finalise decision",
+  href: "/decision-finalised"
 }) }}
+
 
 </div>
 

@@ -160,17 +160,64 @@
   }
 }) }}
 
-{{ govukInput({
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
   id: "termination-reason",
   name: "terminationReason",
   label: {
-    text: "Reason"
+    text: "Reason (optional)"
   },
-  classes: "govuk-!-width-one-half",
-  value: "@@@",
-  errorMessage: {
-    text: "Enter a valid termination reason"
-  }
+  items: [
+    {
+      value: "",
+      text: "Select a termination reason"
+    },
+    {
+      value: "A01",
+      text: "A01 - Requested by the Supplier"
+    },
+    {
+      value: "A02",
+      text: "A02 - Customer has died"
+    },
+    {
+      value: "A03",
+      text: "A03 - Agreement details incorrect"
+    },
+    {
+      value: "A04",
+      text: "A04 - No longer entitled to High Rate Mobility Component"
+    },
+    {
+      value: "A05",
+      text: "A05 - Change of Appointee"
+    },
+    {
+      value: "A07",
+      text: "A07 - Customer moved to Northern Ireland (NI) or Scotland"
+    },
+    {
+      value: "A08",
+      text: "A08 - Not Entitled - Absence Abroad"
+    },
+    {
+      value: "A09",
+      text: "A09 - Not Entitled - Imprisonment"
+    },
+    {
+      value: "A10",
+      text: "A10 - No Payability - Hospitalisation"
+    },
+    {
+      value: "A11",
+      text: "A11 - Extension terminated"
+    },
+    {
+      value: "A12",
+      text: "A12 - Transferred to PIP"
+    }
+  ]
 }) }}
 
     <h2 class="govuk-heading-m">

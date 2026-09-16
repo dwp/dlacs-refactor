@@ -36,18 +36,26 @@
 
 <div class="govuk-grid-column-two-thirds">
 
-  <div class="govuk-panel govuk-panel--confirmation">
-            <h1 class="govuk-panel__title">
-              Placeholder content: Claim returned
-            </h1>
-          </div>
-          <p class="govuk-body"> Placeholder content: This claim has been returned. You can now....</p>
 
- 
+   <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Payment returned
+            </h1>
+            <div class="govuk-panel__body">
+              National Insurance number:<br><strong>QQ 12 34 56 X</strong>
+            </div>
+            <br>
+             <div class="govuk-panel__body">
+              Payment number:<br><strong>1234567890</strong>
+            </div>
+          </div>
+<p class="govuk-body">This payment has been returned.</p>
+
+
           {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Return to homepage",
+  text: "Return another payment",
   href: "/bank-liasion-record-iop"
 }) }}
 

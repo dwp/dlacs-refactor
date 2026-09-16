@@ -170,3 +170,24 @@
 .entry-header .govuk-button {
   margin-bottom: 0;
 }
+
+.govuk-tag.status-tag {
+  width: auto !important;
+  max-width: none !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.status-highlight {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #d2e2f1;
+  margin-right: 10px;
+}

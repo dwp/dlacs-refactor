@@ -23,7 +23,13 @@
       <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
       <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
       <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+<<<<<<< HEAD
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag status-tag">CREG - Claim registered</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Payment status: </b><strong class="govuk-tag status-tag">NAPR - No automatic payment renewal</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Change status: </b><strong class="govuk-tag status-tag">NOTR - No outstanding transaction</strong></dd>
+=======
       <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+>>>>>>> d97e381c839a018c7de4ca7314a6a966632e4815
     </dl>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -37,6 +43,16 @@
   href: "/notifications"
 }) }}
 
+<<<<<<< HEAD
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select a notification to continue",
+      href: "#notificationType1"
+=======
 <div class="govuk-error-summary" data-module="govuk-error-summary">
   <div role="alert">
     <h2 class="govuk-error-summary__title">
@@ -88,10 +104,119 @@
          {
       text: "DBD955 Change of account details",
       value: "DBD955"
+>>>>>>> d97e381c839a018c7de4ca7314a6a966632e4815
     }
   ]
 }) }}
 
+<<<<<<< HEAD
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+<h1 class="govuk-heading-l">Select a notification type</h1>
+
+<div class="govuk-form-group govuk-form-group--error">
+
+  <p id="notificationType-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span>
+    Select a notification to continue
+  </p>
+
+  <h2 class="govuk-heading-m">
+    Renewal and supersession forms/notifications
+  </h2>
+
+  {{ govukRadios({
+    idPrefix: "notificationTypeA",
+    name: "notificationType",
+    items: [
+      {
+        text: "Letter of entitlement",
+        value: "LoE"
+      },
+      {
+        text: "VED Certificate of Entitlement",
+        value: "VED"
+      },
+      {
+        text: "DBD225A Parent Guardian responsibilities",
+        value: "DBD225A"
+      },
+      {
+        text: "BF57B Review of appointment to act (P/G)",
+        value: "BF57B"
+      },
+      {
+        text: "DBD955 Change of account details",
+        value: "DBD955"
+      }
+    ]
+  }) }}
+
+  <h2 class="govuk-heading-m">
+    Renewal and supersession forms/notifications
+  </h2>
+
+  {{ govukRadios({
+    idPrefix: "notificationTypeB",
+    name: "notificationType",
+    items: [
+      {
+        text: "DBD138 DLA Nighttime needs",
+        value: "DBD138"
+      },
+      {
+        text: "DBD73 Child renewal invite",
+        value: "DBD73"
+      },
+      {
+        text: "DBD73 Child renewal invite",
+        value: "DBD73-2"
+      }
+    ]
+  }) }}
+
+  <h2 class="govuk-heading-m">
+    Appeal/recon - enquiry forms/notifications
+  </h2>
+
+  {{ govukRadios({
+    idPrefix: "notificationTypeC",
+    name: "notificationType",
+    items: [
+      {
+        text: "DBD919 TS des rtd for corrective actions",
+        value: "DBD919"
+      },
+      {
+        text: "DBD4R Acknowledgment DBD4 Acknowledgment",
+        value: "DBD4R"
+      },
+      {
+        text: "BD303 Non-payee request",
+        value: "BD303"
+      },
+      {
+        text: "DBD304 Confirm non-payee permission",
+        value: "DBD304"
+      },
+      {
+        text: "PIPR11 Supersession",
+        value: "PIPR11"
+      },
+      {
+        text: "PIPR13 Termination",
+        value: "PIPR13"
+      },
+      {
+        text: "PIPR14 Chooses not to claim PIP",
+        value: "PIPR14"
+      }
+    ]
+  }) }}
+
+</div>
+
+=======
 </div>
 
 
@@ -177,6 +302,7 @@ DBD4 Acknowledgment. DBD4R Acknowledgment",
 
   </div>
 
+>>>>>>> d97e381c839a018c7de4ca7314a6a966632e4815
 </div>
 
 {% endblock %}

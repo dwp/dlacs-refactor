@@ -79,20 +79,26 @@
   </h2>
 </div>
 
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Code</th>
-        <td class="govuk-table__cell">02</td>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Type</th>
-        <td class="govuk-table__cell">Claim form, Fee paying medical evidence, Telephone call</td>
-      </tr>
-    </tbody>
-  </table>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Code"
+      },
+      value: {
+        text: "02"
+      }
+    },
+    {
+      key: {
+        text: "Type"
+      },
+      value: {
+        html: "Claim form, Fee paying medical evidence, Telephone call"
+      }
+    }
+  ]
+}) }}
 
 
 </div>

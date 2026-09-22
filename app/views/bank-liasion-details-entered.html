@@ -49,14 +49,19 @@
               Payment number:<br><strong>1234567890</strong>
             </div>
           </div>
-<p class="govuk-body">This payment has been returned.</p>
+
+
+
+<p class="govuk-body">
+This payment has been returned. You can now <a href="/bank-liaison-record-iop" class="govuk-link">return another payment</a>.
+</p>
 
 
           {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Return another payment",
-  href: "/bank-liasion-record-iop"
+  text: "Return to homepage",
+  href: "/home"
 }) }}
 
   </div>

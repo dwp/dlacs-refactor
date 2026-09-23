@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+
+{{
+        dwpHeader({
+            serviceName: "Disability Living Allowance for Children",
+            serviceHref: 'home',
+            container: true
+        })
+}}
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      UX prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not the real service. It is not connected to a database, no information you input will be stored.
+    </span>
+  </p>
+</div>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="loading-container">
+  <div class="spinner"></div>
+  <h1 class="govuk-heading-l">Page loading, please wait</h1>
+</div>
+
+<style>
+.loading-container {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  border: 8px solid #d8d8d8;
+  border-top: 8px solid #1d70b8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<br>
+{% endblock %}

@@ -1,0 +1,227 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  
+
+<div class="govuk-grid-column-full">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  <a href="lay-evidence-and-exclusions" class="govuk-back-link">Back</a>
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#">Select an exclusion reason</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid from date, for example 27 3 2007</li>
+        <li>
+          <li>
+          <a href="#">Enter a valid to date, for example 27 3 2007</li>
+        <li>
+           <li>
+          <li>
+          <a href="#">Select a reason code</a></li>
+        <li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <h1 class="govuk-heading-l">Add or amend lay evidence and exclusion</h1>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+
+   <div class="govuk-form-group--error" style="margin-top: 30px;">
+  <label class="govuk-label" for="width-5">
+    Exclusion reason
+  </label>
+    <p id="location-error" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Select an exclusion reason
+  </p>
+ <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+<option value="E01">E01 - R and P conditions not satisfied</option>
+<option value="E02">E02 - Defective claim</option>
+<option value="E03">E03 - Withdrawal</option>
+<option value="E04">E04 - Withdrawal following death</option>
+<option value="E10">E10 - Death during qualifying period</option>
+<option value="E11">E11 - Death before start of first possible benefit week</option>
+<option value="E12">E12 - Death between end of qualifying period and first payday</option>
+<option value="E13">E13 - Death between start of entitlement and first payday (no qualifying period)</option>
+<option value="E14">E14 - Death before receipt of claim or conversion claim effective date</option>
+<option value="E15">E15 - Posthumous claim</option>
+  </select> 
+   </div>
+
+<br/>
+
+  
+
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Effective date</th>
+      <td class="govuk-table__cell">21 August 2025</td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+<h3 class="govuk-heading-s">Entry 1</h3>
+
+
+
+</div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group govuk-form-group--error">
+
+      <div class="govuk-date-input" id="passport-issued">
+        <p>From</p>
+         <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid from date, for example 27 3 2007
+    </p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+          </div></div>
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-form-group govuk-form-group--error">
+
+      <div class="govuk-date-input" id="passport-issued">
+        <p>To</p>
+         <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid to date, for example 27 3 2007
+    </p>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+              </div>
+            </div>
+        </div></div>
+    </div>
+
+        
+
+</div>
+<div class="govuk-form-group">      <div class="govuk-form-group govuk-form-group--error">
+
+  <label class="govuk-label" for="sort">
+    Reason code
+  </label>
+   <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select a reason code
+    </p>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published"></option>
+    <option value="views">N99 - Uprating indicator</option>
+    <option value="comments">T02 - Absence abroad or Residence and Prescence (R and P) – claim terminated</option>
+    <option value="views">T03 - Transfer to NI or IOM – claim terminated</option>
+    <option value="views">T04 - Failure to comply – claim terminated</option>
+  </select></div>
+</div>
+
+
+
+  
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+          
+
+
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add another lay evidence
+</button>
+</div>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Save
+</button>
+
+  </div>
+
+</div>
+
+{% endblock %}

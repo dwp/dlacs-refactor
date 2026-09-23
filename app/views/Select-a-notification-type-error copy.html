@@ -1,0 +1,182 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-">
+  <section class="dwp-quick-reference" aria-label="Case information">
+    <dl class="dwp-quick-reference__block">
+      <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-quick-reference__primary">Jane Smith</dd>
+      <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-quick-reference__secondary"><b>National insurance number: </b>QQ 12 34 56 X</dd>
+      <dd class="dwp-quick-reference__secondary"><b>Date of birth: </b>9 May 2006 <strong class="govuk-tag">V</strong></dd>
+      <dd class="dwp-quick-reference__secondary"><b>Claim status: </b><strong class="govuk-tag">Registered</strong></dd>
+    </dl>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+  </section>
+
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/notifications"
+}) }}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list" style="list-style: none; padding-left: 0;">
+        <li>
+          <a href="#"> Select a notification type</a></li>
+        <li>
+          <li>
+          <a href="#">E Select a notification type</a></li>
+        <li>
+          <li>
+          <a href="#"> Select a notification type</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <div class="govuk-form-group govuk-form-group--error">
+
+    <h2 class="govuk-heading-m">Select a notification type</h2>
+     <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>  Select a notification type
+    </p>
+
+
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+    {
+      text: "Letter of entitlement",
+      value: "LoE"
+    },
+    {
+      text: "VED Certificate of Entitlement",
+      value: "VED"
+    },
+     {
+      text: "DBD225A Parent Guardian responsbilities",
+      value: "DBD225A"
+    },
+     {
+      text: "BF57B Review of appointment to act (P/G)",
+      value: "BF57B"
+    },
+         {
+      text: "DBD955 Change of account details",
+      value: "DBD955"
+    }
+  ]
+}) }}
+
+</div>
+
+
+      <div class="govuk-form-group govuk-form-group--error">
+
+    <h2 class="govuk-heading-m">Renewal and Supersession Forms and Notifications</h2>
+     <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>  Select a notification type
+    </p>
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD138 DLA Nighttime needs",
+      value: "DBD138"
+    },
+    {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
+    },
+     {
+      text: "DBD73 Child renewal invite",
+      value: "DBD73"
+    }
+  ]
+}) }}
+</div>
+
+  <div class="govuk-form-group govuk-form-group--error">
+    <h2 class="govuk-heading-m">Appeal/recon - enquiry forms/notifications</h2>
+
+     <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Select a notification type
+    </p>
+{{ govukRadios({
+  idPrefix: "notificationType",
+  name: "notificationType",
+  items: [
+
+    {
+      text: "DBD919 TS des rtd for corrective actions",
+      value: "DBD919"
+    },
+    {
+      text: "DBD4R Acknowledgment
+DBD4 Acknowledgment. DBD4R Acknowledgment",
+      value: "DBD4R"
+    },
+     {
+      text: "BD303 Non-payee request",
+      value: "BD303"
+    },
+     {
+      text: "DBD304 Confirm non-payee permission (or can be req after DBD303)",
+      value: "DBD304"
+    },
+      {
+      text: "PIPR11 Supersession",
+      value: "PIPR11"
+    },
+      {
+      text: "PIPR13 Termination",
+      value: "PIPR13"
+    },
+      {
+      text: "PIPR14 Chooses not to claim PIP",
+      value: "PIPR14"
+    }
+  ]
+}) }}</div>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/Confirm-notification-IF-address-autopopulated"
+}) }}
+
+
+  
+
+  </div>
+
+</div>
+
+{% endblock %}

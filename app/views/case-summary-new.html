@@ -98,49 +98,73 @@
 <div class="govuk-grid-column-three-quarters">
 
 <section class="dwp-quick-reference" aria-label="Case information">
-  <dl class="dwp-quick-reference__block">
-    <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
-    <dd class="dwp-quick-reference__primary">Jane Smith</dd>
 
-    <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">
-      National Insurance number:
-    </dt>
+  <!-- Claimant details -->
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; margin-bottom:20px;">
 
-    <dd class="dwp-quick-reference__secondary">
-      <b>National insurance number: </b>QQ 12 34 56 X
-    </dd>
+    <div class="dwp-quick-reference__primary">
+      Miss Jane Smith
+    </div>
 
-    <dd class="dwp-quick-reference__secondary">
-      <b>Date of birth: </b>9 May 2006
-      <strong class="govuk-tag">V</strong>
-    </dd>
+    <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:16px;">
 
-    <dd class="dwp-quick-reference__secondary">
-      <b>Claim status: </b>
-      <strong class="govuk-tag status-tag">
-        CREG - Claim registered
-      </strong>
-    </dd>
+      <span>
+        <strong>NINO:</strong> QQ123456B
+      </span>
 
-    <dd class="dwp-quick-reference__secondary">
-      <b>Payment status: </b>
-      <strong class="govuk-tag status-tag">
-        NAPR - No automatic payment renewal
-      </strong>
-    </dd>
+      <span>
+        <strong>DOB:</strong> 09 May 2006
+      </span>
 
-    <dd class="dwp-quick-reference__secondary">
-      <b>Change status: </b>
-      <strong class="govuk-tag status-tag">
-        NOTR - No outstanding transaction
-      </strong>
-    </dd>
+      <span class="govuk-tag">
+        V
+      </span>
 
-  </dl>
+    </div>
+
+  </div>
+
+  <!-- Status row 1 -->
+  <div style="display:flex; flex-wrap:wrap; gap:24px; margin-bottom:8px; font-size:16px;">
+
+    <div>
+      <span style="font-weight:700;">Claim:</span>
+      <span class="govuk-tag status-tag" style="font-size:14px;padding:4px 8px;">
+        CREG - CLAIM REGISTERED
+      </span>
+    </div>
+
+    <div>
+      <span style="font-weight:700;">Payment:</span>
+      <span class="govuk-tag status-tag" style="font-size:14px;padding:4px 8px;">
+        NAPR - NO AUTOMATIC PAYMENT RENEWAL
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Status row 2 -->
+  <div style="display:flex; flex-wrap:wrap; gap:24px; font-size:16px;">
+
+    <div>
+      <span style="font-weight:700;">Change:</span>
+      <span class="govuk-tag status-tag" style="font-size:14px;padding:4px 8px;">
+        NOTR - NO OUTSTANDING TRANSACTION
+      </span>
+    </div>
+
+    <div>
+      <span style="font-weight:700;">Flags:</span>
+      <span class="govuk-tag status-tag" style="font-size:14px;padding:4px 8px;">
+        R - REGISTERED
+      </span>
+    </div>
+
+  </div>
+
 </section>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
 
 
  <h1 class="govuk-heading-l">Case summary</h1>

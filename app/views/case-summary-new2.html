@@ -1,0 +1,446 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+{% include './includes/_header.html' %}
+
+{% endblock %}
+
+{% block content %}
+
+<section class="dwp-quick-reference" aria-label="Case information">
+
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px; margin-bottom:20px;">
+
+    <div class="dwp-quick-reference__primary">
+      Miss Jane Smith
+    </div>
+
+    <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:16px;">
+
+      <span>
+        <strong>NINO:</strong> QQ123456B
+      </span>
+
+      <span>
+        <strong>DOB:</strong> 09 May 2006
+      </span>
+
+      <span class="govuk-tag">
+        V
+      </span>
+
+    </div>
+
+  </div>
+
+<div style="
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px 24px;
+  align-items:center;
+">
+
+  <span>
+    <strong style="font-size:16px;">Claim:</strong>
+    <span class="govuk-tag status-tag" style="font-size:15px;padding:1px 6px;">
+      CLAIM REGISTERED
+    </span>
+  </span>
+
+  <span>
+    <strong style="font-size:16px;">Payment:</strong>
+    <span class="govuk-tag status-tag" style="font-size:15px;padding:1px 6px;">
+      NO AUTOMATIC PAYMENT RENEWAL
+    </span>
+  </span>
+
+  <span>
+    <strong style="font-size:16px;">Change:</strong>
+    <span class="govuk-tag status-tag" style="font-size:15px;padding:1px 6px;">
+      NO OUTSTANDING TRANSACTION
+    </span>
+  </span>
+
+  <span>
+    <strong style="font-size:16px;">Flags:</strong>
+    <span class="govuk-tag status-tag" style="font-size:15px;padding:1px 6px;">
+      REGISTERED
+    </span>
+  </span>
+
+</div>
+
+</section>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-quarter">
+
+
+    <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        </li>
+               <li class="dwp-side-navigation__item dwp-side-navigation__item--selected">
+          <a id="case-summary" href="case-summary" class="dwp-side-navigation__link dwp-side-navigation__link--selected" aria-current="true">
+            Case summary
+          </a>
+        </li>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="event-maintenance" href="event-maintenance" class="dwp-side-navigation__link">
+            Event maintenance
+          </a>
+      <li class="dwp-side-navigation__item">
+          <a id="case-details" href="case-details" class="dwp-side-navigation__link">
+            Case details
+          </a>
+        </li>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="delete-interest-or-undecided-claim" href="delete-interest-or-undecided-claim" class="dwp-side-navigation__link">
+            Deregistration
+          </a>
+        </li>
+          <li class="dwp-side-navigation__item">
+          <a id="delete-decided-claim" href="delete-decided-claim" class="dwp-side-navigation__link">
+            Delete claim
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="management-units-transfer" href="management-units-transfer" class="dwp-side-navigation__link">
+            Management unit transfer
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="request-record-print" href="request-record-print" class="dwp-side-navigation__link">
+            Request record print
+          </a>
+              <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+      <ul class="dwp-side-navigation__list">
+        <li class="dwp-side-navigation__item dwp-side-navigation__link">
+          <p id="s-item-0" class="govuk-caption-m">
+            Motability          </p>
+        </li>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="supplier-agreement-history" href="supplier-agreement-history" class="dwp-side-navigation__link">
+            Supplier agreement history
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="motability-payment" href="motability-payment" class="dwp-side-navigation__link">
+            Motability payments
+          </a>
+        </li>
+        <li class="dwp-side-navigation__item">
+          <a id="record-supplier-clerical-payment-empty" href="record-supplier-clerical-payment-empty" class="dwp-side-navigation__link">
+            Clerical mota payments
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  
+
+<div class="govuk-grid-column-three-quarters">
+
+
+
+
+ <h1 class="govuk-heading-l">Case summary</h1>
+
+ <h2 class="govuk-heading-m">Name</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Miss
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Other names
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Requested name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      May
+    </dd>
+</dl>
+
+ <h2 class="govuk-heading-m">Further personal details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of death
+    </dt>
+    <dd class="govuk-summary-list__value">
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+     </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Nationality type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Great Britain
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+
+ <h2 class="govuk-heading-m">Address</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post code
+    </dt>
+    <dd class="govuk-summary-list__value">
+      SE1 7ND
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Country code
+    </dt>
+    <dd class="govuk-summary-list__value">
+      114 - England
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Post type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      1 - Normal
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+
+
+<h2 class="govuk-heading-m">Contact</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      077123456
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+
+
+ <h2 class="govuk-heading-m">Other details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Indicators
+    </dt>
+    <dd class="govuk-summary-list__value">
+     <p class="govuk-body">B - Border Case</p>
+     <p class="govuk-body">F - Proven Fraud</p>
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+  </div>
+   <div class="govuk-summary-list__row">
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      PIP Indicator
+    </dt>
+    <dd class="govuk-summary-list__value">
+      00 - Not selected for PIP reassessment
+    </dd>
+    </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      PIP extract date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      12/08/2025
+    </dd>
+</dl>
+
+
+
+<h2 class="govuk-heading-m">End of entitlement</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Mobility
+    </dt>
+    <dd class="govuk-summary-list__value">
+      22/10/2026
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Care
+    </dt>
+    <dd class="govuk-summary-list__value">
+      22/10/2026
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+<h2 class="govuk-heading-m">Status</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Claim
+    </dt>
+    <dd class="govuk-summary-list__value">
+      CREG - Registered
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+     <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+Payment
+    </dt>
+    <dd class="govuk-summary-list__value">
+      PSS - Stable
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+     </div>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</dl>
+
+
+
+<table class="govuk-table govuk-table--small-text-until-tablet">
+  <caption class="govuk-table__caption govuk-table__caption--m">Events</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Events</th>
+      <th scope="col" class="govuk-table__header">Receipt</th>
+      <th scope="col" class="govuk-table__header">Effective</th>
+      <th scope="col" class="govuk-table__header">Decn made</th>
+      <th scope="col" class="govuk-table__header">End/notf</th>
+      <th scope="col" class="govuk-table__header">Ev.c</th>
+      <th scope="col" class="govuk-table__header">Outcome</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">1 - New claim</td>
+      <td class="govuk-table__cell">21 Aug 2025</td>
+      <td class="govuk-table__cell">21 Aug 2025</td>
+      <td class="govuk-table__cell">21 Aug 2025</td>
+      <td class="govuk-table__cell">21 Aug 2025</td>
+      <td class="govuk-table__cell">02 - Claim form with attachments received before the decision is given.</td>
+      <td class="govuk-table__cell">F02 - Adjusted award</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
